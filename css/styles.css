@@ -418,13 +418,30 @@ body--invitation {
 
 /* ── Save the Date — Editorial layout (page 2 mockup) ── */
 .save-the-date--editorial {
+  position: relative;
   min-height: auto;
   background-color: var(--story-cream);
   display: block;
-  padding: clamp(1.25rem, 4vw, 2rem) 0 0;
+  padding: 0;
   overflow: visible;
-  --std-footer-estimate: clamp(8rem, 19vw, 11rem);
   --std-flower-overlap: 10%;
+}
+
+.std-editorial-cream {
+  position: relative;
+  padding: clamp(1.25rem, 4vw, 2rem) 0 clamp(0.5rem, 2vw, 0.85rem);
+  overflow: hidden;
+}
+
+.std-editorial-cream__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--story-cream);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .std-decor__gold-glow {
@@ -514,7 +531,7 @@ body--invitation {
 
 .std-decor__flowers--left {
   left: 0;
-  bottom: var(--std-footer-estimate);
+  bottom: 0;
   width: clamp(260px, 58vw, 560px);
   transform: translate(-10%, var(--std-flower-overlap));
   z-index: 8;
@@ -533,6 +550,10 @@ body--invitation {
 
 .std-editorial__header {
   margin-bottom: clamp(0.75rem, 3vw, 1.25rem);
+}
+
+.save-the-date--editorial .std-editorial__header {
+  margin-bottom: clamp(1rem, 4vw, 1.75rem);
 }
 
 .std-editorial__heart {
@@ -864,7 +885,7 @@ body--invitation {
 }
 
 @media (max-width: 768px) {
-  .save-the-date--editorial {
+  .std-editorial-cream {
     padding-top: 0.65rem;
   }
 
@@ -873,15 +894,9 @@ body--invitation {
     transform: translate(8%, -4%);
   }
 
-  .save-the-date--editorial {
-    --std-footer-estimate: calc(
-      2rem + clamp(50px, 13vw, 62px) + 0.65rem + 2.75rem + max(1.35rem, env(safe-area-inset-bottom, 0px))
-    );
-  }
-
   .save-the-date--editorial .std-decor__flowers--left {
     width: clamp(128px, 34vw, 200px);
-    bottom: var(--std-footer-estimate);
+    bottom: 0;
     transform: translate(-5%, var(--std-flower-overlap));
   }
 

@@ -158,17 +158,15 @@ function initSaveTheDate(lang) {
 }
 
 function initSaveTheDateHeroImage(isFr) {
-  const img = document.getElementById('std-hero-image');
-  if (!img) return;
+  const bg = document.getElementById('std-cream-bg');
+  if (!bg) return;
 
   const src =
     WEDDING_CONFIG.saveTheDateImage ||
     WEDDING_CONFIG.couplePhoto ||
     'assets/save-the-date-gemini.jpg';
-  img.src = src;
-  img.alt = isFr
-    ? `Illustration — ${getCoupleNames()}`
-    : `${getCoupleNames()} — illustration`;
+  const wash = WEDDING_CONFIG.saveTheDateBgWash ?? 0.84;
+  bg.style.backgroundImage = `linear-gradient(rgba(249, 245, 240, ${wash}), rgba(249, 245, 240, ${Math.min(wash + 0.06, 0.94)})), url("${src}")`;
 }
 
 function initStdFooterActions() {
