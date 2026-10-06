@@ -1007,9 +1007,15 @@ body--invitation {
   }
 
   .save-the-date--editorial {
+    /* Hauteur réelle du pied de page mobile (alignement crème / bordeaux) */
     --std-footer-estimate: calc(
-      2rem + clamp(50px, 13vw, 62px) + 0.65rem + 2.75rem + max(1.35rem, env(safe-area-inset-bottom, 0px))
+      2rem
+      + clamp(50px, 13vw, 62px)
+      + 0.65rem
+      + clamp(1.55rem, 5.5vw, 2.1rem)
+      + max(1.35rem, env(safe-area-inset-bottom, 0px))
     );
+    --std-flower-burgundy-overlap: 10%;
   }
 
   .std-decor__flowers--right {
@@ -1019,6 +1025,7 @@ body--invitation {
 
   .save-the-date--editorial > .std-decor__flowers--left {
     width: clamp(128px, 34vw, 200px);
+    bottom: calc(var(--std-footer-estimate) - clamp(0.5rem, 2.5vw, 0.85rem));
     transform: translate(-5%, var(--std-flower-burgundy-overlap));
   }
 
