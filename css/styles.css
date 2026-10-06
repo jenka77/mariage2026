@@ -466,6 +466,8 @@ body--invitation {
 
 .std-editorial-cream {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: clamp(32rem, 82vh, 52rem);
   padding:
     clamp(1.25rem, 4vw, 2rem)
@@ -598,8 +600,56 @@ body--invitation {
   margin-bottom: clamp(0.75rem, 3vw, 1.25rem);
 }
 
+.save-the-date--editorial .std-editorial {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(100%, 36rem);
+  max-width: min(94%, 36rem);
+  margin-inline: auto;
+  padding:
+    clamp(1.25rem, 5vw, 2.75rem)
+    clamp(0.85rem, 4vw, 1.75rem)
+    clamp(1.5rem, 6vw, 3rem);
+}
+
 .save-the-date--editorial .std-editorial__header {
-  margin-bottom: clamp(1rem, 4vw, 1.75rem);
+  margin-bottom: clamp(1.25rem, 5vw, 2.25rem);
+}
+
+.save-the-date--editorial .std-editorial__tagline {
+  font-size: clamp(0.72rem, 2.9vw, 1.02rem);
+  letter-spacing: 0.24em;
+  margin: 0.35rem 0;
+}
+
+.save-the-date--editorial .std-editorial__names {
+  font-size: clamp(3.2rem, 13.5vw, 5.25rem);
+  margin: 0.3rem 0 0.45rem;
+}
+
+.save-the-date--editorial .std-editorial__heart {
+  font-size: clamp(0.62rem, 2.4vw, 0.88rem);
+  margin: 0.45rem 0;
+}
+
+.save-the-date--editorial .std-editorial__closing {
+  margin-top: clamp(1.25rem, 5vw, 2.5rem);
+  width: 100%;
+}
+
+.save-the-date--editorial .std-editorial__message {
+  font-size: clamp(1.08rem, 4.4vw, 1.48rem);
+  line-height: 1.72;
+  max-width: min(40ch, 92vw);
+  margin: 0 auto clamp(1rem, 3.5vw, 1.65rem);
+}
+
+.save-the-date--editorial .std-editorial__thanks {
+  font-size: clamp(1.85rem, 7.2vw, 2.9rem);
+  line-height: 1.15;
 }
 
 .std-editorial__heart {
@@ -905,6 +955,25 @@ body--invitation {
     padding: clamp(0.5rem, 3vw, 1rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 5vw, 2.5rem);
   }
 
+  .save-the-date--editorial .std-editorial {
+    width: min(100%, 38rem);
+    max-width: min(100%, 38rem);
+    padding-inline: clamp(1.25rem, 4vw, 2rem);
+  }
+
+  .save-the-date--editorial .std-editorial__names {
+    font-size: clamp(3.75rem, 8.5vw, 5.5rem);
+  }
+
+  .save-the-date--editorial .std-editorial__message {
+    font-size: clamp(1.22rem, 2.1vw, 1.55rem);
+    max-width: 38ch;
+  }
+
+  .save-the-date--editorial .std-editorial__thanks {
+    font-size: clamp(2.15rem, 4.5vw, 3rem);
+  }
+
   .std-editorial__photo--monogram {
     width: min(100%, 480px);
   }
@@ -961,13 +1030,26 @@ body--invitation {
     margin-bottom: 0.5rem;
   }
 
+  .save-the-date--editorial .std-editorial__header {
+    margin-bottom: clamp(1rem, 4.5vw, 1.75rem);
+  }
+
   .std-editorial__tagline {
     font-size: clamp(0.52rem, 2.6vw, 0.65rem);
     letter-spacing: 0.16em;
   }
 
+  .save-the-date--editorial .std-editorial__tagline {
+    font-size: clamp(0.62rem, 3.2vw, 0.82rem);
+    letter-spacing: 0.18em;
+  }
+
   .std-editorial__names {
     font-size: clamp(2.35rem, 10vw, 3.1rem);
+  }
+
+  .save-the-date--editorial .std-editorial__names {
+    font-size: clamp(2.75rem, 12.5vw, 3.85rem);
   }
 
   .std-editorial__heart {
@@ -988,9 +1070,21 @@ body--invitation {
     padding: 0 0.5rem;
   }
 
+  .save-the-date--editorial .std-editorial__message {
+    font-size: clamp(1.02rem, 4.8vw, 1.22rem);
+    max-width: min(38ch, 94vw);
+    margin: 0 auto clamp(0.85rem, 3vw, 1.25rem);
+    padding: 0 0.35rem;
+  }
+
   .std-editorial__thanks {
     font-size: clamp(1.25rem, 5vw, 1.6rem);
     padding: 0 0.35rem;
+  }
+
+  .save-the-date--editorial .std-editorial__thanks {
+    font-size: clamp(1.65rem, 7vw, 2.15rem);
+    padding: 0 0.25rem;
   }
 
   .std-editorial__footer {

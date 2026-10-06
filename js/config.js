@@ -28,8 +28,8 @@ const WEDDING_CONFIG = {
 
   // Image sous les prénoms (fr.html / en.html) — remplacez par votre PNG/JPG si besoin
   saveTheDateImage: 'assets/save-the-date-gemini.jpg',
-  // Opacité du voile crème sur le fond (0.7 = image plus visible, 0.9 = très discret)
-  saveTheDateBgWash: 0.74,
+  // Opacité du voile crème sur le fond (plus bas = image plus visible)
+  saveTheDateBgWash: 0.54,
 
   // false = image complète (placeholder actuel) | true = photo seule + cœur en overlay
   overlayDesign: false,
