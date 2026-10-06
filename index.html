@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Yannick & Dora — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Parisienne&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="landing-page-body">
+  <main class="landing">
+    <div class="landing__bg" aria-hidden="true">
+      <img class="landing__bg-img" id="landing-bg-img" src="assets/image2.jpeg" alt="">
+      <div class="landing__bg-overlay"></div>
+    </div>
+
+    <div class="landing__gold-glow" aria-hidden="true"></div>
+
+    <div class="landing__corner landing__corner--tl" aria-hidden="true"></div>
+    <div class="landing__corner landing__corner--br" aria-hidden="true"></div>
+
+    <div class="landing__flowers landing__flowers--right" aria-hidden="true">
+      <img src="assets/landing-flowers-right.png" alt="">
+    </div>
+    <div class="landing__flowers landing__flowers--left" aria-hidden="true">
+      <img src="assets/landing-flowers-left.png" alt="">
+    </div>
+
+    <div class="landing__content">
+      <p class="landing__save-the-date" aria-label="Save the Date">
+        <span class="landing__std-save">Save</span>
+        <span class="landing__std-the">the</span>
+        <span class="landing__std-date">Date</span>
+      </p>
+
+      <p class="landing__header">We're Getting Married</p>
+
+      <div class="landing__names" id="couple-names">
+        <span class="name-line">Amara <span class="ampersand">&</span></span>
+        <span class="name-line name-line--second">Elijah</span>
+      </div>
+
+      <div class="landing__rings" aria-hidden="true">
+        <img src="assets/goldring.png" alt="">
+      </div>
+
+      <div class="landing__date-group">
+        <div class="landing__divider" aria-hidden="true">
+          <img src="assets/landing-divider.png" alt="">
+        </div>
+        <p class="landing__date" id="landing-date">19 décembre 2026</p>
+      </div>
+
+      <div class="landing__envelope-wrap">
+        <img class="landing__envelope-img" src="assets/landing-envelope.png" alt="">
+        <span class="landing__envelope-monogram" id="monogram">YD</span>
+      </div>
+
+      <div class="landing__actions">
+        <a href="en.html" class="lang-btn">Click to Open</a>
+        <a href="fr.html" class="lang-btn">Cliquez ici</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script>
+    document.querySelector('.landing__names').innerHTML =
+      `<span class="name-line">${WEDDING_CONFIG.groom} <span class="ampersand">&</span></span>` +
+      `<span class="name-line name-line--second">${WEDDING_CONFIG.bride}</span>`;
+    document.getElementById('monogram').textContent = WEDDING_CONFIG.monogram;
+    document.getElementById('landing-bg-img').src = WEDDING_CONFIG.landingPhoto;
+    document.getElementById('landing-date').textContent =
+      WEDDING_CONFIG.landingDate || '19 décembre 2026';
+    document.title = `${getCoupleNames()} — Wedding Invitation`;
+  </script>
+</body>
+</html>

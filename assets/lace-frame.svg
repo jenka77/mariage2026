@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" fill="none" aria-hidden="true">
+  <defs>
+    <pattern id="lace-dot" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.2" fill="white" opacity="0.9"/>
+    </pattern>
+  </defs>
+  <!-- Outer scalloped edge -->
+  <rect x="8" y="8" width="404" height="404" rx="4"
+        fill="none" stroke="white" stroke-width="2" opacity="0.95"/>
+  <rect x="18" y="18" width="384" height="384"
+        fill="none" stroke="white" stroke-width="1" stroke-dasharray="4 6" opacity="0.7"/>
+  <!-- Corner flourishes -->
+  <path d="M8,8 Q40,8 40,40" stroke="white" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M412,8 Q380,8 380,40" stroke="white" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M8,412 Q40,412 40,380" stroke="white" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M412,412 Q380,412 380,380" stroke="white" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <!-- Heart motifs corners -->
+  <path d="M30,30 C30,22 38,18 42,24 C46,18 54,22 54,30 C54,40 42,50 42,50 C42,50 30,40 30,30Z" fill="white" opacity="0.85" transform="scale(0.7) translate(10,10)"/>
+  <path d="M30,30 C30,22 38,18 42,24 C46,18 54,22 54,30 C54,40 42,50 42,50 C42,50 30,40 30,30Z" fill="white" opacity="0.85" transform="scale(0.7) translate(510,10)"/>
+  <path d="M30,30 C30,22 38,18 42,24 C46,18 54,22 54,30 C54,40 42,50 42,50 C42,50 30,40 30,30Z" fill="white" opacity="0.85" transform="scale(0.7) translate(10,510)"/>
+  <path d="M30,30 C30,22 38,18 42,24 C46,18 54,22 54,30 C54,40 42,50 42,50 C42,50 30,40 30,30Z" fill="white" opacity="0.85" transform="scale(0.7) translate(510,510)"/>
+  <!-- Dove silhouettes (simplified) -->
+  <path d="M200,22 C205,18 215,18 210,24 C218,22 222,28 215,28 C220,32 210,34 205,30 C200,34 190,32 195,28 C188,28 192,22 200,24Z" fill="white" opacity="0.75"/>
+  <path d="M200,398 C205,394 215,394 210,400 C218,398 222,404 215,404 C220,408 210,410 205,406 C200,410 190,408 195,404 C188,404 192,398 200,400Z" fill="white" opacity="0.75"/>
+  <!-- Side floral loops -->
+  <ellipse cx="210" cy="210" rx="175" ry="175" fill="url(#lace-dot)" opacity="0.15"/>
+  <circle cx="210" cy="32" r="6" fill="none" stroke="white" stroke-width="1" opacity="0.6"/>
+  <circle cx="210" cy="388" r="6" fill="none" stroke="white" stroke-width="1" opacity="0.6"/>
+  <circle cx="32" cy="210" r="6" fill="none" stroke="white" stroke-width="1" opacity="0.6"/>
+  <circle cx="388" cy="210" r="6" fill="none" stroke="white" stroke-width="1" opacity="0.6"/>
+</svg>

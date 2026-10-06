@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Réservation — Yannick & Dora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="rsvp-page-body">
+
+  <div class="rsvp-decor rsvp-decor--tl" aria-hidden="true">
+    <img src="assets/flowers_formular.png" alt="">
+  </div>
+  <div class="rsvp-decor rsvp-decor--br" aria-hidden="true">
+    <img src="assets/flowers_formular.png" alt="">
+  </div>
+
+  <nav class="back-nav">
+    <a href="fr.html" class="back-link back-link--prominent">← Retour à l'invitation</a>
+  </nav>
+
+  <main class="rsvp-page">
+    <header class="rsvp-page__header">
+      <p class="invitation__subtitle">Avec leurs familles</p>
+      <h1 class="invitation__names" id="couple-names">Camille & Henry</h1>
+    </header>
+
+    <section class="deadline-countdown deadline-countdown--page" id="reservation-deadline" aria-live="polite">
+      <p class="deadline-countdown__title" id="rd-countdown-title">Temps restant pour confirmer votre réservation</p>
+      <p class="deadline-countdown__date" id="rd-countdown-date">Date limite : 30 novembre 2026</p>
+      <div class="countdown deadline-countdown__timer">
+        <div class="countdown__item">
+          <span class="countdown__number" id="rd-days">00</span>
+          <span class="countdown__label" id="rd-label-days">Jours</span>
+        </div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__item">
+          <span class="countdown__number" id="rd-hours">00</span>
+          <span class="countdown__label" id="rd-label-hours">Heures</span>
+        </div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__item">
+          <span class="countdown__number" id="rd-minutes">00</span>
+          <span class="countdown__label" id="rd-label-minutes">Minutes</span>
+        </div>
+        <span class="countdown__sep">:</span>
+        <div class="countdown__item">
+          <span class="countdown__number" id="rd-seconds">00</span>
+          <span class="countdown__label" id="rd-label-seconds">Secondes</span>
+        </div>
+      </div>
+    </section>
+
+    <form class="rsvp rsvp--page" id="rsvp-form" novalidate>
+      <h2 class="rsvp__title">Réservation</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">Prénom</label>
+          <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Nom</label>
+          <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+        </div>
+      </div>
+      <p class="rsvp__name-hint" id="rsvp-name-hint"></p>
+
+      <div class="form-group search-field" id="country-search-field">
+        <label for="countrySearchInput">Pays de résidence <span class="required">*</span></label>
+        <input type="text" id="countrySearchInput" autocomplete="off" spellcheck="false">
+        <input type="hidden" id="countryOfResidence" name="countryOfResidence">
+        <ul class="search-dropdown" id="countrySearchList" role="listbox"></ul>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span class="optional">(facultatif)</span></label>
+        <input type="email" id="email" name="email" autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label>Numéro de téléphone <span class="required">*</span></label>
+        <div class="phone-row">
+          <div class="search-field phone-row__code" id="phone-code-search-field">
+            <input type="text" id="phoneCodeSearchInput" autocomplete="off" spellcheck="false">
+            <input type="hidden" id="phoneCountryCode" name="phoneCountryCode">
+            <ul class="search-dropdown" id="phoneCodeSearchList" role="listbox"></ul>
+          </div>
+          <input type="tel" id="phoneNumber" name="phoneNumber" class="phone-row__number"
+                 placeholder="612345678" required autocomplete="tel-national" inputmode="numeric">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Serez-vous présent(e) ?</label>
+        <div class="attendance-options">
+          <div class="attendance-option">
+            <input type="radio" id="attend-yes" name="attendance" value="yes" required>
+            <label for="attend-yes">Avec plaisir</label>
+          </div>
+          <div class="attendance-option">
+            <input type="radio" id="attend-no" name="attendance" value="no">
+            <label for="attend-no">Je ne pourrai pas</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" id="guests-group">
+        <label for="guests">Nombre de personnes (vous inclus)</label>
+        <select id="guests" name="guests">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="additional-guests" id="additional-guests-group" hidden>
+        <p class="additional-guests__lead" id="additional-guests-lead"></p>
+        <div id="additional-guests-list"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="dietary">Régime alimentaire</label>
+        <textarea id="dietary" name="dietary" placeholder="Allergies, végétarien, etc."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message pour les mariés</label>
+        <textarea id="message" name="message" placeholder="Facultatif"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn">Confirmer la réservation</button>
+      <div class="message" id="form-message" role="alert"></div>
+    </form>
+
+    <a href="fr.html" class="back-link back-link--prominent">← Retour à l'invitation</a>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/countries.js"></script>
+  <script src="js/phone-codes.js"></script>
+  <script src="js/country-search.js"></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/help.js"></script>
+  <script>
+    document.getElementById('couple-names').textContent = getCoupleNames();
+    initReservationCountdown('fr');
+    document.title = `Réservation — ${getCoupleNames()}`;
+    initRsvpForm('fr');
+    initFaq('fr');
+    initHelp('fr');
+  </script>
+</body>
+</html>

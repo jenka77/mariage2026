@@ -1,0 +1,14 @@
+{
+  "name": "mariage-invitation",
+  "version": "1.0.0",
+  "description": "Online wedding invitation with RSVP",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "pdfkit": "^0.19.1"
+  }
+}

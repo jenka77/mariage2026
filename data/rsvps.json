@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1786617432086,
+    "firstName": "test1",
+    "lastName": "Dupont",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+49",
+    "phoneNumber": "15751032043",
+    "fullPhone": "+4915751032043",
+    "attendance": "yes",
+    "guests": 1,
+    "confirmedCount": 1,
+    "additionalGuests": [],
+    "guestList": [
+      {
+        "firstName": "marie",
+        "lastName": "Dupont",
+        "fullName": "marie Dupont",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      }
+    ],
+    "dietary": "vegan",
+    "message": "tous mes voeux les meilleurs",
+    "lang": "fr",
+    "submittedAt": "2026-08-13T10:37:12.081Z",
+    "invitedGuestId": "inv-001",
+    "maxGuestsAllowed": 2
+  },
+  {
+    "id": 1791285918021,
+    "firstName": "Test2",
+    "lastName": "OpenRsvp",
+    "email": "",
+    "countryOfResidence": "DE",
+    "countryOfResidenceName": "Germany",
+    "phoneCountryCode": "+49",
+    "phoneNumber": "1234567890",
+    "fullPhone": "+491234567890",
+    "attendance": "no",
+    "guests": 0,
+    "confirmedCount": 0,
+    "additionalGuests": [],
+    "guestList": [],
+    "dietary": "",
+    "message": "",
+    "lang": "fr",
+    "submittedAt": "2026-10-06T11:25:18.021Z",
+    "invitedGuestId": null
+  }
+]

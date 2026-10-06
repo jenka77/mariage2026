@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Yannick & Dora — Invitation au Mariage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="body--invitation">
+
+  <section class="save-the-date save-the-date--editorial" id="save-the-date">
+    <div class="std-decor std-decor__gold-glow" aria-hidden="true"></div>
+    <div class="std-decor std-decor__corner std-decor__corner--tl" aria-hidden="true"></div>
+    <div class="std-decor std-decor__corner std-decor__corner--br" aria-hidden="true"></div>
+
+    <div class="std-decor std-decor__flowers std-decor__flowers--right" aria-hidden="true">
+      <img src="assets/landing-flowers-right.png" alt="">
+    </div>
+    <div class="std-decor std-decor__flowers std-decor__flowers--left" aria-hidden="true">
+      <img src="assets/landing-flowers-left.png" alt="">
+    </div>
+
+    <div class="std-editorial">
+      <header class="std-editorial__header">
+        <span class="std-editorial__heart" aria-hidden="true">♥</span>
+        <p class="std-editorial__tagline" id="std-tagline">Nous nous marions</p>
+        <h1 class="std-editorial__names" id="std-page-names">Yannick & Dora</h1>
+        <span class="std-editorial__heart" aria-hidden="true">♥</span>
+      </header>
+
+      <div class="std-editorial__photo std-editorial__photo--monogram">
+        <img class="std-editorial__photo-img" id="std-hero-image" src="" alt="">
+      </div>
+
+      <div class="std-editorial__countdown">
+        <div class="std-editorial__divider" aria-hidden="true">
+          <img src="assets/landing-divider.png" alt="">
+        </div>
+        <p class="std-editorial__countdown-title" id="countdown-title">Compte à rebours jusqu'à notre mariage</p>
+        <div class="countdown std-editorial__timer" id="countdown">
+          <div class="countdown__item">
+            <span class="countdown__number" id="cd-days">00</span>
+            <span class="countdown__label" id="cd-label-days">Jours</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__number" id="cd-hours">00</span>
+            <span class="countdown__label" id="cd-label-hours">Heures</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__number" id="cd-minutes">00</span>
+            <span class="countdown__label" id="cd-label-minutes">Minutes</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__number" id="cd-seconds">00</span>
+            <span class="countdown__label" id="cd-label-seconds">Secondes</span>
+          </div>
+        </div>
+        <p class="std-editorial__message" id="std-message"></p>
+        <p class="std-editorial__thanks" id="std-thanks"></p>
+      </div>
+    </div>
+
+    <footer class="std-editorial__footer">
+      <div class="std-editorial__curve" aria-hidden="true">
+        <svg viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,0 Q200,95 400,0 L400,80 L0,80 Z" fill="var(--story-cream)"/>
+        </svg>
+        <span class="std-editorial__curve-heart">♥</span>
+      </div>
+      <nav class="std-editorial__actions" aria-label="Actions">
+        <button type="button" class="std-action" id="std-action-faq">
+          <span class="std-action__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v5M12 8h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          <span class="std-action__label" id="std-action-info">Bon à savoir</span>
+        </button>
+        <a href="#" class="std-action" id="std-calendar-link" target="_blank" rel="noopener">
+          <span class="std-action__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 3v4M16 3v4M3 10h18" stroke="currentColor" stroke-width="1.5"/></svg>
+          </span>
+          <span class="std-action__label" id="std-action-calendar">Ajouter à mon calendrier</span>
+        </a>
+        <button type="button" class="std-action" id="std-action-help">
+          <span class="std-action__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.2 1.8c0 1.8-2.2 2.2-2.2 3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="17" r="0.75" fill="currentColor"/></svg>
+          </span>
+          <span class="std-action__label" id="std-action-help-label">Aide</span>
+        </button>
+      </nav>
+    </footer>
+  </section>
+
+  <div class="invitation-content" id="invitation">
+    <main class="invitation">
+      <header class="invitation__hero">
+        <p class="invitation__subtitle">Avec leurs familles</p>
+        <h1 class="invitation__names" id="couple-names">Camille & Henry</h1>
+        <p class="invitation__date" id="wedding-date">Dimanche 19 juillet 2027</p>
+      </header>
+
+      <div class="invitation__divider invitation__divider--ornate" aria-hidden="true">
+        <img src="assets/landing-divider.png" alt="">
+      </div>
+
+      <section class="invitation__section invitation__section--event">
+        <div class="invitation__event">
+          <div class="invitation__event-photo">
+            <img id="ceremony-photo" src="assets/chapelle1.jpeg" alt="Façade de la chapelle">
+          </div>
+          <div class="invitation__event-body">
+            <h2 class="invitation__section-title">Cérémonie</h2>
+            <p class="location-name" id="ceremony-name">EEC Paroisse de Biyem-Assi</p>
+            <p id="ceremony-address">RFJJ+Q9V, Yaoundé, Cameroun</p>
+            <a href="https://maps.app.goo.gl/NB83KsPmr6NNLumJA" id="ceremony-maps-link" class="invitation__maps-link" target="_blank" rel="noopener noreferrer">Voir sur Google Maps</a>
+            <p id="ceremony-time">15h00</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="invitation__divider invitation__divider--ornate" aria-hidden="true">
+        <img src="assets/landing-divider.png" alt="">
+      </div>
+
+      <section class="invitation__section invitation__section--event">
+        <div class="invitation__event">
+          <div class="invitation__event-photo">
+            <img id="reception-photo" src="assets/buffet.png" alt="Réception">
+          </div>
+          <div class="invitation__event-body">
+            <h2 class="invitation__section-title">Réception</h2>
+            <p class="location-name" id="reception-name">EEC Paroisse de Biyem-Assi</p>
+            <p id="reception-address">RFJJ+Q9V, Yaoundé, Cameroun</p>
+            <a href="https://maps.app.goo.gl/NB83KsPmr6NNLumJA" id="reception-maps-link" class="invitation__maps-link" target="_blank" rel="noopener noreferrer">Voir sur Google Maps</a>
+            <p id="reception-time">18h00</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="invitation__divider invitation__divider--ornate" aria-hidden="true">
+        <img src="assets/landing-divider.png" alt="">
+      </div>
+
+      <section class="invitation__section invitation__section--message">
+        <p>Nous serions honorés de votre présence<br>pour célébrer ce jour si spécial.</p>
+      </section>
+
+      <section class="deadline-countdown" id="reservation-deadline" aria-live="polite">
+        <p class="deadline-countdown__title" id="rd-countdown-title">Temps restant pour confirmer votre réservation</p>
+        <p class="deadline-countdown__date" id="rd-countdown-date">Date limite : 30 novembre 2026</p>
+        <div class="countdown deadline-countdown__timer">
+          <div class="countdown__item">
+            <span class="countdown__number" id="rd-days">00</span>
+            <span class="countdown__label" id="rd-label-days">Jours</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__number" id="rd-hours">00</span>
+            <span class="countdown__label" id="rd-label-hours">Heures</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__number" id="rd-minutes">00</span>
+            <span class="countdown__label" id="rd-label-minutes">Minutes</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__number" id="rd-seconds">00</span>
+            <span class="countdown__label" id="rd-label-seconds">Secondes</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dress-code" id="dress-code">
+        <img class="dress-code__illustration" src="assets/dresscode.png" alt="" aria-hidden="true">
+        <h2 class="dress-code__title">
+          <span class="dress-code__title-main" id="dc-title-main">Code</span>
+          <span class="dress-code__title-script" id="dc-title-script">Vestimentaire</span>
+        </h2>
+        <p class="dress-code__lead" id="dc-lead">Tenue de soirée optionnelle.</p>
+        <p class="dress-code__text" id="dc-text">Nous vous invitons à porter des tons ivoire, champagne ou bordeaux profond.</p>
+        <p class="dress-code__avoid" id="dc-avoid">Merci d'éviter le blanc et le blanc cassé par respect pour la mariée.</p>
+        <div class="dress-code__colors" id="dc-colors"></div>
+        <p class="dress-code__tip" id="dc-tip">Mesdames, pensez aux talons larges ou compensés pour marcher confortablement sur l'herbe.</p>
+      </section>
+
+      <nav class="page-nav">
+        <a href="story-fr.html" class="page-nav__btn">Notre Histoire</a>
+        <a href="rsvp-fr.html" class="page-nav__btn page-nav__btn--primary">Réservation</a>
+      </nav>
+
+      <a href="index.html" class="back-link back-link--prominent">← Retour</a>
+    </main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/dress-code.js"></script>
+  <script src="js/photo-lightbox.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/help.js"></script>
+  <script>
+    initSaveTheDate('fr');
+    initReservationCountdown('fr');
+    initDressCode('fr');
+    initFaq('fr');
+    initHelp('fr');
+    initStdFooterActions();
+
+    document.getElementById('ceremony-photo').src = WEDDING_CONFIG.ceremonyPhoto;
+    initPhotoLightbox('#ceremony-photo', 'fr');
+    document.getElementById('reception-photo').src = WEDDING_CONFIG.receptionPhoto;
+    document.getElementById('couple-names').textContent = getCoupleNames();
+    document.getElementById('wedding-date').textContent = WEDDING_CONFIG.dateFr;
+    document.getElementById('ceremony-name').textContent = WEDDING_CONFIG.ceremony.nameFr;
+    document.getElementById('ceremony-address').textContent = WEDDING_CONFIG.ceremony.addressFr;
+    document.getElementById('ceremony-time').textContent = '15h00';
+    const ceremonyMaps = document.getElementById('ceremony-maps-link');
+    if (ceremonyMaps && WEDDING_CONFIG.ceremony.mapsUrl) {
+      ceremonyMaps.href = WEDDING_CONFIG.ceremony.mapsUrl;
+      ceremonyMaps.textContent = WEDDING_CONFIG.ceremony.mapsLabelFr || 'Voir sur Google Maps';
+    }
+    document.getElementById('reception-name').textContent = WEDDING_CONFIG.reception.nameFr;
+    document.getElementById('reception-address').textContent = WEDDING_CONFIG.reception.addressFr;
+    document.getElementById('reception-time').textContent = WEDDING_CONFIG.reception.timeFr;
+    const receptionMaps = document.getElementById('reception-maps-link');
+    if (receptionMaps && WEDDING_CONFIG.reception.mapsUrl) {
+      receptionMaps.href = WEDDING_CONFIG.reception.mapsUrl;
+      receptionMaps.textContent = WEDDING_CONFIG.reception.mapsLabelFr || 'Voir sur Google Maps';
+    }
+    document.title = `${getCoupleNames()} — Invitation au Mariage`;
+  </script>
+</body>
+</html>

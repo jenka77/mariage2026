@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Admin — Réservations Mariage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="login-view" class="admin-login">
+    <h2>Accès Admin</h2>
+    <div class="form-group">
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" placeholder="Mot de passe">
+    </div>
+    <button class="submit-btn" id="login-btn" style="margin-top:0">Connexion</button>
+    <p class="admin-login__hint" id="login-hint">
+      Le panneau admin nécessite le serveur local : lancez <code>npm start</code>, puis ouvrez
+      <a href="http://localhost:3000/admin.html">http://localhost:3000/admin.html</a>.
+    </p>
+    <div class="message" id="login-error" role="alert"></div>
+  </div>
+
+  <main class="admin" id="admin-view" style="display:none">
+    <h1>Réponses Réservation</h1>
+
+    <div class="admin-stats" id="stats"></div>
+
+    <div class="admin-actions">
+      <a class="export-btn" id="export-btn" href="#">Exporter les réponses (CSV)</a>
+      <a class="export-btn export-btn--secondary" id="export-guests-btn" href="#">Exporter la liste des invités (CSV)</a>
+      <a class="export-btn export-btn--secondary" id="export-guests-pdf-btn" href="#">Exporter la liste des invités (PDF)</a>
+    </div>
+
+    <section class="admin-section">
+      <h2 class="admin-section__title">Invités confirmés — détail par personne</h2>
+      <p class="admin-section__hint" id="guests-summary"></p>
+      <div style="overflow-x:auto">
+        <table class="rsvp-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Nom</th>
+              <th>Type</th>
+              <th>Lien</th>
+              <th>Répondant</th>
+              <th>Téléphone</th>
+              <th>Régime (foyer)</th>
+            </tr>
+          </thead>
+          <tbody id="guests-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-section">
+      <h2 class="admin-section__title">Réponses complètes</h2>
+      <div style="overflow-x:auto">
+        <table class="rsvp-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Nom</th>
+              <th>Pays</th>
+              <th>Téléphone</th>
+              <th>Email</th>
+              <th>Présence</th>
+              <th>Personnes</th>
+              <th>Liste invités</th>
+              <th>Accompagnants</th>
+              <th>Régime</th>
+              <th>Message</th>
+              <th>Langue</th>
+            </tr>
+          </thead>
+          <tbody id="rsvp-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let currentPassword = '';
+
+    const ADMIN_MESSAGES = {
+      fileProtocol:
+        'Impossible de se connecter depuis un fichier local. Lancez « npm start » dans le dossier du projet, puis ouvrez http://localhost:3000/admin.html',
+      serverUnavailable:
+        'Impossible de contacter le serveur. Vérifiez que « npm start » est bien lancé, puis rechargez cette page via http://localhost:3000/admin.html',
+      wrongPassword: 'Mot de passe incorrect.',
+    };
+
+    function getAdminApiBase() {
+      if (window.location.protocol === 'file:') return null;
+      return window.location.origin;
+    }
+
+    function showLoginError(message) {
+      const errorEl = document.getElementById('login-error');
+      errorEl.className = 'message message--error';
+      errorEl.textContent = message;
+    }
+
+    async function checkServerAvailability() {
+      const base = getAdminApiBase();
+      if (!base) {
+        showLoginError(ADMIN_MESSAGES.fileProtocol);
+        return false;
+      }
+
+      try {
+        const res = await fetch(`${base}/api/health`);
+        if (!res.ok) throw new Error('health check failed');
+        return true;
+      } catch {
+        showLoginError(ADMIN_MESSAGES.serverUnavailable);
+        return false;
+      }
+    }
+
+    document.getElementById('login-btn').addEventListener('click', login);
+    document.getElementById('password').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') login();
+    });
+
+    checkServerAvailability();
+
+    async function login() {
+      const password = document.getElementById('password').value;
+      const errorEl = document.getElementById('login-error');
+      errorEl.className = 'message';
+      errorEl.textContent = '';
+
+      const base = getAdminApiBase();
+      if (!base) {
+        showLoginError(ADMIN_MESSAGES.fileProtocol);
+        return;
+      }
+
+      try {
+        const res = await fetch(`${base}/api/stats?password=${encodeURIComponent(password)}`);
+        if (res.status === 401) {
+          showLoginError(ADMIN_MESSAGES.wrongPassword);
+          return;
+        }
+        if (!res.ok) throw new Error('stats request failed');
+        currentPassword = password;
+        document.getElementById('login-view').style.display = 'none';
+        document.getElementById('admin-view').style.display = 'block';
+        renderDashboard(await res.json());
+      } catch {
+        showLoginError(ADMIN_MESSAGES.serverUnavailable);
+      }
+    }
+
+    function escapeHtml(text) {
+      return String(text ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function formatGuestList(guestList) {
+      if (!Array.isArray(guestList) || guestList.length === 0) return '—';
+      return guestList.map((g) => escapeHtml(g.fullName || `${g.firstName} ${g.lastName}`)).join('<br>');
+    }
+
+    function formatAdditionalGuests(additionalGuests) {
+      if (!Array.isArray(additionalGuests) || additionalGuests.length === 0) return '—';
+      return additionalGuests.map((g) => {
+        const rel = g.relationshipLabel || g.relationshipOther || g.relationship || '';
+        return `${escapeHtml(g.firstName)} ${escapeHtml(g.lastName)} (${escapeHtml(rel)})`;
+      }).join('<br>');
+    }
+
+    function renderDashboard(data) {
+      const {
+        responses,
+        attendingHouseholds,
+        declinedHouseholds,
+        confirmedPersons,
+        allConfirmedGuests,
+        rsvps,
+      } = data;
+
+      document.getElementById('stats').innerHTML = `
+        <div class="stat-card stat-card--highlight">
+          <div class="stat-card__number">${confirmedPersons}</div>
+          <div class="stat-card__label">Personnes confirmées</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number">${responses}</div>
+          <div class="stat-card__label">Réponses reçues</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number">${attendingHouseholds}</div>
+          <div class="stat-card__label">Foyers présents</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__number">${declinedHouseholds}</div>
+          <div class="stat-card__label">Absents</div>
+        </div>
+      `;
+
+      document.getElementById('guests-summary').textContent =
+        confirmedPersons === 0
+          ? 'Aucune personne confirmée pour le moment.'
+          : `${confirmedPersons} personne${confirmedPersons > 1 ? 's' : ''} confirmée${confirmedPersons > 1 ? 's' : ''} au total (comptage exact pour le traiteur et la salle).`;
+
+      document.getElementById('guests-body').innerHTML = allConfirmedGuests.length === 0
+        ? '<tr><td colspan="7" style="text-align:center;opacity:0.5;padding:2rem">Aucun invité confirmé</td></tr>'
+        : allConfirmedGuests.map((guest) => `
+          <tr>
+            <td>${new Date(guest.submittedAt).toLocaleDateString('fr-FR')}</td>
+            <td>${escapeHtml(guest.fullName)}</td>
+            <td>${guest.role === 'main' ? 'Principal' : 'Accompagnant'}</td>
+            <td>${guest.role === 'main' ? '—' : escapeHtml(guest.relationshipLabel || '—')}</td>
+            <td>${escapeHtml(guest.contactName)}</td>
+            <td>${escapeHtml(guest.contactPhone || '—')}</td>
+            <td>${escapeHtml(guest.dietary || '—')}</td>
+          </tr>
+        `).reverse().join('');
+
+      document.getElementById('rsvp-body').innerHTML = rsvps.length === 0
+        ? '<tr><td colspan="12" style="text-align:center;opacity:0.5;padding:2rem">Aucune réponse pour le moment</td></tr>'
+        : rsvps.map((r) => `
+          <tr>
+            <td>${new Date(r.submittedAt).toLocaleDateString('fr-FR')}</td>
+            <td>${escapeHtml(r.firstName)} ${escapeHtml(r.lastName)}</td>
+            <td>${escapeHtml(r.countryOfResidenceName || r.countryOfResidence || '—')}</td>
+            <td>${escapeHtml(r.fullPhone || `${r.phoneCountryCode || ''}${r.phoneNumber || ''}` || '—')}</td>
+            <td>${escapeHtml(r.email || '—')}</td>
+            <td><span class="badge badge--${r.attendance}">${r.attendance === 'yes' ? 'Oui' : 'Non'}</span></td>
+            <td>${r.attendance === 'yes' ? (r.confirmedCount ?? r.guests) : '—'}</td>
+            <td>${formatGuestList(r.guestList)}</td>
+            <td>${formatAdditionalGuests(r.additionalGuests)}</td>
+            <td>${escapeHtml(r.dietary || '—')}</td>
+            <td>${escapeHtml(r.message || '—')}</td>
+            <td>${r.lang === 'fr' ? 'FR' : 'EN'}</td>
+          </tr>
+        `).reverse().join('');
+
+      const passwordQuery = `password=${encodeURIComponent(currentPassword)}`;
+      const apiBase = getAdminApiBase() || '';
+      document.getElementById('export-btn').href = `${apiBase}/api/export?${passwordQuery}`;
+      document.getElementById('export-guests-btn').href = `${apiBase}/api/export-guests?${passwordQuery}`;
+      document.getElementById('export-guests-pdf-btn').href = `${apiBase}/api/export-guests-pdf?${passwordQuery}`;
+    }
+  </script>
+  <script src="js/config.js"></script>
+  <script src="js/help.js"></script>
+  <script>initHelp('fr');</script>
+</body>
+</html>

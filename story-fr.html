@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Notre Histoire — Yannick & Dora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="story-page-body">
+
+  <div class="story-editorial">
+    <header class="story-editorial__hero">
+      <img class="story-editorial__hero-img" id="story-hero-img" src="assets/mariage1.png" alt="">
+      <a href="fr.html#invitation" class="story-editorial__details-link" id="story-details-link">Cliquez ici</a>
+    </header>
+
+    <section class="story-editorial__content">
+      <div class="story-editorial__layout">
+        <div class="story-strip" aria-label="Photos du couple">
+          <div class="story-strip__inner" id="story-strip"></div>
+        </div>
+
+        <article class="story-editorial__article">
+          <h1 class="story-editorial__title">
+            <span class="story-editorial__title-our" id="story-title-our">Notre</span>
+            <span class="story-editorial__title-love" id="story-title-love">Histoire</span>
+            <span class="story-editorial__title-story" id="story-title-story">d'amour</span>
+          </h1>
+          <div class="story-editorial__prose" id="story-text"></div>
+        </article>
+      </div>
+
+      <a href="fr.html" class="back-link back-link--prominent story-editorial__back" data-story-back>← Retour à l'invitation</a>
+    </section>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/story-content.js"></script>
+  <script src="js/story.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/help.js"></script>
+  <script>
+    initOurStory('fr');
+    initFaq('fr');
+    initHelp('fr');
+    document.title = `Notre Histoire — ${getCoupleNames()}`;
+  </script>
+</body>
+</html>
