@@ -1763,18 +1763,23 @@ html:has(body.landing-page-body) {
   background-color: var(--story-cream);
   min-height: 100%;
   min-height: 100dvh;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .landing-page-body {
   background: var(--story-cream);
   color: var(--story-burgundy);
   overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: visible;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
+  height: auto;
   margin: 0;
+  position: relative;
+  touch-action: pan-y pinch-zoom;
 }
 
 .landing-page-body .faq-widget__btn,
@@ -1794,10 +1799,9 @@ html:has(body.landing-page-body) {
   min-height: 100dvh;
   padding: 0;
   text-align: center;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: visible;
   background-color: var(--story-cream);
-  touch-action: pan-y;
+  touch-action: pan-y pinch-zoom;
 }
 
 .landing__bg {
@@ -1824,6 +1828,7 @@ html:has(body.landing-page-body) {
 .landing__bg-overlay {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: linear-gradient(
     to bottom,
     rgba(249, 245, 240, 0.25) 0%,
@@ -3542,6 +3547,34 @@ html:has(body.landing-page-body) {
     padding: 0 0.25rem;
   }
 
+  html:has(body.landing-page-body),
+  body.landing-page-body {
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.landing-page-body .landing {
+    display: block;
+    min-height: 100dvh;
+    height: auto;
+    overflow: visible;
+  }
+
+  body.landing-page-body .landing__content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body.landing-page-body .landing__bg,
+  body.landing-page-body .landing__gold-glow,
+  body.landing-page-body .landing__flowers,
+  body.landing-page-body .landing__corner {
+    pointer-events: none;
+  }
+
   .landing__bg-overlay {
     background: linear-gradient(
       to bottom,
@@ -3593,7 +3626,7 @@ html:has(body.landing-page-body) {
     max-width: 100%;
     gap: 0.15rem;
     padding-top: max(3rem, calc(env(safe-area-inset-top, 0px) + 2.25rem));
-    padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+    padding-bottom: max(2.75rem, calc(env(safe-area-inset-bottom, 0px) + 2.25rem));
     padding-left: max(0.65rem, env(safe-area-inset-left, 0px));
     padding-right: max(0.65rem, env(safe-area-inset-right, 0px));
   }
