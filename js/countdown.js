@@ -152,7 +152,9 @@ function initSaveTheDate(lang) {
 
   initSaveTheDateHeroImage(isFr);
 
-  initCountdown(lang);
+  if (document.getElementById('cd-days')) {
+    initCountdown(lang);
+  }
 }
 
 function initSaveTheDateHeroImage(isFr) {

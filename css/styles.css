@@ -422,6 +422,7 @@ body--invitation {
   background-color: var(--story-cream);
   display: block;
   padding: clamp(1.25rem, 4vw, 2rem) 0 0;
+  overflow: visible;
 }
 
 .std-decor__gold-glow {
@@ -469,7 +470,7 @@ body--invitation {
 
 .std-decor__corner--br {
   right: clamp(0.45rem, 1.8vw, 0.75rem);
-  bottom: clamp(8rem, 22vw, 11rem);
+  bottom: clamp(0.35rem, 2vw, 0.75rem);
 }
 
 .std-decor__corner--br::before {
@@ -511,9 +512,10 @@ body--invitation {
 
 .std-decor__flowers--left {
   left: 0;
-  bottom: clamp(7rem, 20vw, 10rem);
+  bottom: 0;
   width: clamp(260px, 58vw, 560px);
-  transform: translate(-12%, 6%);
+  transform: translate(-10%, 42%);
+  z-index: 8;
 }
 
 .std-editorial {
@@ -522,7 +524,7 @@ body--invitation {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: clamp(0.5rem, 3vw, 1rem) clamp(0.65rem, 3vw, 1rem) clamp(1.25rem, 4vw, 2rem);
+  padding: clamp(0.5rem, 3vw, 1rem) clamp(0.65rem, 3vw, 1rem) clamp(0.5rem, 2vw, 0.85rem);
   text-align: center;
   overflow: visible;
 }
@@ -667,9 +669,10 @@ body--invitation {
   pointer-events: none;
 }
 
-.std-editorial__countdown {
+.std-editorial__closing {
   position: relative;
   z-index: 2;
+  margin-top: clamp(0.75rem, 3vw, 1.25rem);
 }
 
 .std-editorial__divider {
@@ -691,7 +694,7 @@ body--invitation {
   font-style: italic;
   color: rgba(58, 32, 16, 0.88);
   max-width: 34ch;
-  margin: clamp(1.25rem, 4vw, 1.75rem) auto 0.75rem;
+  margin: 0 auto 0.75rem;
 }
 
 .std-editorial__thanks {
@@ -703,10 +706,10 @@ body--invitation {
 
 .std-editorial__footer {
   position: relative;
-  z-index: 6;
+  z-index: 5;
   background: var(--burgundy);
   padding: clamp(2.5rem, 8vw, 3.5rem) clamp(0.75rem, 3vw, 1.25rem) clamp(2rem, 6vw, 3rem);
-  margin-top: clamp(0.5rem, 2vw, 1rem);
+  margin-top: 0;
 }
 
 .std-editorial__curve {
@@ -844,8 +847,8 @@ body--invitation {
 
   .std-decor__flowers--left {
     width: clamp(150px, 40vw, 240px);
-    transform: translate(-10%, 6%);
-    bottom: clamp(4.5rem, 13vw, 7rem);
+    transform: translate(-8%, 38%);
+    bottom: 0;
   }
 
   .std-editorial__header {
@@ -871,43 +874,6 @@ body--invitation {
 
   .std-carousel__slide img {
     object-position: center 22%;
-  }
-
-  .save-the-date--editorial .deadline-countdown {
-    margin: 0.85rem auto 1.15rem;
-    padding: 1.15rem 0.85rem 1.35rem;
-  }
-
-  .save-the-date--editorial .deadline-countdown__title {
-    letter-spacing: 0.1em;
-    line-height: 1.4;
-    padding: 0 0.25rem;
-    margin-bottom: 0.65rem;
-  }
-
-  .save-the-date--editorial .deadline-countdown__timer {
-    gap: 0.2rem;
-    padding: 0 0.15rem;
-  }
-
-  .save-the-date--editorial .deadline-countdown__timer .countdown__item {
-    min-width: 0;
-    flex: 1 1 0;
-    max-width: 4.25rem;
-  }
-
-  .save-the-date--editorial .deadline-countdown__timer .countdown__number {
-    font-size: clamp(1.55rem, 6.5vw, 2rem);
-  }
-
-  .save-the-date--editorial .deadline-countdown__timer .countdown__label {
-    font-size: clamp(0.5rem, 2.2vw, 0.62rem);
-    letter-spacing: 0.08em;
-  }
-
-  .save-the-date--editorial .deadline-countdown__timer .countdown__sep {
-    font-size: clamp(1.15rem, 4.5vw, 1.5rem);
-    margin-bottom: 0.75rem;
   }
 
   .std-editorial__message {
@@ -2101,13 +2067,51 @@ html:has(body.landing-page-body) {
   width: clamp(240px, 58vw, 320px);
   margin: clamp(0.5rem, 2vw, 1rem) auto clamp(1.75rem, 4.5vw, 2.5rem);
   line-height: 0;
+  isolation: isolate;
+  filter:
+    drop-shadow(0 6px 14px rgba(91, 22, 27, 0.14))
+    drop-shadow(0 18px 32px rgba(91, 22, 27, 0.2))
+    drop-shadow(0 32px 52px rgba(91, 22, 27, 0.16));
+}
+
+.landing__envelope-wrap::before {
+  content: '';
+  position: absolute;
+  left: -14%;
+  right: -14%;
+  top: 10%;
+  bottom: -18%;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 72% 62% at 50% 52%,
+    rgba(91, 22, 27, 0.26) 0%,
+    rgba(91, 22, 27, 0.12) 42%,
+    transparent 72%
+  );
+}
+
+.landing__envelope-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(249, 245, 240, 0.95) 0%, rgba(249, 245, 240, 0.55) 8%, transparent 22%),
+    linear-gradient(to top, rgba(249, 245, 240, 0.95) 0%, rgba(249, 245, 240, 0.55) 8%, transparent 24%);
 }
 
 .landing__envelope-img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 14px 32px rgba(91, 22, 27, 0.18));
+  filter:
+    drop-shadow(0 2px 8px rgba(91, 22, 27, 0.12))
+    drop-shadow(0 12px 24px rgba(91, 22, 27, 0.18))
+    drop-shadow(0 24px 40px rgba(91, 22, 27, 0.1));
 }
 
 .landing__envelope-monogram {
@@ -2115,11 +2119,13 @@ html:has(body.landing-page-body) {
   top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 3;
   font-family: var(--font-script);
   font-size: clamp(1.65rem, 5.5vw, 2.25rem);
   color: var(--story-burgundy);
   line-height: 1;
   pointer-events: none;
+  text-shadow: 0 1px 8px rgba(249, 245, 240, 0.65);
 }
 
 /* Legacy envelope (unused on landing) */
@@ -3642,11 +3648,12 @@ html:has(body.landing-page-body) {
     margin: -0.35rem auto 1.35rem;
     z-index: 7;
     transform: translateY(-0.25rem);
-    filter: drop-shadow(0 22px 28px rgba(91, 22, 27, 0.2));
   }
 
-  .landing__envelope-img {
-    filter: drop-shadow(0 16px 32px rgba(91, 22, 27, 0.28));
+  .landing__envelope-wrap::after {
+    background:
+      linear-gradient(to bottom, rgba(249, 245, 240, 0.98) 0%, rgba(249, 245, 240, 0.6) 10%, transparent 26%),
+      linear-gradient(to top, rgba(249, 245, 240, 0.98) 0%, rgba(249, 245, 240, 0.6) 10%, transparent 28%);
   }
 
   .landing__envelope-monogram {
