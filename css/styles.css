@@ -1769,6 +1769,8 @@ html:has(body.landing-page-body) {
   background: var(--story-cream);
   color: var(--story-burgundy);
   overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
@@ -1793,29 +1795,30 @@ html:has(body.landing-page-body) {
   padding: 0;
   text-align: center;
   overflow-x: hidden;
+  overflow-y: visible;
   background-color: var(--story-cream);
+  touch-action: pan-y;
 }
 
 .landing__bg {
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
   overflow: hidden;
   background: var(--story-cream);
+  pointer-events: none;
 }
 
 .landing__bg-img {
   width: 100%;
   height: 100%;
+  min-height: 100%;
   object-fit: cover;
   object-position: center 22%;
   display: block;
   opacity: 0.38;
   filter: grayscale(100%) contrast(1.04) brightness(1.05);
+  pointer-events: none;
 }
 
 .landing__bg-overlay {
@@ -1831,13 +1834,9 @@ html:has(body.landing-page-body) {
 }
 
 .landing__gold-glow {
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: 1;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
   pointer-events: none;
   background: var(--gold-corner-glow);
 }
@@ -1939,6 +1938,7 @@ html:has(body.landing-page-body) {
   z-index: 4;
   width: 100%;
   max-width: 520px;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
