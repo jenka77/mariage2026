@@ -91,6 +91,8 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -98,16 +100,48 @@ body {
   color: var(--white);
   font-family: var(--font-serif);
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* Pas de scroll horizontal (accueil, invitation, RSVP — comme « Notre histoire ») */
+html:has(body.landing-page-body),
+html:has(body.body--invitation),
+html:has(body.rsvp-page-body),
+html:has(body.story-page-body) {
+  overflow-x: clip;
+  max-width: 100%;
+  overscroll-behavior-x: none;
+}
+
+html:has(body.landing-page-body),
+html:has(body.body--invitation),
+html:has(body.rsvp-page-body) {
+  touch-action: pan-y pinch-zoom;
+}
+
+body.landing-page-body,
+body.body--invitation,
+body.rsvp-page-body,
+body.story-page-body {
+  overflow-x: clip;
+  max-width: 100%;
+  overscroll-behavior-x: none;
+}
+
+body.landing-page-body,
+body.body--invitation,
+body.rsvp-page-body {
+  touch-action: pan-y pinch-zoom;
 }
 
 body--invitation {
   background-color: var(--story-cream);
-  overflow-x: hidden;
 }
 
 .save-the-date--editorial {
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* ── Save the Date Hero ── */
@@ -423,14 +457,17 @@ body--invitation {
   background-color: var(--story-cream);
   display: block;
   padding: 0;
-  overflow: visible;
+  overflow-x: clip;
+  overflow-y: visible;
   --std-flower-overlap: 10%;
 }
 
 .std-editorial-cream {
   position: relative;
   padding: clamp(1.25rem, 4vw, 2rem) 0 clamp(0.5rem, 2vw, 0.85rem);
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
+  max-width: 100%;
 }
 
 .std-editorial-cream__bg {
@@ -854,8 +891,8 @@ body--invitation {
 
 @media (min-width: 769px) {
   .std-editorial {
-    width: min(100vw, 520px);
-    max-width: min(100vw, 520px);
+    width: min(100%, 520px);
+    max-width: min(100%, 520px);
     padding: clamp(0.5rem, 3vw, 1rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 5vw, 2.5rem);
   }
 
@@ -1002,6 +1039,8 @@ body--invitation {
 /* ── Invitation content (below hero) ── */
 .invitation-content {
   background-color: var(--burgundy);
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 /* ── Our Story ── */
@@ -1130,6 +1169,8 @@ body--invitation {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 .story-editorial__hero {
@@ -1743,7 +1784,8 @@ body--invitation {
 /* ── RSVP Page ── */
 .rsvp-page-body {
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
 }
@@ -1850,7 +1892,8 @@ html:has(body.landing-page-body) {
   min-height: 100%;
   padding: 0;
   text-align: center;
-  overflow: visible;
+  overflow-x: clip;
+  overflow-y: visible;
   background-color: var(--story-cream);
 }
 
@@ -3612,7 +3655,8 @@ html:has(body.landing-page-body) {
     display: block;
     min-height: auto;
     height: auto;
-    overflow: visible;
+    overflow-x: clip;
+    overflow-y: visible;
   }
 
   body.landing-page-body .landing__content {
