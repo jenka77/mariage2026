@@ -512,9 +512,9 @@ body--invitation {
 
 .std-decor__flowers--left {
   left: 0;
-  bottom: clamp(5.5rem, 17vw, 9rem);
+  bottom: clamp(6.75rem, 20vw, 10.5rem);
   width: clamp(260px, 58vw, 560px);
-  transform: translate(-10%, 22%);
+  transform: translate(-10%, 9%);
   z-index: 8;
 }
 
@@ -847,8 +847,8 @@ body--invitation {
 
   .std-decor__flowers--left {
     width: clamp(150px, 40vw, 240px);
-    bottom: clamp(4.25rem, 13vw, 6.5rem);
-    transform: translate(-8%, 20%);
+    bottom: clamp(5.25rem, 15vw, 7.75rem);
+    transform: translate(-8%, 8%);
   }
 
   .std-editorial__header {
