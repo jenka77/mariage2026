@@ -423,6 +423,8 @@ body--invitation {
   display: block;
   padding: clamp(1.25rem, 4vw, 2rem) 0 0;
   overflow: visible;
+  --std-footer-estimate: clamp(8rem, 19vw, 11rem);
+  --std-flower-overlap: 10%;
 }
 
 .std-decor__gold-glow {
@@ -512,9 +514,9 @@ body--invitation {
 
 .std-decor__flowers--left {
   left: 0;
-  bottom: clamp(6.75rem, 20vw, 10.5rem);
+  bottom: var(--std-footer-estimate);
   width: clamp(260px, 58vw, 560px);
-  transform: translate(-10%, 9%);
+  transform: translate(-10%, var(--std-flower-overlap));
   z-index: 8;
 }
 
@@ -845,10 +847,20 @@ body--invitation {
     transform: translate(8%, -4%);
   }
 
-  .std-decor__flowers--left {
-    width: clamp(150px, 40vw, 240px);
-    bottom: clamp(5.25rem, 15vw, 7.75rem);
-    transform: translate(-8%, 8%);
+  .save-the-date--editorial {
+    --std-footer-estimate: calc(
+      2rem + clamp(50px, 13vw, 62px) + 0.65rem + 2.75rem + max(1.35rem, env(safe-area-inset-bottom, 0px))
+    );
+  }
+
+  .save-the-date--editorial .std-decor__flowers--left {
+    width: clamp(128px, 34vw, 200px);
+    bottom: var(--std-footer-estimate);
+    transform: translate(-5%, var(--std-flower-overlap));
+  }
+
+  .save-the-date--editorial .std-decor__flowers--left img {
+    max-height: min(30vh, 210px);
   }
 
   .std-editorial__header {
@@ -1759,27 +1771,26 @@ body--invitation {
 }
 
 /* ── Landing Page ── */
+html.landing-page-root,
 html:has(body.landing-page-body) {
   background-color: var(--story-cream);
   min-height: 100%;
-  min-height: 100dvh;
   height: auto;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow-x: clip;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .landing-page-body {
   background: var(--story-cream);
   color: var(--story-burgundy);
-  overflow-x: hidden;
+  overflow-x: clip;
   overflow-y: visible;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100%;
   height: auto;
   margin: 0;
   position: relative;
-  touch-action: pan-y pinch-zoom;
 }
 
 .landing-page-body .faq-widget__btn,
@@ -1795,13 +1806,11 @@ html:has(body.landing-page-body) {
   justify-content: flex-start;
   width: 100%;
   max-width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100%;
   padding: 0;
   text-align: center;
   overflow: visible;
   background-color: var(--story-cream);
-  touch-action: pan-y pinch-zoom;
 }
 
 .landing__bg {
@@ -3547,18 +3556,20 @@ html:has(body.landing-page-body) {
     padding: 0 0.25rem;
   }
 
+  html.landing-page-root,
   html:has(body.landing-page-body),
   body.landing-page-body {
     height: auto;
-    min-height: 100dvh;
-    overflow-x: hidden;
-    overflow-y: visible;
+    min-height: 100%;
+    overflow-x: clip;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    touch-action: auto;
   }
 
   body.landing-page-body .landing {
     display: block;
-    min-height: 100dvh;
+    min-height: auto;
     height: auto;
     overflow: visible;
   }
@@ -3566,13 +3577,23 @@ html:has(body.landing-page-body) {
   body.landing-page-body .landing__content {
     margin-left: auto;
     margin-right: auto;
+    min-height: calc(100svh + 5rem);
+    position: relative;
+    z-index: 5;
   }
 
   body.landing-page-body .landing__bg,
   body.landing-page-body .landing__gold-glow,
   body.landing-page-body .landing__flowers,
-  body.landing-page-body .landing__corner {
+  body.landing-page-body .landing__corner,
+  body.landing-page-body .landing__bg-overlay {
     pointer-events: none;
+  }
+
+  body.landing-page-body .landing__actions,
+  body.landing-page-body .landing__actions .lang-btn {
+    position: relative;
+    z-index: 6;
   }
 
   .landing__bg-overlay {
