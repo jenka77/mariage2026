@@ -162,12 +162,11 @@ function initSaveTheDateHeroImage(isFr) {
   const src =
     WEDDING_CONFIG.saveTheDateImage ||
     WEDDING_CONFIG.couplePhoto ||
-    'assets/initiales-yd.svg';
-  const monogram = WEDDING_CONFIG.monogram || getCoupleNames().replace(/\s*&\s*/g, '');
+    'assets/save-the-date-couple.png';
   img.src = src;
   img.alt = isFr
-    ? `Monogramme ${monogram}`
-    : `${monogram} monogram`;
+    ? `Illustration — ${getCoupleNames()}`
+    : `${getCoupleNames()} — illustration`;
 }
 
 function initStdFooterActions() {
