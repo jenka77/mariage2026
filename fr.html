@@ -39,28 +39,30 @@
         <div class="std-editorial__divider" aria-hidden="true">
           <img src="assets/landing-divider.png" alt="">
         </div>
-        <p class="std-editorial__countdown-title" id="countdown-title">Compte à rebours jusqu'à notre mariage</p>
-        <div class="countdown std-editorial__timer" id="countdown">
-          <div class="countdown__item">
-            <span class="countdown__number" id="cd-days">00</span>
-            <span class="countdown__label" id="cd-label-days">Jours</span>
+        <section class="deadline-countdown deadline-countdown--wedding" id="wedding-countdown" aria-live="polite">
+          <p class="deadline-countdown__title" id="countdown-title">Compte à rebours jusqu'à notre mariage</p>
+          <div class="countdown deadline-countdown__timer" id="countdown">
+            <div class="countdown__item">
+              <span class="countdown__number" id="cd-days">00</span>
+              <span class="countdown__label" id="cd-label-days">Jours</span>
+            </div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__item">
+              <span class="countdown__number" id="cd-hours">00</span>
+              <span class="countdown__label" id="cd-label-hours">Heures</span>
+            </div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__item">
+              <span class="countdown__number" id="cd-minutes">00</span>
+              <span class="countdown__label" id="cd-label-minutes">Minutes</span>
+            </div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__item">
+              <span class="countdown__number" id="cd-seconds">00</span>
+              <span class="countdown__label" id="cd-label-seconds">Secondes</span>
+            </div>
           </div>
-          <span class="countdown__sep">:</span>
-          <div class="countdown__item">
-            <span class="countdown__number" id="cd-hours">00</span>
-            <span class="countdown__label" id="cd-label-hours">Heures</span>
-          </div>
-          <span class="countdown__sep">:</span>
-          <div class="countdown__item">
-            <span class="countdown__number" id="cd-minutes">00</span>
-            <span class="countdown__label" id="cd-label-minutes">Minutes</span>
-          </div>
-          <span class="countdown__sep">:</span>
-          <div class="countdown__item">
-            <span class="countdown__number" id="cd-seconds">00</span>
-            <span class="countdown__label" id="cd-label-seconds">Secondes</span>
-          </div>
-        </div>
+        </section>
         <p class="std-editorial__message" id="std-message"></p>
         <p class="std-editorial__thanks" id="std-thanks"></p>
       </div>
@@ -150,7 +152,7 @@
         <p>Nous serions honorés de votre présence<br>pour célébrer ce jour si spécial.</p>
       </section>
 
-      <section class="deadline-countdown" id="reservation-deadline" aria-live="polite">
+      <section class="deadline-countdown deadline-countdown--page" id="reservation-deadline" aria-live="polite">
         <p class="deadline-countdown__title" id="rd-countdown-title">Temps restant pour confirmer votre réservation</p>
         <p class="deadline-countdown__date" id="rd-countdown-date">Date limite : 30 novembre 2026</p>
         <div class="countdown deadline-countdown__timer">

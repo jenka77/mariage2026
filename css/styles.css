@@ -318,26 +318,29 @@ body--invitation {
   padding: 0 0.15rem;
 }
 
-/* ── Reservation deadline countdown ── */
+/* ── Countdown boxes (RSVP, invitation, Save the Date) ── */
 .deadline-countdown {
   text-align: center;
   margin: 2.5rem auto 3rem;
-  padding: 2rem 1.25rem 2.25rem;
+  padding: clamp(1.35rem, 4vw, 2rem) clamp(1rem, 3.5vw, 1.5rem) clamp(1.5rem, 4.5vw, 2.25rem);
   max-width: 520px;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(201, 169, 110, 0.45);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-}
-
-.deadline-countdown--page {
-  margin-top: 0;
-  margin-bottom: 2.5rem;
+  width: calc(100% - 0.5rem);
   border-radius: clamp(18px, 4vw, 28px);
   border: 4px solid var(--gold);
   background: rgba(0, 0, 0, 0.38);
   box-shadow:
     0 10px 36px rgba(0, 0, 0, 0.28),
     inset 0 0 0 1px rgba(240, 221, 176, 0.15);
+  box-sizing: border-box;
+}
+
+.deadline-countdown--page {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+.deadline-countdown--wedding {
+  margin: 1rem auto clamp(1.25rem, 4vw, 1.75rem);
 }
 
 .deadline-countdown__title {
@@ -358,13 +361,42 @@ body--invitation {
   letter-spacing: 0.06em;
 }
 
+.deadline-countdown__timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  flex-wrap: nowrap;
+}
+
+.deadline-countdown__timer .countdown__item {
+  min-width: clamp(64px, 18vw, 88px);
+}
+
 .deadline-countdown__timer .countdown__number {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 8vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1;
   color: var(--white);
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .deadline-countdown__timer .countdown__label {
-  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.65rem, 2.2vw, 0.85rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+  margin-top: 0.4rem;
+}
+
+.deadline-countdown__timer .countdown__sep {
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 1.2rem;
+  padding: 0 0.15rem;
 }
 
 .save-the-date__scroll {
@@ -652,29 +684,6 @@ body--invitation {
   display: block;
 }
 
-.std-editorial__countdown-title {
-  font-family: 'Playfair Display', var(--font-serif);
-  font-size: clamp(0.62rem, 2.2vw, 0.78rem);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: var(--story-burgundy);
-  margin-bottom: 1rem;
-}
-
-.save-the-date--editorial .countdown__number {
-  color: var(--story-burgundy);
-  text-shadow: none;
-}
-
-.save-the-date--editorial .countdown__label {
-  color: rgba(91, 22, 27, 0.72);
-}
-
-.save-the-date--editorial .countdown__sep {
-  color: rgba(91, 22, 27, 0.42);
-}
-
 .std-editorial__message {
   font-family: var(--font-serif);
   font-size: clamp(0.95rem, 3.2vw, 1.12rem);
@@ -864,36 +873,40 @@ body--invitation {
     object-position: center 22%;
   }
 
-  .std-editorial__countdown-title {
-    font-size: clamp(0.55rem, 2.6vw, 0.68rem);
-    letter-spacing: 0.14em;
-    margin-bottom: 0.65rem;
-    padding: 0 0.35rem;
+  .save-the-date--editorial .deadline-countdown {
+    margin: 0.85rem auto 1.15rem;
+    padding: 1.15rem 0.85rem 1.35rem;
   }
 
-  .save-the-date--editorial .countdown {
+  .save-the-date--editorial .deadline-countdown__title {
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    padding: 0 0.25rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .save-the-date--editorial .deadline-countdown__timer {
     gap: 0.2rem;
-    flex-wrap: nowrap;
     padding: 0 0.15rem;
   }
 
-  .save-the-date--editorial .countdown__item {
+  .save-the-date--editorial .deadline-countdown__timer .countdown__item {
     min-width: 0;
     flex: 1 1 0;
-    max-width: 4.1rem;
+    max-width: 4.25rem;
   }
 
-  .save-the-date--editorial .countdown__number {
-    font-size: clamp(1.45rem, 6.2vw, 1.9rem);
+  .save-the-date--editorial .deadline-countdown__timer .countdown__number {
+    font-size: clamp(1.55rem, 6.5vw, 2rem);
   }
 
-  .save-the-date--editorial .countdown__label {
+  .save-the-date--editorial .deadline-countdown__timer .countdown__label {
     font-size: clamp(0.5rem, 2.2vw, 0.62rem);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
   }
 
-  .save-the-date--editorial .countdown__sep {
-    font-size: clamp(1.1rem, 4.5vw, 1.45rem);
+  .save-the-date--editorial .deadline-countdown__timer .countdown__sep {
+    font-size: clamp(1.15rem, 4.5vw, 1.5rem);
     margin-bottom: 0.75rem;
   }
 
@@ -1712,10 +1725,12 @@ body--invitation {
 .rsvp-page-body {
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .rsvp-decor {
-  position: fixed;
+  position: absolute;
   z-index: 0;
   pointer-events: none;
   line-height: 0;
@@ -1778,10 +1793,20 @@ body--invitation {
 }
 
 /* ── Landing Page ── */
+html:has(body.landing-page-body) {
+  background-color: var(--story-cream);
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
 .landing-page-body {
   background: var(--story-cream);
   color: var(--story-burgundy);
-  overflow-x: clip;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
 }
 
 .landing-page-body .faq-widget__btn,
@@ -1794,19 +1819,25 @@ body--invitation {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.75rem) clamp(2rem, 5vw, 3rem);
+  padding: 0;
   text-align: center;
-  overflow: visible;
+  overflow-x: hidden;
   background-color: var(--story-cream);
 }
 
 .landing__bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
   background: var(--story-cream);
 }
@@ -1834,9 +1865,13 @@ body--invitation {
 }
 
 .landing__gold-glow {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
   pointer-events: none;
   background: var(--gold-corner-glow);
 }
@@ -1936,11 +1971,17 @@ body--invitation {
 .landing__content {
   position: relative;
   z-index: 4;
-  width: min(100%, 520px);
+  width: 100%;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-inline: clamp(0.5rem, 3vw, 1rem);
+  box-sizing: border-box;
+  padding:
+    max(clamp(2rem, 5vh, 3.25rem), calc(env(safe-area-inset-top, 0px) + 1.5rem))
+    max(clamp(0.75rem, 2.5vw, 1.5rem), env(safe-area-inset-right, 0px))
+    max(clamp(1.75rem, 4vh, 3rem), env(safe-area-inset-bottom, 0px))
+    max(clamp(0.75rem, 2.5vw, 1.5rem), env(safe-area-inset-left, 0px));
 }
 
 .landing__save-the-date {
@@ -2414,37 +2455,7 @@ body--invitation {
 }
 
 .invitation-content .deadline-countdown {
-  max-width: min(100%, 540px);
   margin: clamp(0.85rem, 2.5vw, 1.25rem) auto clamp(1.25rem, 3.5vw, 2rem);
-  padding: clamp(1.25rem, 4vw, 1.75rem) clamp(1rem, 3.5vw, 1.5rem);
-}
-
-.invitation-content .deadline-countdown__title {
-  font-size: clamp(1.05rem, 3.6vw, 1.4rem);
-  letter-spacing: 0.16em;
-  margin-bottom: 0.5rem;
-}
-
-.invitation-content .deadline-countdown__date {
-  font-size: clamp(1.3rem, 4.2vw, 1.65rem);
-  margin-bottom: 0.85rem;
-}
-
-.invitation-content .deadline-countdown__timer .countdown__number {
-  font-size: clamp(2.6rem, 10vw, 3.8rem);
-}
-
-.invitation-content .deadline-countdown__timer .countdown__label {
-  font-size: clamp(0.78rem, 2.8vw, 1rem);
-}
-
-.invitation-content .deadline-countdown__timer .countdown__sep {
-  font-size: clamp(2rem, 6.5vw, 2.8rem);
-  margin-bottom: 1.1rem;
-}
-
-.invitation-content .deadline-countdown__timer .countdown__item {
-  min-width: clamp(76px, 21vw, 100px);
 }
 
 /* ── RSVP Form ── */
@@ -3525,11 +3536,6 @@ body--invitation {
     padding: 0 0.25rem;
   }
 
-  .landing {
-    justify-content: flex-start;
-    padding: max(3.25rem, calc(env(safe-area-inset-top, 0px) + 2.75rem)) 1rem max(2rem, env(safe-area-inset-bottom, 0px));
-  }
-
   .landing__bg-overlay {
     background: linear-gradient(
       to bottom,
@@ -3578,9 +3584,12 @@ body--invitation {
   }
 
   .landing__content {
-    width: min(100%, 440px);
-    margin-top: clamp(0.75rem, 4vh, 1.75rem);
+    max-width: 100%;
     gap: 0.15rem;
+    padding-top: max(3rem, calc(env(safe-area-inset-top, 0px) + 2.25rem));
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+    padding-left: max(0.65rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.65rem, env(safe-area-inset-right, 0px));
   }
 
   .landing__save-the-date {
