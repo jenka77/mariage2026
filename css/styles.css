@@ -999,15 +999,9 @@ body--invitation {
   }
 }
 
-@media (max-width: 768px) {
-  .std-editorial-cream {
-    padding-top: 0.65rem;
-    min-height: clamp(28rem, 78vh, 40rem);
-    padding-bottom: clamp(2.25rem, 9vw, 4rem);
-  }
-
+/* Fleurs page 2 — même placement portrait / paysage téléphone */
+@media (max-width: 768px), (max-width: 932px) and (max-height: 520px) and (pointer: coarse) {
   .save-the-date--editorial {
-    /* Hauteur réelle du pied de page mobile (alignement crème / bordeaux) */
     --std-footer-estimate: calc(
       2rem
       + clamp(50px, 13vw, 62px)
@@ -1018,7 +1012,9 @@ body--invitation {
     --std-flower-burgundy-overlap: 10%;
   }
 
-  .std-decor__flowers--right {
+  .save-the-date--editorial .std-decor__flowers--right {
+    top: 0;
+    right: 0;
     width: clamp(170px, 44vw, 280px);
     transform: translate(8%, -4%);
   }
@@ -1029,8 +1025,31 @@ body--invitation {
     transform: translate(-5%, var(--std-flower-burgundy-overlap));
   }
 
-  .save-the-date--editorial .std-decor__flowers--left img {
+  .save-the-date--editorial .std-decor__flowers img {
     max-height: min(30vh, 210px);
+  }
+
+  .save-the-date--editorial .std-editorial__footer {
+    padding: 2rem 0.5rem max(1.35rem, env(safe-area-inset-bottom, 0px));
+  }
+
+  .save-the-date--editorial .std-editorial__actions {
+    gap: 0.3rem;
+    max-width: 100%;
+    padding: 0 0.15rem;
+  }
+
+  .save-the-date--editorial .std-action__icon {
+    width: clamp(50px, 13vw, 62px);
+    height: clamp(50px, 13vw, 62px);
+  }
+}
+
+@media (max-width: 768px) {
+  .std-editorial-cream {
+    padding-top: 0.65rem;
+    min-height: clamp(28rem, 78vh, 40rem);
+    padding-bottom: clamp(2.25rem, 9vw, 4rem);
   }
 
   .std-editorial__header {
