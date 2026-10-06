@@ -164,7 +164,7 @@ function initSaveTheDateHeroImage(isFr) {
   const src =
     WEDDING_CONFIG.saveTheDateImage ||
     WEDDING_CONFIG.couplePhoto ||
-    'assets/save-the-date-couple.png';
+    'assets/save-the-date-gemini.jpg';
   img.src = src;
   img.alt = isFr
     ? `Illustration — ${getCoupleNames()}`

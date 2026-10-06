@@ -27,7 +27,7 @@ const WEDDING_CONFIG = {
   receptionPhoto: 'assets/buffet.png',
 
   // Image sous les prénoms (fr.html / en.html) — remplacez par votre PNG/JPG si besoin
-  saveTheDateImage: 'assets/save-the-date-couple.png',
+  saveTheDateImage: 'assets/save-the-date-gemini.jpg',
 
   // false = image complète (placeholder actuel) | true = photo seule + cœur en overlay
   overlayDesign: false,
