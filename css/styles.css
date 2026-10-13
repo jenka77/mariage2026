@@ -500,43 +500,6 @@ body--invitation {
   background-image: none;
 }
 
-.std-editorial__drape {
-  position: absolute;
-  top: -2%;
-  left: -8%;
-  width: min(78%, 420px);
-  height: clamp(7rem, 28vw, 11rem);
-  z-index: 2;
-  pointer-events: none;
-  background: linear-gradient(
-    128deg,
-    rgba(255, 252, 247, 0.95) 0%,
-    rgba(245, 235, 220, 0.88) 45%,
-    rgba(235, 220, 200, 0.35) 100%
-  );
-  transform: rotate(-8deg);
-  box-shadow: 8px 12px 28px rgba(91, 22, 27, 0.06);
-  border-radius: 2px;
-  opacity: 0.92;
-}
-
-.std-editorial__seal {
-  position: absolute;
-  top: clamp(0.35rem, 2vw, 0.85rem);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 7;
-  width: clamp(52px, 14vw, 72px);
-  pointer-events: none;
-  filter: drop-shadow(0 4px 10px rgba(91, 22, 27, 0.18));
-}
-
-.std-editorial__seal img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* ── Save the Date — Editorial layout (page 2 mockup) ── */
 .save-the-date--editorial {
   position: relative;
@@ -546,9 +509,7 @@ body--invitation {
   padding: 0;
   overflow-x: clip;
   overflow-y: visible;
-  --std-footer-estimate: clamp(8rem, 19vw, 11rem);
-  /* Décalage vers le bas = ~1/10 de la hauteur des fleurs sur le bordeaux */
-  --std-flower-burgundy-overlap: 10%;
+  --std-bottom-frame: clamp(0.35rem, 2vw, 0.75rem);
 }
 
 .std-editorial-cream {
@@ -559,7 +520,7 @@ body--invitation {
   padding:
     clamp(1.25rem, 4vw, 2rem)
     0
-    clamp(2.75rem, 10vw, 5rem);
+    clamp(0.5rem, 2vw, 1rem);
   overflow-x: clip;
   overflow-y: visible;
   max-width: 100%;
@@ -621,7 +582,7 @@ body--invitation {
 
 .std-decor__corner--br {
   right: clamp(0.45rem, 1.8vw, 0.75rem);
-  bottom: clamp(0.35rem, 2vw, 0.75rem);
+  bottom: var(--std-bottom-frame);
 }
 
 .std-decor__corner--br::before {
@@ -667,9 +628,21 @@ body--invitation {
   z-index: 8;
 }
 
-.save-the-date--editorial > .std-decor__flowers--left {
-  bottom: var(--std-footer-estimate);
-  transform: translate(-10%, var(--std-flower-burgundy-overlap));
+.save-the-date--editorial .std-decor__flowers--bottom {
+  top: auto;
+  bottom: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.save-the-date--editorial .std-decor__flowers--bottom.std-decor__flowers--left {
+  width: clamp(200px, 48vw, 420px);
+  transform: translate(-12%, 18%);
+}
+
+.save-the-date--editorial .std-decor__flowers--bottom.std-decor__flowers--right {
+  width: clamp(220px, 52vw, 480px);
+  transform: translate(14%, 12%);
 }
 
 .std-editorial {
@@ -697,9 +670,9 @@ body--invitation {
   max-width: min(94%, 36rem);
   margin-inline: auto;
   padding:
-    clamp(3.25rem, 11vw, 4.75rem)
+    clamp(1.25rem, 5vw, 2rem)
     clamp(0.85rem, 4vw, 1.75rem)
-    clamp(1.5rem, 6vw, 3rem);
+    clamp(1rem, 4vw, 1.75rem);
 }
 
 .save-the-date--editorial .std-editorial__header {
@@ -940,6 +913,47 @@ body--invitation {
   margin-top: 0;
 }
 
+.save-the-date--editorial .std-editorial__actions--on-cream {
+  position: relative;
+  z-index: 7;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: min(100%, 640px);
+  margin:
+    clamp(0.5rem, 2vw, 1rem)
+    auto
+    clamp(6.5rem, 22vw, 9.5rem);
+  padding: 0 clamp(0.75rem, 3vw, 1.25rem);
+}
+
+.save-the-date--editorial .std-editorial__actions--on-cream .std-action__label {
+  color: var(--story-burgundy);
+  text-shadow: none;
+  font-weight: 500;
+}
+
+.save-the-date--editorial .std-editorial__actions--on-cream .std-action__icon {
+  border-color: var(--gold);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 252, 247, 0.92),
+    rgba(249, 241, 231, 0.75)
+  );
+  color: var(--story-burgundy);
+  box-shadow:
+    0 0 12px rgba(201, 169, 110, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.save-the-date--editorial .std-editorial__actions--on-cream .std-action:hover .std-action__icon,
+.save-the-date--editorial .std-editorial__actions--on-cream .std-action:focus-visible .std-action__icon {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(245, 230, 210, 0.88)
+  );
+}
+
 .std-editorial__curve {
   position: absolute;
   top: -1px;
@@ -1086,47 +1100,29 @@ body--invitation {
   }
 }
 
-/* Fleurs page 2 — même placement portrait / paysage téléphone */
+/* Fleurs page 2 — bas du billet (portrait / paysage téléphone) */
 @media (max-width: 768px), (max-width: 932px) and (max-height: 520px) and (pointer: coarse) {
-  .save-the-date--editorial {
-    --std-footer-estimate: calc(
-      2rem
-      + clamp(50px, 13vw, 62px)
-      + 0.65rem
-      + clamp(1.55rem, 5.5vw, 2.1rem)
-      + max(1.35rem, env(safe-area-inset-bottom, 0px))
-    );
-    --std-flower-burgundy-overlap: 10%;
+  .save-the-date--editorial .std-decor__flowers--bottom.std-decor__flowers--left {
+    width: clamp(128px, 36vw, 200px);
+    transform: translate(-6%, 14%);
   }
 
-  .save-the-date--editorial .std-decor__flowers--right {
-    top: 0;
-    right: 0;
-    width: clamp(170px, 44vw, 280px);
-    transform: translate(8%, -4%);
+  .save-the-date--editorial .std-decor__flowers--bottom.std-decor__flowers--right {
+    width: clamp(140px, 38vw, 220px);
+    transform: translate(10%, 10%);
   }
 
-  .save-the-date--editorial > .std-decor__flowers--left {
-    width: clamp(128px, 34vw, 200px);
-    bottom: calc(var(--std-footer-estimate) - clamp(0.5rem, 2.5vw, 0.85rem));
-    transform: translate(-5%, var(--std-flower-burgundy-overlap));
+  .save-the-date--editorial .std-decor__flowers--bottom img {
+    max-height: min(28vh, 200px);
   }
 
-  .save-the-date--editorial .std-decor__flowers img {
-    max-height: min(30vh, 210px);
-  }
-
-  .save-the-date--editorial .std-editorial__footer {
-    padding: 2rem 0.5rem max(1.35rem, env(safe-area-inset-bottom, 0px));
-  }
-
-  .save-the-date--editorial .std-editorial__actions {
+  .save-the-date--editorial .std-editorial__actions--on-cream {
     gap: 0.3rem;
-    max-width: 100%;
+    margin-bottom: clamp(5.75rem, 20vw, 8.5rem);
     padding: 0 0.15rem;
   }
 
-  .save-the-date--editorial .std-action__icon {
+  .save-the-date--editorial .std-editorial__actions--on-cream .std-action__icon {
     width: clamp(50px, 13vw, 62px);
     height: clamp(50px, 13vw, 62px);
   }
