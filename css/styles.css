@@ -1316,6 +1316,7 @@ body.body--invitation {
 .invitation-content--billet .dress-code__illustration {
   mix-blend-mode: normal;
   opacity: 1;
+  filter: sepia(0.85) saturate(2.4) hue-rotate(358deg) brightness(1.08) contrast(1.02);
 }
 
 .invitation-content--billet .dress-code__lead,
@@ -1923,8 +1924,9 @@ body.body--invitation {
   width: clamp(220px, 62vw, 340px);
   height: auto;
   margin: 0 auto 1.5rem;
-  mix-blend-mode: screen;
-  opacity: 0.95;
+  mix-blend-mode: normal;
+  opacity: 1;
+  filter: sepia(0.85) saturate(2.4) hue-rotate(358deg) brightness(1.08) contrast(1.02);
 }
 
 .dress-code__icons {

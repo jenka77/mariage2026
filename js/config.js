@@ -5,14 +5,14 @@ const WEDDING_CONFIG = {
   monogram: 'YD',
 
   // Date du mariage (pour le décompte — format ISO)
-  weddingDateISO: '2026-12-19T15:00:00',
+  weddingDateISO: '2026-12-19T14:30:00',
 
   date: 'Saturday, December 19, 2026',
   dateShort: '19 DEC 2026',
   dateFr: 'Samedi 19 décembre 2026',
   dateShortFr: '19 DÉC. 2026',
   landingDate: '19 décembre 2026',
-  time: '3:00 PM',
+  time: '2:30 PM',
 
   venue: 'EEC Paroisse de Biyem-Assi, RFJJ+Q9V, Yaoundé, Cameroon',
   venueFr: 'EEC Paroisse de Biyem-Assi, RFJJ+Q9V, Yaoundé, Cameroun',
@@ -61,6 +61,8 @@ const WEDDING_CONFIG = {
     mapsUrl: 'https://maps.app.goo.gl/NB83KsPmr6NNLumJA',
     mapsLabelEn: 'Open in Google Maps',
     mapsLabelFr: 'Voir sur Google Maps',
+    time: '2:30 PM',
+    timeFr: '14h30',
   },
 
   reception: {
@@ -75,9 +77,9 @@ const WEDDING_CONFIG = {
     timeFr: '18h00',
   },
 
-  rsvpDeadline: 'November 30, 2026',
-  rsvpDeadlineFr: '30 novembre 2026',
-  rsvpDeadlineISO: '2026-11-30T23:59:59',
+  rsvpDeadline: 'November 20, 2026',
+  rsvpDeadlineFr: '20 novembre 2026',
+  rsvpDeadlineISO: '2026-11-20T23:59:59',
 
   // Page « Notre Histoire » — image hero + bande de photos
   storyHero: 'assets/mariage1.png',
