@@ -2514,10 +2514,21 @@ html:has(body.landing-page-body) {
   align-items: center;
   box-sizing: border-box;
   padding:
-    max(clamp(2rem, 5vh, 3.25rem), calc(env(safe-area-inset-top, 0px) + 1.5rem))
+    max(clamp(3.25rem, 11vh, 5rem), calc(env(safe-area-inset-top, 0px) + 2.75rem))
     max(clamp(0.75rem, 2.5vw, 1.5rem), env(safe-area-inset-right, 0px))
     max(clamp(1.75rem, 4vh, 3rem), env(safe-area-inset-bottom, 0px))
     max(clamp(0.75rem, 2.5vw, 1.5rem), env(safe-area-inset-left, 0px));
+}
+
+.landing__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.landing__intro .landing__date-group {
+  margin-bottom: 0;
 }
 
 .landing__save-the-date {
@@ -2557,7 +2568,7 @@ html:has(body.landing-page-body) {
   font-weight: 400;
   letter-spacing: 0.38em;
   text-transform: uppercase;
-  margin-bottom: clamp(0.85rem, 2.5vw, 1.25rem);
+  margin-bottom: clamp(0.45rem, 1.6vw, 0.75rem);
   color: var(--story-burgundy);
 }
 
@@ -2565,7 +2576,7 @@ html:has(body.landing-page-body) {
   font-family: var(--font-script);
   font-size: clamp(3.2rem, 13vw, 6rem);
   line-height: 1.05;
-  margin-bottom: clamp(0.35rem, 1.2vw, 0.55rem);
+  margin-bottom: clamp(0.15rem, 0.8vw, 0.35rem);
   position: relative;
   color: var(--story-burgundy);
 }
@@ -2586,7 +2597,7 @@ html:has(body.landing-page-body) {
 
 .landing__rings {
   width: clamp(110px, 28vw, 165px);
-  margin: 0 auto clamp(0.55rem, 1.8vw, 0.85rem);
+  margin: clamp(0.15rem, 1vw, 0.35rem) auto clamp(0.1rem, 0.6vw, 0.25rem);
   line-height: 0;
 }
 
@@ -2601,7 +2612,8 @@ html:has(body.landing-page-body) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4cm;
+  gap: clamp(0.15rem, 1.2vw, 0.35rem);
+  margin-top: 0;
   margin-bottom: clamp(1.15rem, 3vw, 1.55rem);
 }
 
@@ -3873,6 +3885,64 @@ html:has(body.landing-page-body) {
   overflow-wrap: anywhere;
 }
 
+.faq-widget__list .faq-item__question,
+.faq-widget__list .faq-item__answer {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+body.body--invitation .faq-widget__panel,
+body.rsvp-page-body .faq-widget__panel,
+body.landing-page-body .faq-widget__panel,
+body.story-page-body .faq-widget__panel {
+  background: rgba(255, 252, 247, 0.97);
+  border: 2px solid var(--gold);
+  box-shadow:
+    0 10px 36px rgba(91, 22, 27, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+}
+
+body.body--invitation .faq-widget__title,
+body.rsvp-page-body .faq-widget__title,
+body.landing-page-body .faq-widget__title,
+body.story-page-body .faq-widget__title {
+  color: var(--story-burgundy);
+  border-bottom-color: rgba(201, 169, 110, 0.35);
+}
+
+body.body--invitation .faq-widget__list,
+body.rsvp-page-body .faq-widget__list,
+body.landing-page-body .faq-widget__list,
+body.story-page-body .faq-widget__list {
+  scrollbar-color: rgba(201, 169, 110, 0.6) rgba(91, 22, 27, 0.06);
+}
+
+body.body--invitation .faq-widget__list::-webkit-scrollbar-track,
+body.rsvp-page-body .faq-widget__list::-webkit-scrollbar-track,
+body.landing-page-body .faq-widget__list::-webkit-scrollbar-track,
+body.story-page-body .faq-widget__list::-webkit-scrollbar-track {
+  background: rgba(91, 22, 27, 0.06);
+}
+
+body.body--invitation .faq-widget__list .faq-item,
+body.rsvp-page-body .faq-widget__list .faq-item,
+body.landing-page-body .faq-widget__list .faq-item,
+body.story-page-body .faq-widget__list .faq-item {
+  background: rgba(255, 252, 247, 0.88);
+  border-color: rgba(201, 169, 110, 0.42);
+}
+
+body.body--invitation .faq-widget__list .faq-item__question,
+body.body--invitation .faq-widget__list .faq-item__answer,
+body.rsvp-page-body .faq-widget__list .faq-item__question,
+body.rsvp-page-body .faq-widget__list .faq-item__answer,
+body.landing-page-body .faq-widget__list .faq-item__question,
+body.landing-page-body .faq-widget__list .faq-item__answer,
+body.story-page-body .faq-widget__list .faq-item__question,
+body.story-page-body .faq-widget__list .faq-item__answer {
+  color: var(--story-burgundy);
+  opacity: 1;
+}
+
 @media (max-width: 480px) {
   .faq-widget {
     bottom: max(1rem, env(safe-area-inset-bottom, 0px));
@@ -4184,7 +4254,7 @@ html:has(body.landing-page-body) {
   body.landing-page-body .landing__content {
     margin-left: auto;
     margin-right: auto;
-    min-height: calc(100svh + 5rem);
+    min-height: auto;
     position: relative;
     z-index: 5;
   }
@@ -4240,6 +4310,7 @@ html:has(body.landing-page-body) {
 
   .landing__rings {
     width: clamp(96px, 30vw, 140px);
+    margin: 0.2rem auto 0.1rem;
   }
 
   .landing__flowers img {
@@ -4247,13 +4318,14 @@ html:has(body.landing-page-body) {
   }
 
   .landing__date-group {
-    gap: min(0.5cm, 0.3rem);
+    gap: 0.2rem;
+    margin-bottom: 0.5rem;
   }
 
   .landing__content {
     max-width: 100%;
     gap: 0.15rem;
-    padding-top: max(3rem, calc(env(safe-area-inset-top, 0px) + 2.25rem));
+    padding-top: max(4.25rem, calc(env(safe-area-inset-top, 0px) + 3.5rem));
     padding-bottom: max(2.75rem, calc(env(safe-area-inset-bottom, 0px) + 2.25rem));
     padding-left: max(0.65rem, env(safe-area-inset-left, 0px));
     padding-right: max(0.65rem, env(safe-area-inset-right, 0px));
@@ -4288,20 +4360,16 @@ html:has(body.landing-page-body) {
     font-size: clamp(0.88rem, 3.4vw, 1.05rem);
     letter-spacing: 0.3em;
     line-height: 1.55;
-    margin-bottom: 1.1rem;
+    margin-bottom: 0.55rem;
   }
 
   .landing__names {
     font-size: clamp(3rem, 14vw, 4.75rem);
-    margin-bottom: 1.35rem;
+    margin-bottom: 0.25rem;
   }
 
   .landing__names .name-line--second {
     padding-left: 1rem;
-  }
-
-  .landing__date-group {
-    margin-bottom: 0.65rem;
   }
 
   .landing__envelope-wrap {
