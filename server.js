@@ -200,7 +200,7 @@ function buildGuestsPdfBuffer(allConfirmedGuests, confirmedPersons) {
     const pageBottom = doc.page.height - 40;
 
     function drawPageHeader() {
-      doc.font('Bold').fontSize(18).fillColor('#5a3824')
+      doc.font('Bold').fontSize(18).fillColor('#5b161b')
         .text('Liste des invités confirmés', { align: 'center' });
       doc.moveDown(0.35);
       doc.font('Regular').fontSize(11).fillColor('#333333')
@@ -216,7 +216,7 @@ function buildGuestsPdfBuffer(allConfirmedGuests, confirmedPersons) {
 
     function drawTableHeader(y) {
       let x = 40;
-      doc.font('Bold').fontSize(8).fillColor('#5a3824');
+      doc.font('Bold').fontSize(8).fillColor('#5b161b');
       columns.forEach((col) => {
         doc.text(col.label, x, y, { width: col.width, lineBreak: false });
         x += col.width;

@@ -18,9 +18,22 @@ function initDressCode(lang) {
   setText('dc-tip', dc.tipEn, dc.tipFr);
 
   const colorsEl = document.getElementById('dc-colors');
+  const swatches = dc.colorSwatches?.length ? dc.colorSwatches : (dc.colors || []).map((hex) => ({ hex }));
+
   if (colorsEl) {
-    colorsEl.innerHTML = dc.colors
-      .map((color) => `<span class="dress-code__swatch" style="background-color:${color}"></span>`)
+    colorsEl.innerHTML = swatches
+      .map((item) => {
+        const hex = item.hex || item;
+        const label = isFr ? item.nameFr : item.nameEn;
+        const title = label ? `${label} (${hex})` : hex;
+        const caption = label
+          ? `<span class="dress-code__swatch-label">${label}</span>`
+          : '';
+        return `<div class="dress-code__swatch-wrap">
+          <span class="dress-code__swatch" style="background-color:${hex}" title="${title}" aria-label="${title}"></span>
+          ${caption}
+        </div>`;
+      })
       .join('');
   }
 

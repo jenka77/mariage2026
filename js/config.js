@@ -114,16 +114,33 @@ const WEDDING_CONFIG = {
     leadEn: 'Black Tie Optional.',
     leadFr: 'Tenue de soirée optionnelle.',
     textEn:
-      'We invite you to dress in warm tones: terracotta, muted olive, sand, and cream (hell orange).',
+      'You are welcome to wear any of the shades below (choose from these authorised colours).',
     textFr:
-      'Nous vous invitons à porter des tons chauds : terracotta, vert olive, sable et crème (hell orange).',
+      'Vous pouvez porter l\'une des teintes ci-dessous (couleurs autorisées pour les invités).',
     avoidEn: 'Please avoid white and off-white out of respect for the bride.',
     avoidFr: 'Merci d\'éviter le blanc et le blanc cassé par respect pour la mariée.',
     tipEn:
       'Ladies, please consider block heels or wedges for walking comfortably on the grass.',
     tipFr:
       'Mesdames, pensez aux talons larges ou compensés pour marcher confortablement sur l\'herbe.',
-    colors: ['#d4c4ad', '#6d7358', '#f9f1e7', '#dcccb5', '#c8b796'],
+    colors: [
+      '#A34C1A',
+      '#74301C',
+      '#686348',
+      '#C66B3D',
+      '#B18A68',
+      '#263F32',
+      '#A86A79',
+    ],
+    colorSwatches: [
+      { hex: '#A34C1A', nameFr: 'Terracotta', nameEn: 'Terracotta' },
+      { hex: '#74301C', nameFr: 'Bordeaux / rouge brique', nameEn: 'Burgundy / brick red' },
+      { hex: '#686348', nameFr: 'Vert olive', nameEn: 'Olive green' },
+      { hex: '#C66B3D', nameFr: 'Rouille / cuivre', nameEn: 'Rust / copper' },
+      { hex: '#B18A68', nameFr: 'Camel / caramel', nameEn: 'Camel / caramel' },
+      { hex: '#263F32', nameFr: 'Vert forêt', nameEn: 'Forest green' },
+      { hex: '#A86A79', nameFr: 'Vieux rose', nameEn: 'Dusty rose' },
+    ],
   },
 
   faq: {
