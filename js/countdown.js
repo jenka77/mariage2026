@@ -161,6 +161,12 @@ function initSaveTheDateHeroImage(isFr) {
   const bg = document.getElementById('std-cream-bg');
   if (!bg) return;
 
+  if (WEDDING_CONFIG.saveTheDatePaperBackground) {
+    bg.classList.add('std-editorial-cream__bg--paper');
+    bg.style.backgroundImage = '';
+    return;
+  }
+
   const src =
     WEDDING_CONFIG.saveTheDateImage ||
     WEDDING_CONFIG.couplePhoto ||

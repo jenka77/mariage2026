@@ -28,6 +28,8 @@ const WEDDING_CONFIG = {
 
   // Image sous les prénoms (fr.html / en.html) — remplacez par votre PNG/JPG si besoin
   saveTheDateImage: 'assets/save-the-date-gemini.jpg',
+  // true = fond papier crème (maquette billet), sans photo de couple
+  saveTheDatePaperBackground: true,
   // Opacité du voile crème sur le fond (plus bas = image plus visible)
   saveTheDateBgWash: 0.54,
 

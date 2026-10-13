@@ -1,6 +1,9 @@
 /* ── Variables ── */
 :root {
   --palette-hell-orange: #f9f1e7;
+  --ticket-paper-base: #fdfbf7;
+  --ticket-paper-wash: #e8ddd0;
+  --ticket-paper-shadow: rgba(162, 130, 95, 0.16);
   --burgundy: #4b0a0a;
   --burgundy-dark: #3a0808;
   --cream: #f5f0e8;
@@ -452,6 +455,88 @@ body--invitation {
   50% { transform: translateX(-50%) translateY(6px); }
 }
 
+/* ── Fond billet (papier crème / aquarelle — maquette) ── */
+.ticket-billet-paper {
+  position: relative;
+  background-color: var(--ticket-paper-base);
+  background-image:
+    radial-gradient(ellipse 95% 55% at 92% 8%, var(--ticket-paper-shadow), transparent 58%),
+    radial-gradient(ellipse 85% 50% at 8% 92%, rgba(176, 148, 115, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 48% 42%, rgba(255, 255, 255, 0.55), transparent 72%),
+    linear-gradient(168deg, #fffefb 0%, var(--palette-hell-orange) 42%, var(--ticket-paper-wash) 100%);
+}
+
+.ticket-billet-paper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: multiply;
+}
+
+.std-editorial-cream.ticket-billet-paper::after {
+  z-index: 1;
+}
+
+.invitation-content--billet.ticket-billet-paper {
+  position: relative;
+}
+
+.invitation-content--billet.ticket-billet-paper::after {
+  z-index: 0;
+}
+
+.invitation-content--billet .invitation {
+  position: relative;
+  z-index: 1;
+}
+
+.std-editorial-cream__bg--paper {
+  background-color: transparent;
+  background-image: none;
+}
+
+.std-editorial__drape {
+  position: absolute;
+  top: -2%;
+  left: -8%;
+  width: min(78%, 420px);
+  height: clamp(7rem, 28vw, 11rem);
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    128deg,
+    rgba(255, 252, 247, 0.95) 0%,
+    rgba(245, 235, 220, 0.88) 45%,
+    rgba(235, 220, 200, 0.35) 100%
+  );
+  transform: rotate(-8deg);
+  box-shadow: 8px 12px 28px rgba(91, 22, 27, 0.06);
+  border-radius: 2px;
+  opacity: 0.92;
+}
+
+.std-editorial__seal {
+  position: absolute;
+  top: clamp(0.35rem, 2vw, 0.85rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  width: clamp(52px, 14vw, 72px);
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(91, 22, 27, 0.18));
+}
+
+.std-editorial__seal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ── Save the Date — Editorial layout (page 2 mockup) ── */
 .save-the-date--editorial {
   position: relative;
@@ -612,7 +697,7 @@ body--invitation {
   max-width: min(94%, 36rem);
   margin-inline: auto;
   padding:
-    clamp(1.25rem, 5vw, 2.75rem)
+    clamp(3.25rem, 11vw, 4.75rem)
     clamp(0.85rem, 4vw, 1.75rem)
     clamp(1.5rem, 6vw, 3rem);
 }
@@ -1179,6 +1264,83 @@ body--invitation {
   background-color: var(--burgundy);
   overflow-x: clip;
   max-width: 100%;
+}
+
+.invitation-content--billet {
+  background-color: var(--ticket-paper-base);
+  color: var(--story-burgundy);
+}
+
+.invitation-content--billet .invitation__subtitle,
+.invitation-content--billet .invitation__date,
+.invitation-content--billet .invitation__section p,
+.invitation-content--billet .invitation__event-body p,
+.invitation-content--billet .location-name {
+  color: var(--story-burgundy);
+}
+
+.invitation-content--billet .invitation__names {
+  color: var(--story-burgundy);
+}
+
+.invitation-content--billet .invitation__section-title {
+  color: var(--gold);
+}
+
+.invitation-content--billet .invitation__maps-link {
+  color: var(--story-burgundy);
+  border-bottom-color: rgba(201, 169, 110, 0.65);
+}
+
+.invitation-content--billet .invitation__maps-link:hover,
+.invitation-content--billet .invitation__maps-link:focus-visible {
+  color: #8a3d22;
+}
+
+.invitation-content--billet .dress-code {
+  color: var(--story-burgundy);
+}
+
+.invitation-content--billet .dress-code__illustration {
+  mix-blend-mode: multiply;
+  opacity: 0.92;
+}
+
+.deadline-countdown--ticket {
+  background: rgba(255, 252, 247, 0.78);
+  border: 2px solid var(--gold);
+  box-shadow:
+    0 8px 28px rgba(91, 22, 27, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+}
+
+.deadline-countdown--ticket .deadline-countdown__title {
+  color: var(--story-burgundy);
+  font-family: 'Playfair Display', var(--font-serif);
+  letter-spacing: 0.18em;
+  font-weight: 500;
+}
+
+.deadline-countdown--ticket .deadline-countdown__date {
+  color: rgba(91, 22, 27, 0.82);
+  font-style: italic;
+}
+
+.deadline-countdown--ticket .deadline-countdown__timer .countdown__number {
+  font-family: var(--font-script);
+  font-weight: 400;
+  color: var(--story-burgundy);
+  text-shadow: none;
+}
+
+.deadline-countdown--ticket .deadline-countdown__timer .countdown__label {
+  color: var(--story-burgundy);
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.deadline-countdown--ticket .deadline-countdown__timer .countdown__sep {
+  color: rgba(201, 169, 110, 0.75);
 }
 
 /* ── Our Story ── */
