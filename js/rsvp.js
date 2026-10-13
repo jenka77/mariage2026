@@ -271,6 +271,12 @@ function initRsvpForm(lang) {
   const modal = document.getElementById('rsvp-modal');
   const msgs = MESSAGES[lang];
 
+  const coupleNamesEl = document.getElementById('couple-names');
+  if (coupleNamesEl && typeof getCoupleNames === 'function') {
+    coupleNamesEl.textContent = getCoupleNames();
+    document.title = `${lang === 'fr' ? 'Réservation' : 'Reservation'} — ${getCoupleNames()}`;
+  }
+
   countrySearches = initCountrySearches(lang);
   updateGuestSections(lang);
 

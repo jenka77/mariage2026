@@ -1,19 +1,28 @@
-/* ── Variables ── */
+/* ── Variables (palette mood board — Hell Orange / terracotta, sans bordeaux) ── */
 :root {
-  --burgundy: #4b0a0a;
-  --burgundy-dark: #3a0808;
-  --cream: #f5f0e8;
+  --palette-hell-orange: #f9f1e7;
+  --palette-rust: #c05836;
+  --palette-rust-dark: #a04828;
+  --palette-rust-deep: #8a3d22;
+  --palette-sand: #dcccb5;
+  --palette-olive: #6d7358;
+  --palette-text: #5a3824;
+
+  /* Noms historiques — mappés sur la nouvelle palette */
+  --burgundy: var(--palette-rust);
+  --burgundy-dark: var(--palette-rust-dark);
+  --cream: #f3e9de;
   --white: #ffffff;
   --gold: #c9a96e;
-  --story-cream: #f9f5f0;
-  --story-burgundy: #5b161b;
+  --story-cream: var(--palette-hell-orange);
+  --story-burgundy: var(--palette-rust-deep);
   --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
   --font-script: 'Great Vibes', cursive;
   --font-landing-date: 'Parisienne', 'Great Vibes', cursive;
   --font-sans: 'Montserrat', 'Helvetica Neue', sans-serif;
 
-  --btn-pill-bg: #fdfbf7;
-  --btn-pill-bg-hover: #f3ece2;
+  --btn-pill-bg: #fbf6ef;
+  --btn-pill-bg-hover: #f3ebe0;
   --btn-pill-color: #1a1412;
   --btn-pill-shadow: 0 2px 14px rgba(0, 0, 0, 0.14);
   --btn-pill-shadow-hover: 0 4px 18px rgba(0, 0, 0, 0.2);
@@ -212,15 +221,15 @@ body--invitation {
 }
 
 .save-the-date--bw .countdown__label {
-  color: rgba(91, 22, 27, 0.75);
+  color: rgba(154, 73, 42, 0.75);
 }
 
 .save-the-date--bw .countdown__sep {
-  color: rgba(91, 22, 27, 0.45);
+  color: rgba(154, 73, 42, 0.45);
 }
 
 .save-the-date--bw .save-the-date__scroll {
-  color: rgba(91, 22, 27, 0.55);
+  color: rgba(154, 73, 42, 0.55);
 }
 
 .save-the-date__overlay {
@@ -564,7 +573,7 @@ body--invitation {
   display: block;
   max-height: min(72vh, 680px);
   object-fit: contain;
-  filter: drop-shadow(0 8px 20px rgba(91, 22, 27, 0.12));
+  filter: drop-shadow(0 8px 20px rgba(154, 73, 42, 0.12));
 }
 
 .std-decor__flowers--right {
@@ -719,7 +728,7 @@ body--invitation {
   object-fit: contain;
   object-position: center top;
   display: block;
-  filter: drop-shadow(0 10px 28px rgba(91, 22, 27, 0.12));
+  filter: drop-shadow(0 10px 28px rgba(154, 73, 42, 0.12));
 }
 
 .std-carousel {
@@ -738,7 +747,7 @@ body--invitation {
   overflow: hidden;
   width: 100%;
   height: clamp(128px, 36vw, 210px);
-  background: rgba(91, 22, 27, 0.04);
+  background: rgba(154, 73, 42, 0.04);
   border-radius: 0;
 }
 
@@ -780,8 +789,8 @@ body--invitation {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(249, 245, 240, 0.18) 55%,
-    rgba(249, 245, 240, 0.55) 100%
+    rgba(249, 241, 231, 0.18) 55%,
+    rgba(249, 241, 231, 0.55) 100%
   );
   pointer-events: none;
 }
@@ -804,7 +813,7 @@ body--invitation {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(249, 245, 240, 0.55) 45%,
+    rgba(249, 241, 231, 0.55) 45%,
     var(--story-cream) 100%
   );
   pointer-events: none;
@@ -1376,7 +1385,7 @@ body--invitation {
   transform-origin: 30% 40%;
   background: #141414;
   padding: 12px 10px;
-  box-shadow: 6px 12px 26px rgba(91, 22, 27, 0.24);
+  box-shadow: 6px 12px 26px rgba(154, 73, 42, 0.24);
 }
 
 .story-strip__frame {
@@ -1504,7 +1513,7 @@ body--invitation {
   margin: clamp(1.25rem, 4vw, 2rem) 0 clamp(1rem, 3vw, 1.5rem);
   padding: clamp(1rem, 3vw, 1.35rem) clamp(1rem, 3.5vw, 1.5rem);
   border-left: 3px solid var(--gold);
-  background: rgba(91, 22, 27, 0.04);
+  background: rgba(154, 73, 42, 0.04);
   border-radius: 0 8px 8px 0;
 }
 
@@ -1597,12 +1606,12 @@ body--invitation {
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x;
     scrollbar-width: thin;
-    scrollbar-color: rgba(91, 22, 27, 0.35) transparent;
+    scrollbar-color: rgba(154, 73, 42, 0.35) transparent;
     transform: none;
     background: linear-gradient(180deg, rgba(20, 20, 20, 0.04) 0%, rgba(20, 20, 20, 0.08) 100%);
     padding: clamp(0.85rem, 3vw, 1.15rem) max(1.15rem, env(safe-area-inset-right, 0px)) clamp(0.85rem, 3vw, 1.15rem) max(1.15rem, env(safe-area-inset-left, 0px));
     box-shadow: none;
-    border-block: 1px solid rgba(91, 22, 27, 0.08);
+    border-block: 1px solid rgba(154, 73, 42, 0.08);
   }
 
   .story-strip__inner::-webkit-scrollbar {
@@ -1610,7 +1619,7 @@ body--invitation {
   }
 
   .story-strip__inner::-webkit-scrollbar-thumb {
-    background: rgba(91, 22, 27, 0.3);
+    background: rgba(154, 73, 42, 0.3);
     border-radius: 999px;
   }
 
@@ -1621,7 +1630,7 @@ body--invitation {
     margin-bottom: 0;
     scroll-snap-align: center;
     scroll-snap-stop: always;
-    box-shadow: 4px 8px 18px rgba(91, 22, 27, 0.18);
+    box-shadow: 4px 8px 18px rgba(154, 73, 42, 0.18);
   }
 
   .story-editorial__prose {
@@ -2060,10 +2069,10 @@ html:has(body.landing-page-body) {
   pointer-events: none;
   background: linear-gradient(
     to bottom,
-    rgba(249, 245, 240, 0.25) 0%,
-    rgba(249, 245, 240, 0.62) 42%,
-    rgba(249, 245, 240, 0.9) 72%,
-    rgba(249, 245, 240, 0.98) 100%
+    rgba(249, 241, 231, 0.25) 0%,
+    rgba(249, 241, 231, 0.62) 42%,
+    rgba(249, 241, 231, 0.9) 72%,
+    rgba(249, 241, 231, 0.98) 100%
   );
 }
 
@@ -2142,7 +2151,7 @@ html:has(body.landing-page-body) {
   display: block;
   max-height: min(92vh, 900px);
   object-fit: contain;
-  filter: drop-shadow(0 8px 20px rgba(91, 22, 27, 0.12));
+  filter: drop-shadow(0 8px 20px rgba(154, 73, 42, 0.12));
 }
 
 .landing__flowers--right {
@@ -2258,7 +2267,7 @@ html:has(body.landing-page-body) {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 4px 12px rgba(91, 22, 27, 0.14));
+  filter: drop-shadow(0 4px 12px rgba(154, 73, 42, 0.14));
 }
 
 .landing__date-group {
@@ -2303,9 +2312,9 @@ html:has(body.landing-page-body) {
   line-height: 0;
   isolation: isolate;
   filter:
-    drop-shadow(0 6px 14px rgba(91, 22, 27, 0.14))
-    drop-shadow(0 18px 32px rgba(91, 22, 27, 0.2))
-    drop-shadow(0 32px 52px rgba(91, 22, 27, 0.16));
+    drop-shadow(0 6px 14px rgba(154, 73, 42, 0.14))
+    drop-shadow(0 18px 32px rgba(154, 73, 42, 0.2))
+    drop-shadow(0 32px 52px rgba(154, 73, 42, 0.16));
 }
 
 .landing__envelope-wrap::before {
@@ -2319,8 +2328,8 @@ html:has(body.landing-page-body) {
   pointer-events: none;
   background: radial-gradient(
     ellipse 72% 62% at 50% 52%,
-    rgba(91, 22, 27, 0.26) 0%,
-    rgba(91, 22, 27, 0.12) 42%,
+    rgba(154, 73, 42, 0.26) 0%,
+    rgba(154, 73, 42, 0.12) 42%,
     transparent 72%
   );
 }
@@ -2332,8 +2341,8 @@ html:has(body.landing-page-body) {
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(to bottom, rgba(249, 245, 240, 0.95) 0%, rgba(249, 245, 240, 0.55) 8%, transparent 22%),
-    linear-gradient(to top, rgba(249, 245, 240, 0.95) 0%, rgba(249, 245, 240, 0.55) 8%, transparent 24%);
+    linear-gradient(to bottom, rgba(249, 241, 231, 0.95) 0%, rgba(249, 241, 231, 0.55) 8%, transparent 22%),
+    linear-gradient(to top, rgba(249, 241, 231, 0.95) 0%, rgba(249, 241, 231, 0.55) 8%, transparent 24%);
 }
 
 .landing__envelope-img {
@@ -2343,9 +2352,9 @@ html:has(body.landing-page-body) {
   height: auto;
   display: block;
   filter:
-    drop-shadow(0 2px 8px rgba(91, 22, 27, 0.12))
-    drop-shadow(0 12px 24px rgba(91, 22, 27, 0.18))
-    drop-shadow(0 24px 40px rgba(91, 22, 27, 0.1));
+    drop-shadow(0 2px 8px rgba(154, 73, 42, 0.12))
+    drop-shadow(0 12px 24px rgba(154, 73, 42, 0.18))
+    drop-shadow(0 24px 40px rgba(154, 73, 42, 0.1));
 }
 
 .landing__envelope-monogram {
@@ -2359,7 +2368,7 @@ html:has(body.landing-page-body) {
   color: var(--story-burgundy);
   line-height: 1;
   pointer-events: none;
-  text-shadow: 0 1px 8px rgba(249, 245, 240, 0.65);
+  text-shadow: 0 1px 8px rgba(249, 241, 231, 0.65);
 }
 
 /* Legacy envelope (unused on landing) */
@@ -3820,11 +3829,11 @@ html:has(body.landing-page-body) {
   .landing__bg-overlay {
     background: linear-gradient(
       to bottom,
-      rgba(249, 245, 240, 0.72) 0%,
-      rgba(249, 245, 240, 0.68) 18%,
-      rgba(249, 245, 240, 0.75) 45%,
-      rgba(249, 245, 240, 0.92) 72%,
-      rgba(249, 245, 240, 0.98) 100%
+      rgba(249, 241, 231, 0.72) 0%,
+      rgba(249, 241, 231, 0.68) 18%,
+      rgba(249, 241, 231, 0.75) 45%,
+      rgba(249, 241, 231, 0.92) 72%,
+      rgba(249, 241, 231, 0.98) 100%
     );
   }
 
@@ -3878,8 +3887,8 @@ html:has(body.landing-page-body) {
     position: relative;
     z-index: 6;
     text-shadow:
-      0 0 18px rgba(249, 245, 240, 0.95),
-      0 2px 10px rgba(249, 245, 240, 0.85);
+      0 0 18px rgba(249, 241, 231, 0.95),
+      0 2px 10px rgba(249, 241, 231, 0.85);
   }
 
   .landing__std-save,
@@ -3927,8 +3936,8 @@ html:has(body.landing-page-body) {
 
   .landing__envelope-wrap::after {
     background:
-      linear-gradient(to bottom, rgba(249, 245, 240, 0.98) 0%, rgba(249, 245, 240, 0.6) 10%, transparent 26%),
-      linear-gradient(to top, rgba(249, 245, 240, 0.98) 0%, rgba(249, 245, 240, 0.6) 10%, transparent 28%);
+      linear-gradient(to bottom, rgba(249, 241, 231, 0.98) 0%, rgba(249, 241, 231, 0.6) 10%, transparent 26%),
+      linear-gradient(to top, rgba(249, 241, 231, 0.98) 0%, rgba(249, 241, 231, 0.6) 10%, transparent 28%);
   }
 
   .landing__envelope-monogram {

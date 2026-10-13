@@ -114,16 +114,16 @@ const WEDDING_CONFIG = {
     leadEn: 'Black Tie Optional.',
     leadFr: 'Tenue de soirée optionnelle.',
     textEn:
-      'We invite you to dress in shades of ivory, champagne, or deep burgundy.',
+      'We invite you to dress in warm tones: terracotta, muted olive, sand, and cream (hell orange).',
     textFr:
-      'Nous vous invitons à porter des tons ivoire, champagne ou bordeaux profond.',
+      'Nous vous invitons à porter des tons chauds : terracotta, vert olive, sable et crème (hell orange).',
     avoidEn: 'Please avoid white and off-white out of respect for the bride.',
     avoidFr: 'Merci d\'éviter le blanc et le blanc cassé par respect pour la mariée.',
     tipEn:
       'Ladies, please consider block heels or wedges for walking comfortably on the grass.',
     tipFr:
       'Mesdames, pensez aux talons larges ou compensés pour marcher confortablement sur l\'herbe.',
-    colors: ['#f3ebd3', '#7c7d41', '#8b633d', '#632b2b', '#333131'],
+    colors: ['#c05836', '#6d7358', '#f9f1e7', '#dcccb5', '#a04828'],
   },
 
   faq: {

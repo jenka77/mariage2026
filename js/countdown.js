@@ -166,7 +166,7 @@ function initSaveTheDateHeroImage(isFr) {
     WEDDING_CONFIG.couplePhoto ||
     'assets/save-the-date-gemini.jpg';
   const wash = WEDDING_CONFIG.saveTheDateBgWash ?? 0.84;
-  bg.style.backgroundImage = `linear-gradient(rgba(249, 245, 240, ${wash}), rgba(249, 245, 240, ${Math.min(wash + 0.06, 0.94)})), url("${src}")`;
+  bg.style.backgroundImage = `linear-gradient(rgba(249, 241, 231, ${wash}), rgba(249, 241, 231, ${Math.min(wash + 0.06, 0.94)})), url("${src}")`;
 }
 
 function initStdFooterActions() {
