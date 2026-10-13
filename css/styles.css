@@ -139,7 +139,7 @@ body.rsvp-page-body {
   touch-action: pan-y pinch-zoom;
 }
 
-body--invitation {
+body.body--invitation {
   background-color: var(--story-cream);
   color: var(--story-burgundy);
 }
@@ -913,7 +913,8 @@ body--invitation {
   margin-top: 0;
 }
 
-.save-the-date--editorial .std-editorial__actions--on-cream {
+.save-the-date--editorial .std-editorial__actions--on-cream,
+.invitation-content--billet .invitation__hero-actions.std-editorial__actions--on-cream {
   position: relative;
   z-index: 7;
   flex-shrink: 0;
@@ -926,13 +927,22 @@ body--invitation {
   padding: 0 clamp(0.75rem, 3vw, 1.25rem);
 }
 
-.save-the-date--editorial .std-editorial__actions--on-cream .std-action__label {
+.invitation-content--billet .invitation__hero-actions.std-editorial__actions--on-cream {
+  margin:
+    clamp(1rem, 3.5vw, 1.75rem)
+    auto
+    clamp(0.35rem, 1.5vw, 0.75rem);
+}
+
+.save-the-date--editorial .std-editorial__actions--on-cream .std-action__label,
+.invitation-content--billet .invitation__hero-actions .std-action__label {
   color: var(--story-burgundy);
   text-shadow: none;
   font-weight: 500;
 }
 
-.save-the-date--editorial .std-editorial__actions--on-cream .std-action__icon {
+.save-the-date--editorial .std-editorial__actions--on-cream .std-action__icon,
+.invitation-content--billet .invitation__hero-actions .std-action__icon {
   border-color: var(--gold);
   background: linear-gradient(
     145deg,
@@ -946,7 +956,9 @@ body--invitation {
 }
 
 .save-the-date--editorial .std-editorial__actions--on-cream .std-action:hover .std-action__icon,
-.save-the-date--editorial .std-editorial__actions--on-cream .std-action:focus-visible .std-action__icon {
+.save-the-date--editorial .std-editorial__actions--on-cream .std-action:focus-visible .std-action__icon,
+.invitation-content--billet .invitation__hero-actions .std-action:hover .std-action__icon,
+.invitation-content--billet .invitation__hero-actions .std-action:focus-visible .std-action__icon {
   background: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.98),
@@ -1257,7 +1269,7 @@ body--invitation {
 
 /* ── Invitation content (below hero) ── */
 .invitation-content {
-  background-color: var(--burgundy);
+  background-color: var(--story-cream);
   overflow-x: clip;
   max-width: 100%;
 }
@@ -1294,7 +1306,20 @@ body--invitation {
 }
 
 .invitation-content--billet .dress-code--bordeaux-panel {
-  color: var(--white);
+  color: var(--story-burgundy);
+}
+
+.invitation-content--billet .dress-code__illustration {
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+
+.invitation-content--billet .dress-code__lead,
+.invitation-content--billet .dress-code__text,
+.invitation-content--billet .dress-code__avoid,
+.invitation-content--billet .dress-code__tip {
+  color: var(--story-burgundy);
+  opacity: 1;
 }
 
 .deadline-countdown--ticket {
@@ -1845,22 +1870,21 @@ body--invitation {
   text-align: center;
   margin: 3rem 0 2.5rem;
   padding: 0 0.5rem;
-  color: var(--white);
+  color: var(--story-burgundy);
 }
 
 .dress-code--bordeaux-panel {
   margin:
-    clamp(2.5rem, 8vw, 3.5rem)
-    calc(50% - 50vw)
-    clamp(2rem, 6vw, 3rem);
-  width: 100vw;
-  max-width: 100vw;
+    clamp(2rem, 6vw, 3rem)
+    0
+    clamp(1.75rem, 5vw, 2.5rem);
+  width: 100%;
+  max-width: 100%;
   padding:
-    clamp(2.25rem, 7vw, 3.25rem)
-    clamp(1rem, 4vw, 1.5rem)
-    clamp(2rem, 6vw, 2.75rem);
-  background-color: var(--burgundy);
-  color: var(--white);
+    clamp(1.25rem, 4vw, 2rem)
+    clamp(0.5rem, 3vw, 1rem);
+  background-color: transparent;
+  color: var(--story-burgundy);
   box-sizing: border-box;
 }
 
@@ -1869,24 +1893,25 @@ body--invitation {
 }
 
 .dress-code--bordeaux-panel .dress-code__title-script {
-  color: var(--white);
+  color: var(--story-burgundy);
 }
 
 .dress-code--bordeaux-panel .dress-code__illustration {
-  mix-blend-mode: screen;
-  opacity: 0.95;
+  mix-blend-mode: normal;
+  opacity: 1;
 }
 
 .dress-code--bordeaux-panel .dress-code__swatch {
-  border: 2px solid rgba(255, 255, 255, 0.38);
+  border: 2px solid rgba(201, 169, 110, 0.55);
   box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.35),
-    inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+    0 4px 14px rgba(91, 22, 27, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
 .dress-code--bordeaux-panel .dress-code__swatch-label {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--story-burgundy);
   font-weight: 400;
+  opacity: 0.88;
 }
 
 .dress-code__illustration {
@@ -2690,6 +2715,56 @@ html:has(body.landing-page-body) {
   text-transform: uppercase;
   margin-top: 0.5rem;
   font-weight: 500;
+}
+
+.invitation-content--billet .invitation__std-closing {
+  margin-top: clamp(1.15rem, 4vw, 2rem);
+}
+
+.invitation-content--billet .invitation__std-message {
+  font-size: clamp(1.08rem, 4.4vw, 1.48rem);
+  line-height: 1.72;
+  max-width: min(40ch, 92vw);
+  margin: 0 auto clamp(0.85rem, 3vw, 1.35rem);
+  color: var(--story-burgundy);
+  font-style: normal;
+}
+
+.invitation-content--billet .invitation__std-thanks {
+  font-size: clamp(1.85rem, 7.2vw, 2.9rem);
+  line-height: 1.15;
+}
+
+.invitation__countdown-frame {
+  position: relative;
+  margin: clamp(0.75rem, 3vw, 1.5rem) auto clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(1.5rem, 7vw, 3.25rem) 0;
+  overflow: visible;
+}
+
+.invitation__countdown-frame .std-decor__flowers--bottom {
+  top: auto;
+  bottom: 0;
+  z-index: 0;
+}
+
+.invitation__countdown-frame .std-decor__flowers--left {
+  width: clamp(140px, 38vw, 320px);
+  transform: translate(-22%, 28%);
+}
+
+.invitation__countdown-frame .std-decor__flowers--right {
+  width: clamp(160px, 42vw, 360px);
+  transform: translate(20%, 22%);
+}
+
+.invitation__countdown-frame .std-decor__flowers img {
+  max-height: min(42vh, 400px);
+}
+
+.invitation__countdown-frame .deadline-countdown--ticket {
+  position: relative;
+  z-index: 2;
 }
 
 .invitation__divider {

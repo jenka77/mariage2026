@@ -11,63 +11,38 @@
 </head>
 <body class="body--invitation">
 
-  <section class="save-the-date save-the-date--editorial" id="save-the-date">
-    <div class="std-editorial-cream ticket-billet-paper">
-    <div class="std-editorial-cream__bg" id="std-cream-bg" aria-hidden="true"></div>
-    <div class="std-decor std-decor__gold-glow" aria-hidden="true"></div>
-    <div class="std-decor std-decor__corner std-decor__corner--tl" aria-hidden="true"></div>
-    <div class="std-decor std-decor__corner std-decor__corner--br" aria-hidden="true"></div>
-
-    <div class="std-editorial">
-      <header class="std-editorial__header">
-        <span class="std-editorial__heart" aria-hidden="true">♥</span>
-        <p class="std-editorial__tagline" id="std-tagline">We're Getting Married</p>
-        <h1 class="std-editorial__names" id="std-page-names">Yannick & Dora</h1>
-        <span class="std-editorial__heart" aria-hidden="true">♥</span>
-      </header>
-
-      <div class="std-editorial__closing">
-        <p class="std-editorial__message" id="std-message"></p>
-        <p class="std-editorial__thanks" id="std-thanks"></p>
-      </div>
-    </div>
-
-    <nav class="std-editorial__actions std-editorial__actions--on-cream" aria-label="Actions">
-      <button type="button" class="std-action" id="std-action-faq">
-        <span class="std-action__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v5M12 8h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </span>
-        <span class="std-action__label" id="std-action-info">Good to Know</span>
-      </button>
-      <a href="#" class="std-action" id="std-calendar-link" target="_blank" rel="noopener">
-        <span class="std-action__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 3v4M16 3v4M3 10h18" stroke="currentColor" stroke-width="1.5"/></svg>
-        </span>
-        <span class="std-action__label" id="std-action-calendar">Add to Calendar</span>
-      </a>
-      <button type="button" class="std-action" id="std-action-help">
-        <span class="std-action__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.2 1.8c0 1.8-2.2 2.2-2.2 3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="17" r="0.75" fill="currentColor"/></svg>
-        </span>
-        <span class="std-action__label" id="std-action-help-label">Help</span>
-      </button>
-    </nav>
-
-    <div class="std-decor std-decor__flowers std-decor__flowers--left std-decor__flowers--bottom" aria-hidden="true">
-      <img src="assets/landing-flowers-left.png" alt="">
-    </div>
-    <div class="std-decor std-decor__flowers std-decor__flowers--right std-decor__flowers--bottom" aria-hidden="true">
-      <img src="assets/landing-flowers-right.png" alt="">
-    </div>
-    </div>
-  </section>
-
   <div class="invitation-content invitation-content--billet ticket-billet-paper" id="invitation">
     <main class="invitation">
       <header class="invitation__hero">
         <p class="invitation__subtitle">Together with their families</p>
         <h1 class="invitation__names" id="couple-names">Camille & Henry</h1>
         <p class="invitation__date" id="wedding-date">Sunday, July 19, 2027</p>
+
+        <div class="invitation__std-closing">
+          <p class="std-editorial__message invitation__std-message" id="std-message"></p>
+          <p class="std-editorial__thanks invitation__std-thanks" id="std-thanks"></p>
+        </div>
+
+        <nav class="invitation__hero-actions std-editorial__actions std-editorial__actions--on-cream" aria-label="Actions">
+          <button type="button" class="std-action" id="std-action-faq">
+            <span class="std-action__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v5M12 8h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <span class="std-action__label" id="std-action-info">Good to Know</span>
+          </button>
+          <a href="#" class="std-action" id="std-calendar-link" target="_blank" rel="noopener">
+            <span class="std-action__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 3v4M16 3v4M3 10h18" stroke="currentColor" stroke-width="1.5"/></svg>
+            </span>
+            <span class="std-action__label" id="std-action-calendar">Add to Calendar</span>
+          </a>
+          <button type="button" class="std-action" id="std-action-help">
+            <span class="std-action__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.2 1.8c0 1.8-2.2 2.2-2.2 3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="17" r="0.75" fill="currentColor"/></svg>
+            </span>
+            <span class="std-action__label" id="std-action-help-label">Help</span>
+          </button>
+        </nav>
       </header>
 
       <div class="invitation__divider invitation__divider--ornate" aria-hidden="true">
@@ -116,6 +91,13 @@
         <p>We would be honoured by your presence<br>as we celebrate our special day.</p>
       </section>
 
+      <div class="invitation__countdown-frame">
+        <div class="std-decor std-decor__flowers std-decor__flowers--left std-decor__flowers--bottom" aria-hidden="true">
+          <img src="assets/landing-flowers-left.png" alt="">
+        </div>
+        <div class="std-decor std-decor__flowers std-decor__flowers--right std-decor__flowers--bottom" aria-hidden="true">
+          <img src="assets/landing-flowers-right.png" alt="">
+        </div>
       <section class="deadline-countdown deadline-countdown--page deadline-countdown--ticket" id="reservation-deadline" aria-live="polite">
         <p class="deadline-countdown__title" id="rd-countdown-title">Time Left to Confirm Your Reservation</p>
         <p class="deadline-countdown__date" id="rd-countdown-date">Deadline: November 30, 2026</p>
@@ -141,6 +123,7 @@
           </div>
         </div>
       </section>
+      </div>
 
       <section class="dress-code dress-code--bordeaux-panel" id="dress-code">
         <img class="dress-code__illustration" src="assets/dresscode.png" alt="" aria-hidden="true">
