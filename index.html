@@ -44,7 +44,7 @@
       </div>
 
       <div class="landing__rings" aria-hidden="true">
-        <img src="assets/goldring.png" alt="">
+        <img src="assets/wedding-rings-sign.png" alt="" id="landing-rings-img">
       </div>
 
       <div class="landing__date-group">
@@ -73,6 +73,10 @@
       `<span class="name-line name-line--second">${WEDDING_CONFIG.bride}</span>`;
     document.getElementById('monogram').textContent = WEDDING_CONFIG.monogram;
     document.getElementById('landing-bg-img').src = WEDDING_CONFIG.landingPhoto;
+    const ringsImg = document.getElementById('landing-rings-img');
+    if (ringsImg && WEDDING_CONFIG.landingRingsImage) {
+      ringsImg.src = WEDDING_CONFIG.landingRingsImage;
+    }
     document.getElementById('landing-date').textContent =
       WEDDING_CONFIG.landingDate || '19 décembre 2026';
     document.title = `${getCoupleNames()} — Wedding Invitation`;

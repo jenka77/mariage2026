@@ -19,6 +19,7 @@ const WEDDING_CONFIG = {
 
   // Photo page enveloppe (première page — index.html)
   landingPhoto: 'assets/image2.jpeg',
+  landingRingsImage: 'assets/wedding-rings-sign.png',
 
   // Photo Save the Date (en.html / fr.html) — noir & blanc
   couplePhoto: 'assets/image2.jpeg',
