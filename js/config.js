@@ -123,7 +123,7 @@ const WEDDING_CONFIG = {
       'Ladies, please consider block heels or wedges for walking comfortably on the grass.',
     tipFr:
       'Mesdames, pensez aux talons larges ou compensés pour marcher confortablement sur l\'herbe.',
-    colors: ['#c05836', '#6d7358', '#f9f1e7', '#dcccb5', '#a04828'],
+    colors: ['#d4c4ad', '#6d7358', '#f9f1e7', '#dcccb5', '#c8b796'],
   },
 
   faq: {
