@@ -1297,13 +1297,8 @@ body--invitation {
   color: #8a3d22;
 }
 
-.invitation-content--billet .dress-code {
-  color: var(--story-burgundy);
-}
-
-.invitation-content--billet .dress-code__illustration {
-  mix-blend-mode: multiply;
-  opacity: 0.92;
+.invitation-content--billet .dress-code--bordeaux-panel {
+  color: var(--white);
 }
 
 .deadline-countdown--ticket {
@@ -1855,6 +1850,47 @@ body--invitation {
   margin: 3rem 0 2.5rem;
   padding: 0 0.5rem;
   color: var(--white);
+}
+
+.dress-code--bordeaux-panel {
+  margin:
+    clamp(2.5rem, 8vw, 3.5rem)
+    calc(50% - 50vw)
+    clamp(2rem, 6vw, 3rem);
+  width: 100vw;
+  max-width: 100vw;
+  padding:
+    clamp(2.25rem, 7vw, 3.25rem)
+    clamp(1rem, 4vw, 1.5rem)
+    clamp(2rem, 6vw, 2.75rem);
+  background-color: var(--burgundy);
+  color: var(--white);
+  box-sizing: border-box;
+}
+
+.dress-code--bordeaux-panel .dress-code__title-main {
+  color: var(--gold);
+}
+
+.dress-code--bordeaux-panel .dress-code__title-script {
+  color: var(--white);
+}
+
+.dress-code--bordeaux-panel .dress-code__illustration {
+  mix-blend-mode: screen;
+  opacity: 0.95;
+}
+
+.dress-code--bordeaux-panel .dress-code__swatch {
+  border: 2px solid rgba(255, 255, 255, 0.38);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+.dress-code--bordeaux-panel .dress-code__swatch-label {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
 }
 
 .dress-code__illustration {
