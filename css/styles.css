@@ -124,6 +124,10 @@ html:has(body.rsvp-page-body) {
   touch-action: pan-y pinch-zoom;
 }
 
+html:has(body.rsvp-page-body) {
+  background-color: var(--story-cream);
+}
+
 body.landing-page-body,
 body.body--invitation,
 body.rsvp-page-body,
@@ -2165,6 +2169,86 @@ body.body--invitation {
   max-width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body.ticket-billet-paper::after {
+  z-index: 0;
+}
+
+.rsvp-page-body .invitation__subtitle,
+.rsvp-page-body .invitation__names {
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .rsvp__title {
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .rsvp__name-hint,
+.rsvp-page-body .additional-guests__lead {
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .form-group label {
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .form-group input,
+.rsvp-page-body .form-group select,
+.rsvp-page-body .form-group textarea {
+  background: rgba(255, 252, 247, 0.92);
+  border: 1px solid rgba(201, 169, 110, 0.5);
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .form-group input::placeholder,
+.rsvp-page-body .form-group textarea::placeholder {
+  color: rgba(91, 22, 27, 0.42);
+}
+
+.rsvp-page-body .form-group select option {
+  background: var(--ticket-paper-base);
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .search-dropdown {
+  background: var(--ticket-paper-base);
+  border: 1px solid rgba(201, 169, 110, 0.55);
+  box-shadow: 0 8px 24px rgba(91, 22, 27, 0.1);
+}
+
+.rsvp-page-body .search-dropdown__item {
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .search-dropdown__item:hover,
+.rsvp-page-body .search-dropdown__item--active {
+  background: rgba(201, 169, 110, 0.18);
+}
+
+.rsvp-page-body .attendance-option label {
+  border-color: rgba(201, 169, 110, 0.45);
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .attendance-option input[type="radio"]:checked + label {
+  background: rgba(201, 169, 110, 0.22);
+  border-color: var(--gold);
+}
+
+.rsvp-page-body .additional-guest-card {
+  background: rgba(255, 252, 247, 0.65);
+  border-color: rgba(201, 169, 110, 0.4);
+}
+
+.rsvp-page-body .additional-guest-card__title {
+  color: var(--story-burgundy);
+}
+
+.rsvp-page-body .message--success,
+.rsvp-page-body .message--error {
+  color: var(--story-burgundy);
 }
 
 .rsvp-decor {
@@ -2228,6 +2312,15 @@ body.body--invitation {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
   padding: 2.5rem 2rem;
+}
+
+.rsvp-page-body .rsvp--page {
+  background: rgba(255, 252, 247, 0.78);
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  box-shadow:
+    0 8px 28px rgba(91, 22, 27, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.65);
 }
 
 /* ── Landing Page ── */
