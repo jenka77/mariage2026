@@ -3798,7 +3798,10 @@ html:has(body.landing-page-body) {
   bottom: calc(100% + 0.75rem);
   left: 0;
   width: min(340px, calc(100vw - 2rem));
-  max-height: min(70vh, 520px);
+  max-height: min(
+    520px,
+    calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 5.75rem)
+  );
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -3834,6 +3837,8 @@ html:has(body.landing-page-body) {
 .faq-widget__list {
   flex: 1 1 auto;
   min-height: 0;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
   overscroll-behavior: contain;
@@ -3866,12 +3871,21 @@ html:has(body.landing-page-body) {
 }
 
 .faq-widget__list .faq-item {
+  flex-shrink: 0;
   background: rgba(0, 0, 0, 0.2);
+  overflow: visible;
 }
 
 .faq-widget__list .faq-item__question {
   font-size: 0.88rem;
+  line-height: 1.45;
   padding: 0.95rem 2.25rem 0.95rem 0.95rem;
+  overflow: visible;
+  white-space: normal;
+}
+
+.faq-widget__list .faq-item[open] .faq-item__question {
+  padding-bottom: 0.45rem;
 }
 
 .faq-widget__list .faq-item:not([open]) .faq-item__question {
@@ -3879,10 +3893,15 @@ html:has(body.landing-page-body) {
 }
 
 .faq-widget__list .faq-item__answer {
+  display: block;
   font-size: 0.86rem;
   line-height: 1.65;
-  padding: 0 0.95rem 0.95rem;
-  overflow-wrap: anywhere;
+  padding: 0 0.95rem 1rem;
+  margin: 0;
+  overflow: visible;
+  max-height: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .faq-widget__list .faq-item__question,
@@ -3956,7 +3975,10 @@ body.story-page-body .faq-widget__list .faq-item__answer {
 
   .faq-widget__panel {
     width: min(320px, calc(100vw - 2rem));
-    max-height: min(65dvh, 480px);
+    max-height: min(
+      480px,
+      calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 5.25rem)
+    );
   }
 
   .help-widget {

@@ -91,6 +91,23 @@ function initFaq(lang) {
     });
   });
 
+  listEl.querySelectorAll('.faq-item').forEach((details) => {
+    details.addEventListener('toggle', () => {
+      if (!details.open) return;
+      requestAnimationFrame(() => {
+        const listRect = listEl.getBoundingClientRect();
+        const itemRect = details.getBoundingClientRect();
+        const padding = 10;
+        if (itemRect.bottom > listRect.bottom - padding) {
+          listEl.scrollTop += itemRect.bottom - listRect.bottom + padding;
+        }
+        if (itemRect.top < listRect.top + padding) {
+          listEl.scrollTop -= listRect.top - itemRect.top + padding;
+        }
+      });
+    });
+  });
+
   const faqBtn = document.getElementById('faq-widget-btn');
   const panel = document.getElementById('faq-widget-panel');
 
