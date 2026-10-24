@@ -82,34 +82,6 @@ const WEDDING_CONFIG = {
   rsvpDeadlineFr: '20 novembre 2026',
   rsvpDeadlineISO: '2026-11-20T23:59:59',
 
-  // Page « Notre Histoire » — image hero + bande de photos
-  storyHero: 'assets/mariage1.png',
-  storyStripPhotos: [
-    'assets/image1.jpeg',
-    'assets/image2.jpeg',
-    'assets/image3.jpeg',
-    'assets/image4.jpeg',
-    'assets/image5.jpeg',
-    'assets/image6.jpeg',
-  ],
-
-  story: {
-    detailsLinkEn: 'The details — please click here',
-    detailsLinkFr: 'Cliquez ici',
-    titleOurEn: 'OUR',
-    titleLoveEn: 'LOVE',
-    titleStoryEn: 'Story',
-    titleOurFr: 'Notre',
-    titleLoveFr: 'Histoire',
-    titleStoryFr: "d'amour",
-    textEn:
-      'It started with a borrowed umbrella on a rainy afternoon in Paris. Three years, two countries, and one sunset proposal in Positano later — we are getting married.',
-    textFr:
-      'Tout a commencé par un parapluie emprunté un après-midi pluvieux à Paris. Trois ans, deux pays et une demande en mariage au coucher du soleil à Positano plus tard — nous nous marions.',
-    placeholderEn: 'Your photo',
-    placeholderFr: 'Votre photo',
-  },
-
   dressCodeIcon: 'assets/dresscode.png',
   dressCode: {
     titleMainEn: 'Dress',
