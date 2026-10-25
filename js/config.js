@@ -104,9 +104,9 @@ const WEDDING_CONFIG = {
     timePrefixFr: '',
   },
 
-  rsvpDeadline: 'November 20, 2026',
-  rsvpDeadlineFr: '20 novembre 2026',
-  rsvpDeadlineISO: '2026-11-20T23:59:59',
+  rsvpDeadline: 'November 10, 2026',
+  rsvpDeadlineFr: '10 novembre 2026',
+  rsvpDeadlineISO: '2026-11-10T23:59:59',
 
   dressCodeIcon: 'assets/dresscode.png',
   dressCode: {

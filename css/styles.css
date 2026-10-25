@@ -960,7 +960,7 @@ body.body--invitation {
   margin:
     clamp(1rem, 3.5vw, 1.75rem)
     auto
-    clamp(0.35rem, 1.5vw, 0.75rem);
+    clamp(0.5rem, 2vw, 1rem);
 }
 
 .save-the-date--editorial .std-editorial__actions--on-cream .std-action__label,
@@ -3122,6 +3122,10 @@ html[data-couple-font='burgues'] .invitation__names {
   overflow: visible;
 }
 
+.invitation-content--billet .invitation__events {
+  margin-top: clamp(2rem, 7vw, 3.5rem);
+}
+
 .invitation__events-decor {
   position: absolute;
   inset: 0;
@@ -3171,7 +3175,7 @@ html[data-couple-font='burgues'] .invitation__names {
   justify-content: center;
   gap: clamp(0.45rem, 2vw, 0.75rem);
   max-width: min(100%, 420px);
-  margin: 0 auto 0.55rem;
+  margin: 0 auto clamp(0.85rem, 2.8vw, 1.15rem);
   color: var(--gold);
 }
 
@@ -3388,8 +3392,8 @@ html[data-couple-font='burgues'] .invitation__names {
 }
 
 .invitation__event-icon {
-  width: clamp(28px, 8vw, 36px);
-  margin-bottom: 0.35rem;
+  width: clamp(40px, 11vw, 52px);
+  margin-bottom: 0.4rem;
   color: var(--gold);
   line-height: 0;
 }
@@ -3402,7 +3406,7 @@ html[data-couple-font='burgues'] .invitation__names {
 }
 
 .invitation__event-icon--img {
-  width: clamp(32px, 9vw, 42px);
+  width: clamp(44px, 12.5vw, 58px);
 }
 
 .invitation__event-venue {
