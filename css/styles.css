@@ -2879,6 +2879,11 @@ html:has(body.landing-page-body) {
   margin-bottom: 0;
 }
 
+.invitation__invite .invitation__names {
+  margin-top: clamp(0.35rem, 1.5vw, 0.55rem);
+  margin-bottom: clamp(0.35rem, 1.5vw, 0.55rem);
+}
+
 .invitation__subtitle {
   font-size: clamp(1.05rem, 3.4vw, 1.3rem);
   letter-spacing: 0.35em;

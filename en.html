@@ -16,7 +16,8 @@
       <header class="invitation__hero">
         <div class="invitation__invite">
           <p class="invitation__subtitle invitation__invite-line" id="invite-families">Together with their families</p>
-          <p class="invitation__subtitle invitation__invite-line" id="invite-couple">Dora and Yannick invite you</p>
+          <h1 class="invitation__names" id="couple-names">Dora &amp; Yannick</h1>
+          <p class="invitation__subtitle invitation__invite-line" id="invite-suffix">invite you</p>
         </div>
 
         <nav class="invitation__hero-actions std-editorial__actions std-editorial__actions--on-cream" aria-label="Actions">
@@ -224,8 +225,9 @@
     const inv = WEDDING_CONFIG.invitation || {};
     document.getElementById('invite-families').textContent =
       inv.familiesLineEn || 'Together with their families';
-    document.getElementById('invite-couple').textContent =
-      `${getCoupleNamesAnd()} ${inv.inviteSuffixEn || 'invite you'}`;
+    document.getElementById('couple-names').textContent = getCoupleNames();
+    document.getElementById('invite-suffix').textContent =
+      inv.inviteSuffixEn || 'invite you';
     document.getElementById('ceremony-name').textContent = WEDDING_CONFIG.ceremony.name;
     document.getElementById('ceremony-city').textContent =
       WEDDING_CONFIG.ceremony.cityEn || WEDDING_CONFIG.ceremony.address;
