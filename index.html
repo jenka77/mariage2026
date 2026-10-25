@@ -36,10 +36,7 @@
 
         <p class="landing__header">We're Getting Married</p>
 
-        <div class="landing__names" id="couple-names">
-          <span class="name-line">Amara <span class="ampersand">&</span></span>
-          <span class="name-line name-line--second">Elijah</span>
-        </div>
+        <h1 class="landing__names" id="couple-names">Dora &amp; Yannick</h1>
 
         <div class="landing__rings" aria-hidden="true">
           <img src="assets/wedding-rings-sign.png" alt="" id="landing-rings-img">
@@ -67,9 +64,7 @@
 
   <script src="js/config.js"></script>
   <script>
-    document.querySelector('.landing__names').innerHTML =
-      `<span class="name-line">${WEDDING_CONFIG.bride} <span class="ampersand">&</span></span>` +
-      `<span class="name-line name-line--second">${WEDDING_CONFIG.groom}</span>`;
+    document.getElementById('couple-names').textContent = getCoupleNames();
     document.getElementById('monogram').textContent = WEDDING_CONFIG.monogram;
     document.getElementById('landing-bg-img').src = WEDDING_CONFIG.landingPhoto;
     const ringsImg = document.getElementById('landing-rings-img');

@@ -131,47 +131,61 @@ const WEDDING_CONFIG = {
       {
         qEn: 'Can I bring a plus one?',
         qFr: 'Puis-je venir accompagné(e) ?',
-        aEn: 'If your invitation includes a plus one, it will be noted on your invitation. If you\'re unsure, please reach out to us and we\'ll be happy to clarify.',
-        aFr: 'Si votre invitation inclut un accompagnant, cela sera indiqué sur votre invitation. En cas de doute, contactez-nous et nous serons ravis de vous répondre.',
+        aEn:
+          'Two types of tickets are used: the couple ticket, valid for two guests (Mr and Mrs), and the individual ticket, valid for one guest. Please register according to the ticket you received.',
+        aFr:
+          'Deux types de billets existent : le billet couple, valable pour deux personnes (Mme et M.), et le billet individuel, valable pour une seule personne. Merci de vous enregistrer conformément au billet reçu.',
       },
       {
         qEn: 'Are children welcome?',
         qFr: 'Les enfants sont-ils les bienvenus ?',
-        aEn: 'We love your little ones, but we have chosen to make our wedding an adults-only celebration. We hope this gives you a chance to enjoy a wonderful evening. We appreciate your understanding.',
-        aFr: 'Nous adorons vos petits, mais nous avons choisi de faire de notre mariage une célébration réservée aux adultes. Nous espérons que cela vous permettra de profiter pleinement de la soirée. Merci de votre compréhension.',
+        aEn:
+          'Our wedding is primarily an adults\' celebration. Children are welcome only if they have their own invitation ticket.',
+        aFr:
+          'Notre mariage est avant tout une célébration entre adultes. Les enfants sont les bienvenus uniquement s\'ils disposent de leur propre billet d\'invitation.',
       },
       {
-        qEn: 'Is there parking at the venue?',
-        qFr: 'Y a-t-il un parking sur place ?',
-        aEn: 'Parking is available near the parish. We recommend arriving a little early.',
-        aFr: 'Un parking est disponible à proximité de la paroisse. Nous vous conseillons d\'arriver un peu en avance.',
+        qEn: 'Is parking available on site?',
+        qFr: 'Un parking est-il disponible sur place ?',
+        aEn:
+          'Yes, parking is available at the EEC parish of Biyem-Assi. Spaces are limited, so we recommend arriving a little early.',
+        aFr:
+          'Oui, un parking est disponible sur le site de l\'EEC, paroisse de Biyem-Assi. Les places étant limitées, nous vous conseillons d\'arriver un peu en avance.',
       },
       {
-        qEn: 'Will there be vegetarian or dietary options?',
-        qFr: 'Y aura-t-il des options végétariennes ou régimes spéciaux ?',
-        aEn: 'Absolutely. Please indicate your dietary preferences on your reservation form and we will ensure your meal is perfect for you.',
-        aFr: 'Absolument. Merci d\'indiquer vos préférences alimentaires sur le formulaire de réservation et nous veillerons à ce que votre repas vous convienne parfaitement.',
+        qEn: 'Can I go home to change or plan something else between the ceremony and the reception?',
+        qFr:
+          'Puis-je rentrer me changer ou prévoir une autre activité entre la cérémonie religieuse et la soirée ?',
+        aEn:
+          'We kindly ask you to stay with us: the highlights of the day follow one after another. Please do not plan to go home or schedule another activity between the religious ceremony and the evening celebration.',
+        aFr:
+          'Nous vous invitons à rester avec nous : les temps forts de la journée s\'enchaînent les uns après les autres. Il n\'est donc pas prévu de retourner chez vous ou de prévoir une autre activité entre la cérémonie religieuse et la soirée.',
       },
       {
-        qEn: 'Can I take photos during the ceremony?',
-        qFr: 'Puis-je prendre des photos pendant la cérémonie ?',
-        aEn: 'We kindly ask that you remain fully present with us during the ceremony. Our photographer will capture every moment beautifully. Feel free to take photos during the cocktail hour and reception.',
-        aFr: 'Nous vous demandons de rester pleinement présents avec nous pendant la cérémonie. Notre photographe immortalisera chaque instant. N\'hésitez pas à prendre des photos pendant le cocktail et la réception.',
+        qEn: 'Is there transport between the church and the reception venue?',
+        qFr: 'Y a-t-il une possibilité de déplacement entre l\'église et le lieu de la soirée ?',
+        aEn:
+          'No travel is needed: the religious ceremony and the evening celebration take place at the same site.',
+        aFr:
+          'Aucun déplacement n\'est nécessaire : la cérémonie religieuse et la soirée se déroulent sur le même site.',
       },
       {
-        qEn: 'When should I book my accommodation?',
-        qFr: 'Quand dois-je réserver mon hébergement ?',
-        aEn: 'We recommend booking as early as possible to ensure availability near the venue.',
-        aFr: 'Nous vous recommandons de réserver le plus tôt possible pour garantir une disponibilité près du lieu.',
+        qEn: 'Can I take photos during the wedding?',
+        qFr: 'Puis-je prendre des photos pendant le mariage ?',
+        aEn:
+          'You may take photos while remaining discreet. Professional photographers will also be present to capture every moment.',
+        aFr:
+          'Vous pouvez prendre des photos en restant discret(e). Des photographes professionnels seront présents pour immortaliser chaque instant.',
       },
       {
-        qEn: 'Who should I contact if I have a question?',
-        qFr: 'Qui dois-je contacter si j\'ai une question ?',
+        qEn: 'What if I forgot my ticket?',
+        qFr: 'Que faire si j\'ai oublié mon billet ?',
         contactHelp: true,
-        aEnBefore: 'Please use our ',
-        aEnAfter: ' at the bottom of the page. We will get back to you as quickly as we can.',
-        aFrBefore: 'Utilisez le ',
-        aFrAfter: ' en bas de la page. Nous vous répondrons dans les plus brefs délais.',
+        aEnBefore: 'Your ticket is required to access the ceremony and the reception. If you forgot it, please contact us as soon as possible using the ',
+        aEnAfter: ' at the bottom of the page.',
+        aFrBefore:
+          'Votre billet est obligatoire pour accéder à la cérémonie et à la soirée. Si vous l\'avez oublié, contactez-nous dès que possible via le ',
+        aFrAfter: ' en bas de la page.',
       },
     ],
   },

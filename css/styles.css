@@ -2574,25 +2574,14 @@ html:has(body.landing-page-body) {
 
 .landing__names {
   font-family: var(--font-script);
-  font-size: clamp(3.2rem, 13vw, 6rem);
-  line-height: 1.05;
+  font-size: clamp(2.35rem, 10.5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.08;
   margin-bottom: clamp(0.15rem, 0.8vw, 0.35rem);
   position: relative;
   color: var(--story-burgundy);
-}
-
-.landing__names .ampersand {
-  font-size: 0.58em;
-  vertical-align: middle;
-  margin: 0 0.08em;
-}
-
-.landing__names .name-line {
-  display: block;
-}
-
-.landing__names .name-line--second {
-  padding-left: clamp(1.25rem, 8vw, 2.25rem);
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .landing__rings {
@@ -2810,9 +2799,11 @@ html:has(body.landing-page-body) {
 
 .invitation__names {
   font-family: var(--font-script);
-  font-size: clamp(4.2rem, 15vw, 7.2rem);
-  line-height: 1.05;
+  font-size: clamp(2.75rem, 11.5vw, 7.2rem);
+  line-height: 1.08;
   margin-bottom: 0.35rem;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .invitation__date {
@@ -4060,9 +4051,8 @@ body.story-page-body .faq-widget__list .faq-item__answer {
   }
 
   .invitation__names {
-    font-size: clamp(3.8rem, 14vw, 6.5rem);
+    font-size: clamp(2.35rem, 10vw, 6.5rem);
     padding: 0 0.25rem;
-    overflow-wrap: anywhere;
   }
 
   .invitation__date {
@@ -4386,12 +4376,8 @@ body.story-page-body .faq-widget__list .faq-item__answer {
   }
 
   .landing__names {
-    font-size: clamp(3rem, 14vw, 4.75rem);
+    font-size: clamp(2.1rem, 9.5vw, 4.25rem);
     margin-bottom: 0.25rem;
-  }
-
-  .landing__names .name-line--second {
-    padding-left: 1rem;
   }
 
   .landing__envelope-wrap {
