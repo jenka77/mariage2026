@@ -87,7 +87,7 @@ const MESSAGES = {
 };
 
 let countrySearches = null;
-const MAX_GUESTS_PER_RSVP = 5;
+const MAX_GUESTS_PER_RSVP = 2;
 
 function getRsvpApiUrl() {
   if (window.location.protocol === 'file:') return null;

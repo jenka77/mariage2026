@@ -129,7 +129,7 @@ function hasExistingResponseByName(firstName, lastName, rsvps) {
   return rsvps.some((rsvp) => guestNameKey(rsvp.firstName, rsvp.lastName) === key);
 }
 
-const MAX_GUESTS_PER_RSVP = 5;
+const MAX_GUESTS_PER_RSVP = 2;
 
 function buildInvitedGuestOverview(rsvps) {
   const config = readGuestListConfig();
