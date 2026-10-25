@@ -56,15 +56,16 @@
 
     <form class="rsvp rsvp--page" id="rsvp-form" novalidate>
       <h2 class="rsvp__title">Réservation</h2>
+      <p class="rsvp__required-note" id="rsvp-required-note"></p>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="firstName">Prénom</label>
-          <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+          <label for="firstName">Prénom <span class="required">*</span></label>
+          <input type="text" id="firstName" name="firstName" required aria-required="true" autocomplete="given-name">
         </div>
         <div class="form-group">
-          <label for="lastName">Nom</label>
-          <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+          <label for="lastName">Nom <span class="required">*</span></label>
+          <input type="text" id="lastName" name="lastName" required aria-required="true" autocomplete="family-name">
         </div>
       </div>
       <p class="rsvp__name-hint" id="rsvp-name-hint"></p>
@@ -98,7 +99,7 @@
         <label>Serez-vous présent(e) ?</label>
         <div class="attendance-options">
           <div class="attendance-option">
-            <input type="radio" id="attend-yes" name="attendance" value="yes" required>
+            <input type="radio" id="attend-yes" name="attendance" value="yes">
             <label for="attend-yes">Avec plaisir</label>
           </div>
           <div class="attendance-option">

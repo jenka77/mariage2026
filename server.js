@@ -21,6 +21,18 @@ const RSVP_ERRORS = {
     fr: (max) => `Votre invitation permet au maximum ${max} personne${max > 1 ? 's' : ''} (vous inclus).`,
     en: (max) => `Your invitation allows a maximum of ${max} guest${max > 1 ? 's' : ''} (including yourself).`,
   },
+  MISSING_NAME: {
+    fr: 'Le prénom et le nom sont obligatoires.',
+    en: 'First name and last name are required.',
+  },
+  MISSING_PHONE: {
+    fr: 'Le numéro de téléphone est obligatoire.',
+    en: 'Phone number is required.',
+  },
+  MISSING_COUNTRY: {
+    fr: 'Le pays de résidence est obligatoire.',
+    en: 'Country of residence is required.',
+  },
 };
 
 function getRsvpErrorMessage(code, lang, params) {
@@ -367,16 +379,25 @@ function validateRsvp(body, existingRsvps) {
   const lang = normalized.lang;
 
   if (!normalized.firstName || !normalized.lastName) {
-    return { valid: false, error: 'Missing name' };
-  }
-  if (!normalized.attendance) {
-    return { valid: false, error: 'Missing attendance' };
+    return {
+      valid: false,
+      error: 'MISSING_NAME',
+      message: getRsvpErrorMessage('MISSING_NAME', lang),
+    };
   }
   if (!normalized.phoneNumber || !normalized.phoneCountryCode) {
-    return { valid: false, error: 'Missing phone' };
+    return {
+      valid: false,
+      error: 'MISSING_PHONE',
+      message: getRsvpErrorMessage('MISSING_PHONE', lang),
+    };
   }
   if (!normalized.countryOfResidence) {
-    return { valid: false, error: 'Missing country' };
+    return {
+      valid: false,
+      error: 'MISSING_COUNTRY',
+      message: getRsvpErrorMessage('MISSING_COUNTRY', lang),
+    };
   }
 
   if (hasExistingResponseByName(normalized.firstName, normalized.lastName, existingRsvps)) {

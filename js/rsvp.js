@@ -23,7 +23,7 @@ const RELATIONSHIPS = {
 
 const MESSAGES = {
   en: {
-    success: 'Thank you! Your reservation has been received.',
+    success: 'Your form has been submitted successfully. Thank you — we have received your reservation.',
     error: 'Something went wrong. Please try again.',
     errorFileProtocol:
       'The form cannot be sent from a local file. Run « npm start », then open http://localhost:3000/rsvp-en.html',
@@ -32,6 +32,8 @@ const MESSAGES = {
     sending: 'Sending…',
     submit: 'Confirm Reservation',
     openBtn: 'Reservation',
+    firstNameRequired: 'Please enter your first name.',
+    lastNameRequired: 'Please enter your last name.',
     phoneRequired: 'Please enter your phone number.',
     countryRequired: 'Please select your country from the list.',
     countryInvalid: 'Please choose a valid country from the suggestions.',
@@ -46,11 +48,13 @@ const MESSAGES = {
     guestNameRequired: (n) => `Please enter the full name for guest ${n}.`,
     guestRelationshipRequired: (n) => `Please select how guest ${n} is related to you.`,
     guestRelationshipOtherRequired: (n) => `Please specify your relationship to guest ${n}.`,
+    requiredFieldsNote:
+      'Required fields: first name, last name, country of residence, and phone number.',
     nameHint: 'Please enter the full name of the person responding.',
     alreadyResponded: 'A response has already been recorded for this name. Contact us if you need to change it.',
   },
   fr: {
-    success: 'Merci ! Votre réservation a bien été reçue.',
+    success: 'Votre formulaire a bien été envoyé. Merci, nous avons enregistré votre réservation.',
     error: 'Une erreur est survenue. Veuillez réessayer.',
     errorFileProtocol:
       'Impossible d\'envoyer le formulaire depuis un fichier local. Lancez « npm start », puis ouvrez http://localhost:3000/rsvp-fr.html',
@@ -59,6 +63,8 @@ const MESSAGES = {
     sending: 'Envoi en cours…',
     submit: 'Confirmer la réservation',
     openBtn: 'Réservation',
+    firstNameRequired: 'Veuillez saisir votre prénom.',
+    lastNameRequired: 'Veuillez saisir votre nom.',
     phoneRequired: 'Veuillez saisir votre numéro de téléphone.',
     countryRequired: 'Veuillez sélectionner votre pays dans la liste.',
     countryInvalid: 'Veuillez choisir un pays valide parmi les suggestions.',
@@ -73,6 +79,8 @@ const MESSAGES = {
     guestNameRequired: (n) => `Veuillez saisir le nom complet de l'invité(e) ${n}.`,
     guestRelationshipRequired: (n) => `Veuillez indiquer le lien de l'invité(e) ${n} avec vous.`,
     guestRelationshipOtherRequired: (n) => `Veuillez préciser votre lien avec l'invité(e) ${n}.`,
+    requiredFieldsNote:
+      'Champs obligatoires : prénom, nom, pays de résidence et numéro de téléphone.',
     nameHint: 'Merci de saisir le nom complet de la personne qui répond.',
     alreadyResponded: 'Une réponse existe déjà pour ce nom. Contactez-nous si vous devez la modifier.',
   },
@@ -283,6 +291,9 @@ function initRsvpForm(lang) {
   const nameHint = document.getElementById('rsvp-name-hint');
   if (nameHint) nameHint.textContent = msgs.nameHint;
 
+  const requiredNote = document.getElementById('rsvp-required-note');
+  if (requiredNote) requiredNote.textContent = msgs.requiredFieldsNote;
+
   updateGuestsSelectMax(MAX_GUESTS_PER_RSVP, lang);
 
   if (openBtn) {
@@ -312,28 +323,48 @@ function initRsvpForm(lang) {
     messageEl.textContent = '';
 
     const formData = new FormData(form);
+    const firstName = formData.get('firstName')?.trim() || '';
+    const lastName = formData.get('lastName')?.trim() || '';
     const countryOfResidence = formData.get('countryOfResidence');
     const phoneCountryCode = formData.get('phoneCountryCode');
     const phoneNumber = formData.get('phoneNumber')?.trim().replace(/\s/g, '');
-    const attendance = formData.get('attendance');
+    const attendanceRaw = formData.get('attendance');
+    const attendance = attendanceRaw === 'yes' ? 'yes' : 'no';
     const guestCount = attendance === 'yes' ? parseInt(formData.get('guests'), 10) : 0;
 
+    if (!firstName) {
+      messageEl.className = 'message message--error';
+      messageEl.textContent = msgs.firstNameRequired;
+      document.getElementById('firstName')?.focus();
+      messageEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
+    if (!lastName) {
+      messageEl.className = 'message message--error';
+      messageEl.textContent = msgs.lastNameRequired;
+      document.getElementById('lastName')?.focus();
+      messageEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
     if (!countryOfResidence || !countrySearches?.countrySearch?.getValidItem()) {
       messageEl.className = 'message message--error';
       messageEl.textContent = countryOfResidence ? msgs.countryInvalid : msgs.countryRequired;
       document.getElementById('countrySearchInput')?.focus();
+      messageEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       return;
     }
     if (!phoneCountryCode || !countrySearches?.phoneCodeSearch?.getValidItem()) {
       messageEl.className = 'message message--error';
       messageEl.textContent = phoneCountryCode ? msgs.codeInvalid : msgs.codeRequired;
       document.getElementById('phoneCodeSearchInput')?.focus();
+      messageEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       return;
     }
     if (!phoneNumber) {
       messageEl.className = 'message message--error';
       messageEl.textContent = msgs.phoneRequired;
       document.getElementById('phoneNumber')?.focus();
+      messageEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       return;
     }
 
@@ -343,6 +374,7 @@ function initRsvpForm(lang) {
       if (!guestValidation.valid) {
         messageEl.className = 'message message--error';
         messageEl.textContent = guestValidation.message;
+        messageEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         return;
       }
       additionalGuests = guestValidation.guests;
@@ -352,8 +384,8 @@ function initRsvpForm(lang) {
     submitBtn.textContent = msgs.sending;
 
     const data = {
-      firstName: formData.get('firstName').trim(),
-      lastName: formData.get('lastName').trim(),
+      firstName,
+      lastName,
       email: formData.get('email')?.trim() || '',
       countryOfResidence,
       countryOfResidenceName: getCountryName(countryOfResidence, lang),
@@ -396,8 +428,10 @@ function initRsvpForm(lang) {
         throw new Error(serverMessage || 'Request failed');
       }
 
-      messageEl.className = 'message message--success';
+      messageEl.className = 'message message--success rsvp-form__confirmation';
       messageEl.textContent = msgs.success;
+      messageEl.setAttribute('aria-live', 'assertive');
+      messageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       form.reset();
       resetCountrySearches(countrySearches);
       updateGuestsSelectMax(MAX_GUESTS_PER_RSVP, lang);

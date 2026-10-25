@@ -2,7 +2,10 @@
 const WEDDING_CONFIG = {
   groom: 'Yannick',
   bride: 'Dora',
-  monogram: 'YD',
+  monogram: 'DY',
+  monogramLeft: 'D',
+  monogramRight: 'Y',
+  envelopeMonogramImage: 'assets/monogram-dy-seal.svg',
 
   // Date du mariage (pour le décompte — format ISO)
   weddingDateISO: '2026-12-19T14:30:00',
@@ -195,8 +198,9 @@ const WEDDING_CONFIG = {
   // RSVP ouvert : les réponses sont enregistrées dans data/rsvps.json (plus de liste d'invités).
 
   contact: {
-    phone: '+4917688652911',
+    phone: '+237640555409',
     email: 'karelletchatchouang@gmail.com',
+    whatsappOnly: true,
   },
 };
 
@@ -206,4 +210,12 @@ function getCoupleNames() {
 
 function getCoupleNamesUpper() {
   return `${WEDDING_CONFIG.bride.toUpperCase()} & ${WEDDING_CONFIG.groom.toUpperCase()}`;
+}
+
+function getEnvelopeMonogramLetters() {
+  const cfg = WEDDING_CONFIG;
+  return {
+    left: (cfg.monogramLeft || cfg.bride?.charAt(0) || 'D').toUpperCase(),
+    right: (cfg.monogramRight || cfg.groom?.charAt(0) || 'Y').toUpperCase(),
+  };
 }

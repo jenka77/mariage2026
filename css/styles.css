@@ -2253,6 +2253,18 @@ body.body--invitation {
   color: var(--story-burgundy);
 }
 
+.rsvp-page-body .rsvp-form__confirmation {
+  display: block;
+  margin-top: 1.25rem;
+  padding: 1.15rem 1rem;
+  font-size: clamp(0.95rem, 2.8vw, 1.08rem);
+  line-height: 1.65;
+  background: rgba(201, 169, 110, 0.22);
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  box-shadow: 0 4px 18px rgba(91, 22, 27, 0.08);
+}
+
 .rsvp-decor {
   position: absolute;
   z-index: 0;
@@ -2529,7 +2541,7 @@ html:has(body.landing-page-body) {
 
 .landing__intro .landing__date-group {
   margin-top: clamp(0.15rem, 1vw, 0.35rem);
-  margin-bottom: 0;
+  margin-bottom: clamp(0.35rem, 1.5vw, 0.65rem);
 }
 
 .landing__headline {
@@ -2646,7 +2658,7 @@ html:has(body.landing-page-body) {
 .landing__envelope-wrap {
   position: relative;
   width: clamp(240px, 58vw, 320px);
-  margin: clamp(0.5rem, 2vw, 1rem) auto clamp(1.75rem, 4.5vw, 2.5rem);
+  margin: clamp(1.35rem, 4.5vw, 2.25rem) auto clamp(1.75rem, 4.5vw, 2.5rem);
   line-height: 0;
   isolation: isolate;
   filter:
@@ -2695,18 +2707,18 @@ html:has(body.landing-page-body) {
     drop-shadow(0 24px 40px rgba(91, 22, 27, 0.1));
 }
 
-.landing__envelope-monogram {
+.landing__envelope-monogram-img {
   position: absolute;
-  top: 52%;
+  top: 49.5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
-  font-family: var(--font-script);
-  font-size: clamp(1.65rem, 5.5vw, 2.25rem);
-  color: var(--story-burgundy);
-  line-height: 1;
+  z-index: 4;
+  width: clamp(58px, 17vw, 82px);
+  height: auto;
   pointer-events: none;
-  text-shadow: 0 1px 8px rgba(249, 241, 231, 0.65);
+  filter:
+    drop-shadow(0 2px 6px rgba(91, 22, 27, 0.22))
+    drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
 }
 
 /* Legacy envelope (unused on landing) */
@@ -3612,6 +3624,17 @@ html:has(body.landing-page-body) {
   color: var(--gold);
 }
 
+.rsvp__required-note {
+  margin: -0.75rem 0 1.35rem;
+  font-family: var(--font-sans);
+  font-size: clamp(0.82rem, 2.4vw, 0.92rem);
+  font-weight: 600;
+  line-height: 1.55;
+  text-align: center;
+  color: var(--story-burgundy);
+  opacity: 0.88;
+}
+
 .rsvp__name-hint {
   margin: -0.35rem 0 1.25rem;
   font-family: var(--font-sans);
@@ -3733,9 +3756,26 @@ html:has(body.landing-page-body) {
   text-transform: uppercase;
   color: var(--gold);
   text-align: center;
-  padding: 0 1.25rem 0.75rem;
+  padding: 0 1.25rem 0.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+.help-widget__hint {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.82);
+  padding: 0.5rem 1.1rem 0.65rem;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.body--invitation .help-widget__hint,
+body.rsvp-page-body .help-widget__hint,
+body.landing-page-body .help-widget__hint {
+  color: rgba(91, 22, 27, 0.78);
 }
 
 .help-widget__option {
@@ -4339,6 +4379,10 @@ body.story-page-body .faq-widget__list .faq-item__answer {
     max-height: min(62vh, 620px);
   }
 
+  .landing__intro .landing__date-group {
+    margin-bottom: 0.65rem;
+  }
+
   .landing__date-group {
     gap: 0.2rem;
     margin-bottom: 0.5rem;
@@ -4397,9 +4441,9 @@ body.story-page-body .faq-widget__list .faq-item__answer {
 
   .landing__envelope-wrap {
     width: clamp(158px, 52vw, 220px);
-    margin: -0.35rem auto 1.35rem;
+    margin: clamp(1rem, 4vw, 1.65rem) auto 1.35rem;
     z-index: 7;
-    transform: translateY(-0.25rem);
+    transform: none;
   }
 
   .landing__envelope-wrap::after {
@@ -4408,8 +4452,9 @@ body.story-page-body .faq-widget__list .faq-item__answer {
       linear-gradient(to top, rgba(249, 241, 231, 0.98) 0%, rgba(249, 241, 231, 0.6) 10%, transparent 28%);
   }
 
-  .landing__envelope-monogram {
-    font-size: clamp(1.35rem, 4.8vw, 1.85rem);
+  .landing__envelope-monogram-img {
+    width: clamp(50px, 15.5vw, 72px);
+    top: 49%;
   }
 
   .lang-btn {
