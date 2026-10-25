@@ -45,7 +45,7 @@ const WEDDING_CONFIG = {
   invitation: {
     familiesLineFr: 'Avec leurs familles',
     familiesLineEn: 'Together with their families',
-    inviteSuffixFr: 'vous invites a leur mariage',
+    inviteSuffixFr: 'vous invitent à leur mariage',
     inviteSuffixEn: 'invite you to their wedding',
   },
 
@@ -86,7 +86,7 @@ const WEDDING_CONFIG = {
 
   reception: {
     sectionTitleEn: 'Dinner / Evening',
-    sectionTitleFr: 'Dîner / soirée',
+    sectionTitleFr: 'Dîner / Soirée',
     name: 'Blessings Hall',
     nameFr: 'Blessings Hall',
     address: 'RFJJ+Q9V, Yaoundé, Cameroon',

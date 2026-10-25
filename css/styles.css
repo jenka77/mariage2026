@@ -3211,10 +3211,8 @@ html[data-couple-font='burgues'] .invitation__names {
   margin: 0;
 }
 
-.invitation__section--reception .invitation__event-title {
-  text-transform: none;
-  letter-spacing: 0.14em;
-  font-size: clamp(0.9rem, 2.95vw, 1.12rem);
+.invitation__section--reception {
+  margin-top: clamp(1.35rem, 4.5vw, 2.15rem);
 }
 
 .invitation__divider--event {

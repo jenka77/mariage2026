@@ -17,7 +17,7 @@
         <div class="invitation__invite">
           <p class="invitation__subtitle invitation__invite-line" id="invite-families">Avec leurs familles</p>
           <h1 class="invitation__names" id="couple-names">Dora &amp; Yannick</h1>
-          <p class="invitation__subtitle invitation__invite-line invitation__invite-suffix" id="invite-suffix">vous invites a leur mariage</p>
+          <p class="invitation__subtitle invitation__invite-line invitation__invite-suffix" id="invite-suffix">vous invitent à leur mariage</p>
         </div>
 
         <nav class="invitation__hero-actions std-editorial__actions std-editorial__actions--on-cream" aria-label="Actions">
@@ -94,7 +94,7 @@
 
       <section class="invitation__section invitation__section--event invitation__section--reception">
         <header class="invitation__event-head invitation__event-head--plain">
-          <h2 class="invitation__event-title" id="reception-section-title">Dîner / soirée</h2>
+          <h2 class="invitation__event-title" id="reception-section-title">Dîner / Soirée</h2>
         </header>
         <div class="invitation__event">
           <div class="invitation__event-photo-wrap">
@@ -210,7 +210,7 @@
     document.getElementById('ceremony-section-title').textContent =
       WEDDING_CONFIG.ceremony.sectionTitleFr || 'Cérémonie religieuse';
     document.getElementById('reception-section-title').textContent =
-      WEDDING_CONFIG.reception.sectionTitleFr || 'Dîner / soirée';
+      WEDDING_CONFIG.reception.sectionTitleFr || 'Dîner / Soirée';
     document.getElementById('ceremony-photo').src = WEDDING_CONFIG.ceremonyPhoto;
     initPhotoLightbox('#ceremony-photo', 'fr');
     document.getElementById('reception-photo').src = WEDDING_CONFIG.receptionPhoto;
@@ -219,7 +219,7 @@
       inv.familiesLineFr || 'Avec leurs familles';
     document.getElementById('couple-names').textContent = getCoupleNames();
     document.getElementById('invite-suffix').textContent =
-      inv.inviteSuffixFr || 'vous invites a leur mariage';
+      inv.inviteSuffixFr || 'vous invitent à leur mariage';
     document.getElementById('ceremony-name').textContent = WEDDING_CONFIG.ceremony.nameFr;
     document.getElementById('ceremony-city').textContent =
       WEDDING_CONFIG.ceremony.cityFr || WEDDING_CONFIG.ceremony.addressFr;
