@@ -3211,8 +3211,12 @@ html[data-couple-font='burgues'] .invitation__names {
   margin: 0;
 }
 
+.invitation__section--ceremony {
+  margin-bottom: clamp(1.1rem, 3.5vw, 1.75rem);
+}
+
 .invitation__section--reception {
-  margin-top: clamp(1.35rem, 4.5vw, 2.15rem);
+  margin-top: clamp(2.25rem, 7vw, 3.25rem);
 }
 
 .invitation__divider--event {
@@ -3390,10 +3394,15 @@ html[data-couple-font='burgues'] .invitation__names {
   line-height: 0;
 }
 
-.invitation__event-icon svg {
+.invitation__event-icon svg,
+.invitation__event-icon img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.invitation__event-icon--img {
+  width: clamp(32px, 9vw, 42px);
 }
 
 .invitation__event-venue {
