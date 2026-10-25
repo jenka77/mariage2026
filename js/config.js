@@ -20,7 +20,7 @@ const WEDDING_CONFIG = {
   venueFr: 'EEC Paroisse de Biyem-Assi, RFJJ+Q9V, Yaoundé, Cameroun',
 
   // Photo page enveloppe (première page — index.html)
-  landingPhoto: 'assets/couple-landing.jpeg',
+  landingPhoto: 'assets/mariage26.jpeg',
   landingRingsImage: 'assets/wedding-rings-sign.png',
 
   // Photo Save the Date (en.html / fr.html) — noir & blanc

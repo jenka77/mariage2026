@@ -13,7 +13,7 @@
 <body class="landing-page-body">
   <main class="landing">
     <div class="landing__bg" aria-hidden="true">
-      <img class="landing__bg-img" id="landing-bg-img" src="assets/couple-landing.jpeg" alt="">
+      <img class="landing__bg-img" id="landing-bg-img" src="assets/mariage26.jpeg" alt="">
       <div class="landing__bg-overlay"></div>
     </div>
 
@@ -51,7 +51,12 @@
 
       <div class="landing__envelope-wrap">
         <img class="landing__envelope-img" src="assets/landing-envelope.png" alt="">
-        <span class="landing__envelope-monogram" id="envelope-monogram" aria-hidden="true">DY</span>
+        <span class="landing__envelope-seal-mask" aria-hidden="true"></span>
+        <span class="landing__envelope-monogram" id="envelope-monogram" aria-hidden="true">
+          <span class="landing__envelope-monogram-letter" id="envelope-monogram-left">D</span>
+          <span class="landing__envelope-monogram-bar" aria-hidden="true"></span>
+          <span class="landing__envelope-monogram-letter" id="envelope-monogram-right">Y</span>
+        </span>
       </div>
 
       <div class="landing__actions">
@@ -65,7 +70,8 @@
   <script>
     document.getElementById('couple-names').textContent = getCoupleNames();
     const letters = getEnvelopeMonogramLetters();
-    document.getElementById('envelope-monogram').textContent = letters.left + letters.right;
+    document.getElementById('envelope-monogram-left').textContent = letters.left;
+    document.getElementById('envelope-monogram-right').textContent = letters.right;
     document.getElementById('landing-bg-img').src = WEDDING_CONFIG.landingPhoto;
     const ringsImg = document.getElementById('landing-rings-img');
     if (ringsImg && WEDDING_CONFIG.landingRingsImage) {
