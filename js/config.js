@@ -6,6 +6,9 @@ const WEDDING_CONFIG = {
   monogramLeft: 'D',
   monogramRight: 'Y',
 
+  // Prénoms : 'brittany' | 'burgues' (accueil + billet + réservation)
+  coupleNamesFont: 'brittany',
+
   // Date du mariage (pour le décompte — format ISO)
   weddingDateISO: '2026-12-19T14:30:00',
 
@@ -214,3 +217,9 @@ function getEnvelopeMonogramLetters() {
     right: (cfg.monogramRight || cfg.groom?.charAt(0) || 'Y').toUpperCase(),
   };
 }
+
+(function applyCoupleNamesFontPreference() {
+  const pick = (WEDDING_CONFIG.coupleNamesFont || 'brittany').toLowerCase();
+  document.documentElement.dataset.coupleFont =
+    pick === 'burgues' ? 'burgues' : 'brittany';
+})();

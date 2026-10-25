@@ -116,13 +116,6 @@ function initSaveTheDate(lang) {
   const namesEl = document.getElementById('std-page-names');
   if (namesEl) namesEl.textContent = getCoupleNames();
 
-  const messageEl = document.getElementById('std-message');
-  if (messageEl) {
-    messageEl.textContent = isFr
-      ? (std.messageFr || '')
-      : (std.messageEn || '');
-  }
-
   const thanksEl = document.getElementById('std-thanks');
   if (thanksEl) {
     thanksEl.textContent = isFr

@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Brittany Signature';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/BrittanySignature-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Burgues Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/BurguesScript-Regular.woff2') format('woff2');
+}
+
 /* ── Variables ── */
 :root {
   --palette-hell-orange: #f9f1e7;
@@ -13,6 +29,7 @@
   --story-burgundy: #5b161b;
   --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
   --font-script: 'Great Vibes', cursive;
+  --font-couple-names: 'Brittany Signature', 'Great Vibes', cursive;
   --font-landing-date: 'Parisienne', 'Great Vibes', cursive;
   --font-sans: 'Montserrat', 'Helvetica Neue', sans-serif;
 
@@ -30,6 +47,14 @@
     radial-gradient(ellipse 105% 85% at 0% 100%, var(--gold-glow) 0%, var(--gold-glow-mid) 30%, transparent 68%),
     radial-gradient(ellipse 105% 85% at 100% 0%, var(--gold-glow) 0%, var(--gold-glow-mid) 30%, transparent 68%),
     radial-gradient(ellipse 105% 85% at 100% 100%, var(--gold-glow) 0%, var(--gold-glow-mid) 30%, transparent 68%);
+}
+
+html[data-couple-font='brittany'] {
+  --font-couple-names: 'Brittany Signature', 'Great Vibes', cursive;
+}
+
+html[data-couple-font='burgues'] {
+  --font-couple-names: 'Burgues Script', 'Great Vibes', cursive;
 }
 
 *, *::before, *::after {
@@ -2563,24 +2588,14 @@ html:has(body.landing-page-body) {
 }
 
 .landing__std-save,
-.landing__std-date {
+.landing__std-date,
+.landing__std-the {
   font-family: 'Playfair Display', var(--font-serif);
   font-size: clamp(1.35rem, 4.8vw, 2.15rem);
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--story-burgundy);
-}
-
-.landing__std-the {
-  font-family: var(--font-script);
-  font-size: clamp(2rem, 7.5vw, 3.15rem);
-  font-weight: 400;
-  color: #8a4a35;
-  margin: 0 0.05em;
-  letter-spacing: 0.02em;
-  line-height: 0.85;
-  transform: translateY(0.08em);
 }
 
 .landing__header {
@@ -2594,7 +2609,7 @@ html:has(body.landing-page-body) {
 }
 
 .landing__names {
-  font-family: var(--font-script);
+  font-family: var(--font-couple-names);
   font-size: clamp(2.35rem, 10.5vw, 5.5rem);
   font-weight: 400;
   line-height: 1.08;
@@ -2707,27 +2722,6 @@ html:has(body.landing-page-body) {
     drop-shadow(0 24px 40px rgba(91, 22, 27, 0.1));
 }
 
-.landing__envelope-seal-mask {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  width: clamp(54px, 16.5vw, 78px);
-  height: clamp(54px, 16.5vw, 78px);
-  border-radius: 50%;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at 50% 42%,
-    #fefdfb 0%,
-    #f7f2eb 55%,
-    #ebe3d6 100%
-  );
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.9),
-    0 1px 4px rgba(91, 22, 27, 0.06);
-}
-
 .landing__envelope-monogram {
   position: absolute;
   top: 50%;
@@ -2746,11 +2740,11 @@ html:has(body.landing-page-body) {
 
 .landing__envelope-monogram-letter {
   font-family: var(--font-script);
-  font-size: clamp(1.75rem, 5.8vw, 2.45rem);
+  font-size: clamp(1.65rem, 5.2vw, 2.25rem);
   font-weight: 400;
-  color: var(--story-burgundy);
-  text-shadow: 0 1px 2px rgba(249, 241, 231, 0.85);
-  transform: translateY(0.06em);
+  color: #4a1520;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  transform: translateY(0.04em);
 }
 
 .landing__envelope-monogram-bar {
@@ -2862,12 +2856,22 @@ html:has(body.landing-page-body) {
 }
 
 .invitation__names {
-  font-family: var(--font-script);
+  font-family: var(--font-couple-names);
   font-size: clamp(2.75rem, 11.5vw, 7.2rem);
   line-height: 1.08;
   margin-bottom: 0.35rem;
   white-space: nowrap;
   max-width: 100%;
+}
+
+html[data-couple-font='burgues'] .landing__names {
+  font-size: clamp(2.05rem, 9vw, 4.85rem);
+  letter-spacing: 0.01em;
+}
+
+html[data-couple-font='burgues'] .invitation__names {
+  font-size: clamp(2.35rem, 10vw, 6.35rem);
+  letter-spacing: 0.01em;
 }
 
 .invitation__date {
@@ -4529,14 +4533,11 @@ body.story-page-body .faq-widget__list .faq-item__answer {
   }
 
   .landing__std-save,
-  .landing__std-date {
+  .landing__std-date,
+  .landing__std-the {
     font-size: clamp(1.75rem, 7.2vw, 2.35rem);
     letter-spacing: 0.22em;
     font-weight: 600;
-  }
-
-  .landing__std-the {
-    font-size: clamp(2.45rem, 10vw, 3.4rem);
   }
 
   .landing__date {
@@ -4572,12 +4573,6 @@ body.story-page-body .faq-widget__list .faq-item__answer {
     background:
       linear-gradient(to bottom, rgba(249, 241, 231, 0.98) 0%, rgba(249, 241, 231, 0.6) 10%, transparent 26%),
       linear-gradient(to top, rgba(249, 241, 231, 0.98) 0%, rgba(249, 241, 231, 0.6) 10%, transparent 28%);
-  }
-
-  .landing__envelope-seal-mask {
-    width: clamp(48px, 15vw, 68px);
-    height: clamp(48px, 15vw, 68px);
-    top: 50%;
   }
 
   .landing__envelope-monogram-letter {
