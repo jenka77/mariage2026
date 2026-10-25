@@ -2514,7 +2514,7 @@ html:has(body.landing-page-body) {
   align-items: center;
   box-sizing: border-box;
   padding:
-    max(clamp(3.25rem, 11vh, 5rem), calc(env(safe-area-inset-top, 0px) + 2.75rem))
+    max(clamp(3.75rem, 13vh, 5.75rem), calc(env(safe-area-inset-top, 0px) + 3.25rem))
     max(clamp(0.75rem, 2.5vw, 1.5rem), env(safe-area-inset-right, 0px))
     max(clamp(1.75rem, 4vh, 3rem), env(safe-area-inset-bottom, 0px))
     max(clamp(0.75rem, 2.5vw, 1.5rem), env(safe-area-inset-left, 0px));
@@ -2528,7 +2528,16 @@ html:has(body.landing-page-body) {
 }
 
 .landing__intro .landing__date-group {
+  margin-top: clamp(0.15rem, 1vw, 0.35rem);
   margin-bottom: 0;
+}
+
+.landing__headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: clamp(1.75rem, 6vw, 3rem);
 }
 
 .landing__save-the-date {
@@ -2537,7 +2546,7 @@ html:has(body.landing-page-body) {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.05em 0.2em;
-  margin: 0 0 clamp(0.85rem, 2.5vw, 1.15rem);
+  margin: 0 0 clamp(0.65rem, 2vw, 0.95rem);
   line-height: 1;
 }
 
@@ -2568,7 +2577,7 @@ html:has(body.landing-page-body) {
   font-weight: 400;
   letter-spacing: 0.38em;
   text-transform: uppercase;
-  margin-bottom: clamp(0.45rem, 1.6vw, 0.75rem);
+  margin: 0;
   color: var(--story-burgundy);
 }
 
@@ -2577,6 +2586,7 @@ html:has(body.landing-page-body) {
   font-size: clamp(2.35rem, 10.5vw, 5.5rem);
   font-weight: 400;
   line-height: 1.08;
+  margin-top: clamp(0.35rem, 1.5vw, 0.65rem);
   margin-bottom: clamp(0.15rem, 0.8vw, 0.35rem);
   position: relative;
   color: var(--story-burgundy);
@@ -2586,7 +2596,7 @@ html:has(body.landing-page-body) {
 
 .landing__rings {
   width: clamp(110px, 28vw, 165px);
-  margin: clamp(0.15rem, 1vw, 0.35rem) auto clamp(0.1rem, 0.6vw, 0.25rem);
+  margin: clamp(0.15rem, 1vw, 0.35rem) auto clamp(0.35rem, 1.5vw, 0.65rem);
   line-height: 0;
 }
 
@@ -4337,7 +4347,7 @@ body.story-page-body .faq-widget__list .faq-item__answer {
   .landing__content {
     max-width: 100%;
     gap: 0.15rem;
-    padding-top: max(4.25rem, calc(env(safe-area-inset-top, 0px) + 3.5rem));
+    padding-top: max(4.75rem, calc(env(safe-area-inset-top, 0px) + 4rem));
     padding-bottom: max(2.75rem, calc(env(safe-area-inset-bottom, 0px) + 2.25rem));
     padding-left: max(0.65rem, env(safe-area-inset-left, 0px));
     padding-right: max(0.65rem, env(safe-area-inset-right, 0px));
@@ -4368,15 +4378,20 @@ body.story-page-body .faq-widget__list .faq-item__answer {
     letter-spacing: 0;
   }
 
+  .landing__headline {
+    margin-bottom: clamp(2rem, 7vw, 3.25rem);
+  }
+
   .landing__header {
     font-size: clamp(0.88rem, 3.4vw, 1.05rem);
     letter-spacing: 0.3em;
     line-height: 1.55;
-    margin-bottom: 0.55rem;
+    margin-bottom: 0;
   }
 
   .landing__names {
     font-size: clamp(2.1rem, 9.5vw, 4.25rem);
+    margin-top: 0.35rem;
     margin-bottom: 0.25rem;
   }
 
