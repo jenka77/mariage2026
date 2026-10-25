@@ -2588,10 +2588,18 @@ html:has(body.landing-page-body) {
 }
 
 .landing__std-save,
-.landing__std-date,
-.landing__std-the {
+.landing__std-date {
   font-family: 'Playfair Display', var(--font-serif);
   font-size: clamp(1.35rem, 4.8vw, 2.15rem);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--story-burgundy);
+}
+
+.landing__std-the {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: clamp(0.95rem, 3.15vw, 1.35rem);
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -2659,12 +2667,12 @@ html:has(body.landing-page-body) {
 
 .landing__date {
   margin: 0;
-  font-family: var(--font-landing-date);
-  font-size: clamp(1.9rem, 8.8vw, 4.5rem);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-transform: none;
-  line-height: 1.1;
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: clamp(1.35rem, 4.8vw, 2.15rem);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  line-height: 1.35;
   white-space: nowrap;
   max-width: 100%;
   color: var(--story-burgundy);
@@ -4533,16 +4541,23 @@ body.story-page-body .faq-widget__list .faq-item__answer {
   }
 
   .landing__std-save,
-  .landing__std-date,
-  .landing__std-the {
+  .landing__std-date {
     font-size: clamp(1.75rem, 7.2vw, 2.35rem);
     letter-spacing: 0.22em;
     font-weight: 600;
   }
 
+  .landing__std-the {
+    font-size: clamp(1.05rem, 4.2vw, 1.55rem);
+    letter-spacing: 0.22em;
+    font-weight: 600;
+  }
+
   .landing__date {
-    font-size: clamp(1.85rem, 8.5vw, 3.35rem);
-    letter-spacing: 0;
+    font-size: clamp(1.75rem, 7.2vw, 2.35rem);
+    letter-spacing: 0.22em;
+    font-weight: 600;
+    line-height: 1.4;
   }
 
   .landing__headline {
