@@ -16,7 +16,7 @@ const WEDDING_CONFIG = {
   dateShort: '19 DEC 2026',
   dateFr: 'Samedi 19 décembre 2026',
   dateShortFr: '19 DÉC. 2026',
-  landingDate: '19 décembre 2026',
+  landingDate: '19 Décembre 2026',
   time: '2:30 PM',
 
   venue: 'EEC Paroisse de Biyem-Assi, RFJJ+Q9V, Yaoundé, Cameroon',
@@ -108,7 +108,7 @@ const WEDDING_CONFIG = {
       '#A04E28',
       '#8B6644',
       '#1A2E24',
-      '#7A505C',
+      '#DAC5A6',
     ],
     colorSwatches: [
       { hex: '#7A3A12', nameFr: 'Terracotta', nameEn: 'Terracotta' },
@@ -117,7 +117,7 @@ const WEDDING_CONFIG = {
       { hex: '#A04E28', nameFr: 'Rouille / cuivre', nameEn: 'Rust / copper' },
       { hex: '#8B6644', nameFr: 'Camel / caramel', nameEn: 'Camel / caramel' },
       { hex: '#1A2E24', nameFr: 'Vert forêt', nameEn: 'Forest green' },
-      { hex: '#7A505C', nameFr: 'Vieux rose', nameEn: 'Dusty rose' },
+      { hex: '#DAC5A6', nameFr: 'Beige champagne / sable', nameEn: 'Champagne beige / sand' },
     ],
   },
 
