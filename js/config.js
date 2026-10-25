@@ -187,9 +187,9 @@ const WEDDING_CONFIG = {
 };
 
 function getCoupleNames() {
-  return `${WEDDING_CONFIG.groom} & ${WEDDING_CONFIG.bride}`;
+  return `${WEDDING_CONFIG.bride} & ${WEDDING_CONFIG.groom}`;
 }
 
 function getCoupleNamesUpper() {
-  return `${WEDDING_CONFIG.groom.toUpperCase()} & ${WEDDING_CONFIG.bride.toUpperCase()}`;
+  return `${WEDDING_CONFIG.bride.toUpperCase()} & ${WEDDING_CONFIG.groom.toUpperCase()}`;
 }

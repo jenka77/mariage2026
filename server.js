@@ -167,7 +167,7 @@ function getCoupleNames() {
   const configContent = fs.readFileSync(path.join(__dirname, 'js', 'config.js'), 'utf8');
   const groom = configContent.match(/groom:\s*['"](.+?)['"]/)?.[1] || '';
   const bride = configContent.match(/bride:\s*['"](.+?)['"]/)?.[1] || '';
-  return `${groom} & ${bride}`.trim();
+  return `${bride} & ${groom}`.trim();
 }
 
 function buildGuestsPdfBuffer(allConfirmedGuests, confirmedPersons) {
