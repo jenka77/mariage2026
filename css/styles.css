@@ -2671,7 +2671,7 @@ html:has(body.landing-page-body) {
   font-size: clamp(1.35rem, 4.8vw, 2.15rem);
   font-weight: 500;
   letter-spacing: 0.28em;
-  text-transform: uppercase;
+  text-transform: none;
   line-height: 1.35;
   white-space: nowrap;
   max-width: 100%;
