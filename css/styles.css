@@ -2881,7 +2881,12 @@ html:has(body.landing-page-body) {
 
 .invitation__invite .invitation__names {
   margin-top: clamp(0.35rem, 1.5vw, 0.55rem);
-  margin-bottom: clamp(0.35rem, 1.5vw, 0.55rem);
+  margin-bottom: clamp(0.5rem, 2vw, 0.75rem);
+}
+
+.invitation__invite .invitation__names + .invitation__invite-line {
+  margin-top: clamp(0.55rem, 2.8vw, 1.15rem);
+  margin-bottom: 0;
 }
 
 .invitation__subtitle {
