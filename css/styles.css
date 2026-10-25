@@ -2140,6 +2140,7 @@ body.body--invitation {
   opacity: 0.9;
   padding: 0 1.15rem 1.15rem;
   margin: 0;
+  white-space: pre-line;
 }
 
 .faq-item:not([open]) .faq-item__question {
@@ -4077,6 +4078,7 @@ body.landing-page-body .help-widget__hint {
   max-height: none;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  white-space: pre-line;
 }
 
 .faq-widget__list .faq-item__question,

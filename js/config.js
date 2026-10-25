@@ -124,8 +124,8 @@ const WEDDING_CONFIG = {
   faq: {
     labelEn: 'FAQ',
     labelFr: 'FAQ',
-    titleEn: 'Good to Know',
-    titleFr: 'Bon à savoir',
+    titleEn: 'Good to Know – FAQ',
+    titleFr: 'Bon à savoir – FAQ',
     helpLinkEn: 'help button',
     helpLinkFr: 'bouton d\'aide',
     items: [
@@ -133,60 +133,58 @@ const WEDDING_CONFIG = {
         qEn: 'Can I bring a plus one?',
         qFr: 'Puis-je venir accompagné(e) ?',
         aEn:
-          'Two types of tickets are used: the couple ticket, valid for two guests (Mr and Mrs), and the individual ticket, valid for one guest. Please register according to the ticket you received.',
+          'Please check the number of seats shown on your invitation ticket. There are two ticket types:\n\nCouple ticket: valid for two guests (Mrs and Mr).\nIndividual ticket: valid for one guest (Mrs, Miss or Mr).\n\nPlease respect the number of seats on your ticket.',
         aFr:
-          'Deux types de billets existent : le billet couple, valable pour deux personnes (Mme et M.), et le billet individuel, valable pour une seule personne. Merci de vous enregistrer conformément au billet reçu.',
+          'Nous vous invitons à vérifier le nombre de places indiqué sur votre billet d\'invitation. Il existe deux catégories de billets :\n\nBillet couple : valable pour deux personnes (Mme et M.).\nBillet individuel : valable pour une seule personne (Mme, Mlle ou M.).\n\nMerci de respecter le nombre de places correspondant à votre billet.',
       },
       {
         qEn: 'Are children welcome?',
         qFr: 'Les enfants sont-ils les bienvenus ?',
         aEn:
-          'Our wedding is primarily an adults\' celebration. Children are welcome only if they have their own invitation ticket.',
+          'We have chosen to celebrate this day mainly among adults. However, if you wish to bring your child or children, please ensure each one has their own invitation ticket. Without a ticket, we unfortunately cannot guarantee their admission.',
         aFr:
-          'Notre mariage est avant tout une célébration entre adultes. Les enfants sont les bienvenus uniquement s\'ils disposent de leur propre billet d\'invitation.',
+          'Nous avons choisi de célébrer cette journée principalement entre adultes. Toutefois, si vous souhaitez venir avec votre ou vos enfants, assurez-vous que chacun d\'eux dispose de son propre billet d\'invitation. Sans billet, leur accès ne pourra malheureusement pas être garanti.',
       },
       {
         qEn: 'Is parking available on site?',
         qFr: 'Un parking est-il disponible sur place ?',
         aEn:
-          'Yes, parking is available at the EEC parish of Biyem-Assi. Spaces are limited, so we recommend arriving a little early.',
+          'Yes, parking is available at the EEC parish of Biyem-Assi. Spaces are limited, so we cannot guarantee a spot for every guest. We recommend arriving early: first come, first served!',
         aFr:
-          'Oui, un parking est disponible sur le site de l\'EEC, paroisse de Biyem-Assi. Les places étant limitées, nous vous conseillons d\'arriver un peu en avance.',
+          'Oui, un parking est disponible sur le site de l\'EEC, paroisse de Biyem-Assi. Toutefois, les places étant limitées, nous ne pouvons pas garantir une place de stationnement à chaque invité. Nous vous recommandons donc d\'arriver tôt : premier arrivé, premier servi !',
       },
       {
         qEn: 'Can I go home to change or plan something else between the ceremony and the reception?',
         qFr:
           'Puis-je rentrer me changer ou prévoir une autre activité entre la cérémonie religieuse et la soirée ?',
         aEn:
-          'We kindly ask you to stay with us: the highlights of the day follow one after another. Please do not plan to go home or schedule another activity between the religious ceremony and the evening celebration.',
+          'We strongly advise against it, as the different parts of the day will follow one another. We recommend staying on site to enjoy every moment and celebrate this beautiful day with us without missing anything!',
         aFr:
-          'Nous vous invitons à rester avec nous : les temps forts de la journée s\'enchaînent les uns après les autres. Il n\'est donc pas prévu de retourner chez vous ou de prévoir une autre activité entre la cérémonie religieuse et la soirée.',
+          'Nous vous le déconseillons fortement, car les différents moments de cette journée s\'enchaîneront. Nous vous recommandons de rester sur place afin de profiter pleinement de chaque instant et de célébrer cette belle journée à nos côtés, sans rien manquer !',
       },
       {
         qEn: 'Is there transport between the church and the reception venue?',
         qFr: 'Y a-t-il une possibilité de déplacement entre l\'église et le lieu de la soirée ?',
         aEn:
-          'No travel is needed: the religious ceremony and the evening celebration take place at the same site.',
+          'No travel is needed, as the religious ceremony and the evening celebration will take place at the same site.',
         aFr:
-          'Aucun déplacement n\'est nécessaire : la cérémonie religieuse et la soirée se déroulent sur le même site.',
+          'Aucun déplacement ne sera nécessaire, car la célébration religieuse et la soirée se dérouleront sur le même site.',
       },
       {
         qEn: 'Can I take photos during the wedding?',
         qFr: 'Puis-je prendre des photos pendant le mariage ?',
         aEn:
-          'You may take photos while remaining discreet. Professional photographers will also be present to capture every moment.',
+          'Yes, you may take photos discreetly to capture these beautiful moments. Professional photographers will also be present to capture the highlights of our day. Photos will be made available to you on the event website.',
         aFr:
-          'Vous pouvez prendre des photos en restant discret(e). Des photographes professionnels seront présents pour immortaliser chaque instant.',
+          'Oui, vous pourrez prendre des photos discrètement afin d\'immortaliser ces beaux moments. Des photographes professionnels seront également présents pour capturer les moments forts de notre journée. Les photos seront mises à votre disposition sur le site Internet de l\'événement.',
       },
       {
         qEn: 'What if I forgot my ticket?',
         qFr: 'Que faire si j\'ai oublié mon billet ?',
-        contactHelp: true,
-        aEnBefore: 'Your ticket is required to access the ceremony and the reception. If you forgot it, please contact us as soon as possible using the ',
-        aEnAfter: ' at the bottom of the page.',
-        aFrBefore:
-          'Votre billet est obligatoire pour accéder à la cérémonie et à la soirée. Si vous l\'avez oublié, contactez-nous dès que possible via le ',
-        aFrAfter: ' en bas de la page.',
+        aEn:
+          'Your ticket is required to access our wedding, both the religious ceremony and the evening celebration. No admission will be allowed without a ticket. Please check that you have it with you before leaving home.',
+        aFr:
+          'Le billet est obligatoire pour accéder à notre mariage, aussi bien à la célébration religieuse qu\'à la soirée. Aucun accès ne sera autorisé sans billet. Nous vous invitons donc à vérifier que vous l\'avez bien avec vous avant de partir de chez vous.',
       },
     ],
   },
