@@ -1267,9 +1267,19 @@ body.body--invitation {
     gap: 0.55rem;
   }
 
-  .invitation__event-photo {
-    width: clamp(92px, 26vw, 118px);
-    height: clamp(92px, 26vw, 118px);
+  .invitation__event-photo--arch {
+    width: clamp(96px, 27vw, 128px);
+    height: clamp(138px, 38vw, 182px);
+  }
+
+  .invitation__event-photo-flowers {
+    width: clamp(58px, 18vw, 86px);
+  }
+
+  .invitation__events-decor--tr,
+  .invitation__events-decor--bl {
+    opacity: 0.75;
+    width: clamp(100px, 32vw, 160px);
   }
 
   .invitation__section--event p {
@@ -3076,17 +3086,127 @@ html[data-couple-font='burgues'] .invitation__names {
   margin-bottom: 0.15rem;
 }
 
+.invitation__events {
+  position: relative;
+  margin: clamp(0.5rem, 2vw, 1rem) 0 clamp(0.75rem, 2.5vw, 1.25rem);
+  padding: clamp(0.35rem, 2vw, 0.75rem) 0;
+  overflow: visible;
+}
+
+.invitation__events-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.invitation__events-decor--tr {
+  position: absolute;
+  top: -2%;
+  right: -18%;
+  width: clamp(120px, 38vw, 220px);
+  opacity: 0.92;
+}
+
+.invitation__events-decor--bl {
+  position: absolute;
+  bottom: 4%;
+  left: -20%;
+  width: clamp(130px, 40vw, 240px);
+  opacity: 0.9;
+}
+
+.invitation__events > .invitation__section--event,
+.invitation__events > .invitation__divider--event {
+  position: relative;
+  z-index: 1;
+}
+
 .invitation__section--event {
   text-align: center;
+  margin-bottom: clamp(0.65rem, 2.5vw, 1.1rem);
+}
+
+.invitation__event-head {
+  margin-bottom: clamp(0.85rem, 3vw, 1.25rem);
+}
+
+.invitation__event-head--plain {
+  margin-top: clamp(0.15rem, 1vw, 0.35rem);
+}
+
+.invitation__event-headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.45rem, 2vw, 0.75rem);
+  max-width: min(100%, 420px);
+  margin: 0 auto 0.55rem;
+  color: var(--gold);
+}
+
+.invitation__event-headline-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.85), transparent);
+  max-width: 140px;
+}
+
+.invitation__event-headline-line--solo {
+  max-width: 120px;
+}
+
+.invitation__event-headline-motif {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.invitation__event-headline-motif--rings svg {
+  width: clamp(42px, 12vw, 56px);
+  height: auto;
+}
+
+.invitation__event-headline-motif--hearts svg {
+  width: clamp(36px, 10vw, 48px);
+  height: auto;
+}
+
+.invitation__event-title {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: clamp(0.95rem, 3.2vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--story-burgundy);
+  margin: 0;
+}
+
+.invitation__divider--event {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.45rem, 2vw, 0.75rem);
+  max-width: min(100%, 420px);
+  margin: clamp(0.35rem, 1.5vw, 0.65rem) auto clamp(0.85rem, 3vw, 1.15rem);
+  line-height: 0;
 }
 
 .invitation__event {
   display: flex;
   align-items: flex-start;
-  gap: clamp(0.85rem, 3.5vw, 1.25rem);
-  max-width: min(100%, 540px);
+  gap: clamp(0.75rem, 3.2vw, 1.15rem);
+  max-width: min(100%, 560px);
   margin: 0 auto;
   text-align: left;
+}
+
+.invitation__event-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
 }
 
 .invitation__event-photo {
@@ -3101,14 +3221,41 @@ html[data-couple-font='burgues'] .invitation__names {
     0 8px 22px rgba(0, 0, 0, 0.38);
 }
 
+.invitation__event-photo--arch {
+  width: clamp(118px, 31vw, 168px);
+  height: clamp(168px, 44vw, 238px);
+  border-radius: 50% 50% 46% 46% / 58% 58% 42% 42%;
+  padding: 3px;
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 110, 0.65),
+    0 10px 24px rgba(91, 22, 27, 0.12);
+}
+
 .invitation__event-photo img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: inherit;
   object-fit: cover;
   object-position: center;
   display: block;
-  border: 2px solid rgba(58, 8, 8, 0.85);
+  border: none;
+}
+
+.invitation__event-photo-flowers {
+  position: absolute;
+  left: -8%;
+  bottom: -6%;
+  width: clamp(72px, 22vw, 110px);
+  z-index: 2;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.invitation__event-photo-flowers img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(91, 22, 27, 0.12));
 }
 
 .photo-lightbox-trigger {
@@ -3203,7 +3350,86 @@ html[data-couple-font='burgues'] .invitation__names {
 .invitation__event-body {
   flex: 1;
   min-width: 0;
-  padding-top: 0.15rem;
+  padding-top: 0.05rem;
+}
+
+.invitation__event-icon {
+  width: clamp(28px, 8vw, 36px);
+  margin-bottom: 0.35rem;
+  color: var(--gold);
+  line-height: 0;
+}
+
+.invitation__event-icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.invitation__event-venue {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: clamp(1.05rem, 3.6vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--story-burgundy);
+  margin: 0 0 0.55rem;
+}
+
+.invitation__event-meta {
+  list-style: none;
+  margin: 0 0 0.65rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.invitation__event-meta li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-serif);
+  font-size: clamp(0.88rem, 2.8vw, 1.05rem);
+  color: rgba(91, 22, 27, 0.82);
+  line-height: 1.35;
+}
+
+.invitation__event-meta-icon {
+  flex-shrink: 0;
+  width: 1.05rem;
+  color: var(--gold);
+  line-height: 0;
+}
+
+.invitation__event-meta-icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.invitation-content--billet .invitation__event-details {
+  display: inline-block;
+  margin-top: 0.15rem;
+  padding: 0.55rem 1.05rem;
+  background: var(--story-burgundy);
+  color: #fff;
+  border-radius: 999px;
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: clamp(0.62rem, 2vw, 0.72rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(91, 22, 27, 0.18);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.invitation-content--billet .invitation__event-details:hover,
+.invitation-content--billet .invitation__event-details:focus-visible {
+  background: #4a1218;
+  color: #fff;
+  transform: translateY(-1px);
+  outline: none;
 }
 
 .invitation__section--event .invitation__section-title {
@@ -4251,9 +4477,9 @@ body.story-page-body .faq-widget__list .faq-item__answer {
     letter-spacing: 0.2em;
   }
 
-  .invitation__event-photo {
-    width: clamp(128px, 32vw, 168px);
-    height: clamp(128px, 32vw, 168px);
+  .invitation__event-photo--arch {
+    width: clamp(104px, 29vw, 142px);
+    height: clamp(148px, 41vw, 200px);
   }
 
   .invitation__divider--ornate {

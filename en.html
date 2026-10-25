@@ -44,43 +44,102 @@
         </nav>
       </header>
 
-      <div class="invitation__divider invitation__divider--ornate" aria-hidden="true">
-        <img src="assets/landing-divider.png" alt="">
-      </div>
+      <div class="invitation__events">
+        <div class="invitation__events-decor" aria-hidden="true">
+          <img class="invitation__events-decor--tr" src="assets/landing-flowers-right.png" alt="">
+          <img class="invitation__events-decor--bl" src="assets/landing-flowers-left.png" alt="">
+        </div>
 
-      <section class="invitation__section invitation__section--event">
+      <section class="invitation__section invitation__section--event invitation__section--ceremony">
+        <header class="invitation__event-head">
+          <div class="invitation__event-headline" aria-hidden="true">
+            <span class="invitation__event-headline-line"></span>
+            <span class="invitation__event-headline-motif invitation__event-headline-motif--rings">
+              <svg viewBox="0 0 48 24" fill="none" aria-hidden="true"><circle cx="16" cy="14" r="7" stroke="currentColor" stroke-width="1.2"/><circle cx="32" cy="14" r="7" stroke="currentColor" stroke-width="1.2"/></svg>
+            </span>
+            <span class="invitation__event-headline-line"></span>
+          </div>
+          <h2 class="invitation__event-title">Ceremony</h2>
+        </header>
         <div class="invitation__event">
-          <div class="invitation__event-photo">
-            <img id="ceremony-photo" src="assets/chapelle1.jpeg" alt="Chapel exterior">
+          <div class="invitation__event-photo-wrap">
+            <div class="invitation__event-photo invitation__event-photo--arch">
+              <img id="ceremony-photo" src="assets/chapelle1.jpeg" alt="Chapel exterior">
+            </div>
+            <div class="invitation__event-photo-flowers" aria-hidden="true">
+              <img src="assets/landing-flowers-left.png" alt="">
+            </div>
           </div>
           <div class="invitation__event-body">
-            <h2 class="invitation__section-title">Ceremony</h2>
-            <p class="location-name" id="ceremony-name">EEC Paroisse de Biyem-Assi</p>
-            <p id="ceremony-address">RFJJ+Q9V, Yaoundé, Cameroon</p>
-            <a href="https://maps.app.goo.gl/NB83KsPmr6NNLumJA" id="ceremony-maps-link" class="invitation__maps-link" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
-            <p id="ceremony-time">2:30 PM</p>
+            <div class="invitation__event-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M16 4v24M10 8h12M8 28h16M12 12v8M20 12v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </div>
+            <p class="invitation__event-venue location-name" id="ceremony-name">EEC Paroisse de Biyem-Assi</p>
+            <ul class="invitation__event-meta">
+              <li>
+                <span class="invitation__event-meta-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.3"/></svg>
+                </span>
+                <span id="ceremony-city">Yaoundé, Cameroon</span>
+              </li>
+              <li>
+                <span class="invitation__event-meta-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.3"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+                </span>
+                <span id="ceremony-time">2:30 PM</span>
+              </li>
+            </ul>
+            <a href="https://maps.app.goo.gl/NB83KsPmr6NNLumJA" id="ceremony-maps-link" class="invitation__event-details" target="_blank" rel="noopener noreferrer">View details ›</a>
           </div>
         </div>
       </section>
 
-      <div class="invitation__divider invitation__divider--ornate" aria-hidden="true">
-        <img src="assets/landing-divider.png" alt="">
+      <div class="invitation__divider invitation__divider--event" aria-hidden="true">
+        <span class="invitation__event-headline-line invitation__event-headline-line--solo"></span>
+        <span class="invitation__event-headline-motif invitation__event-headline-motif--hearts">
+          <svg viewBox="0 0 40 20" fill="none" aria-hidden="true"><path d="M12 6c0-2.2 1.8-4 4-4 1.2 0 2.3.5 3 1.4.7-.9 1.8-1.4 3-1.4 2.2 0 4 1.8 4 4 0 3.2-3.5 6.8-7 9.8C13.5 12.8 12 9.2 12 6Z" stroke="currentColor" stroke-width="1.1"/><path d="M4 8c0-1.6 1.3-3 3-3 .9 0 1.7.4 2.2 1 .5-.6 1.3-1 2.2-1 1.7 0 3 1.4 3 3 0 2.4-2.6 5-5.5 7.2C6.6 13 4 10.4 4 8Z" stroke="currentColor" stroke-width="1" opacity="0.85"/></svg>
+        </span>
+        <span class="invitation__event-headline-line invitation__event-headline-line--solo"></span>
       </div>
 
-      <section class="invitation__section invitation__section--event">
+      <section class="invitation__section invitation__section--event invitation__section--reception">
+        <header class="invitation__event-head invitation__event-head--plain">
+          <h2 class="invitation__event-title">Reception</h2>
+        </header>
         <div class="invitation__event">
-          <div class="invitation__event-photo">
-            <img id="reception-photo" src="assets/buffet.png" alt="Reception">
+          <div class="invitation__event-photo-wrap">
+            <div class="invitation__event-photo invitation__event-photo--arch">
+              <img id="reception-photo" src="assets/reception.jpeg" alt="Reception">
+            </div>
+            <div class="invitation__event-photo-flowers" aria-hidden="true">
+              <img src="assets/landing-flowers-left.png" alt="">
+            </div>
           </div>
           <div class="invitation__event-body">
-            <h2 class="invitation__section-title">Reception</h2>
-            <p class="location-name" id="reception-name">EEC Paroisse de Biyem-Assi</p>
-            <p id="reception-address">RFJJ+Q9V, Yaoundé, Cameroon</p>
-            <a href="https://maps.app.goo.gl/NB83KsPmr6NNLumJA" id="reception-maps-link" class="invitation__maps-link" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
-            <p id="reception-time">6:00 PM</p>
+            <div class="invitation__event-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M8 22h16M10 22V14l6-6 6 6v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10c1.5 0 2.5 1 2.5 2.5M20 10c-1.5 0-2.5 1-2.5 2.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+            </div>
+            <p class="invitation__event-venue location-name" id="reception-name">EEC Paroisse de Biyem-Assi</p>
+            <ul class="invitation__event-meta">
+              <li>
+                <span class="invitation__event-meta-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.3"/></svg>
+                </span>
+                <span id="reception-city">Yaoundé, Cameroon</span>
+              </li>
+              <li>
+                <span class="invitation__event-meta-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.3"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+                </span>
+                <span id="reception-time">6:00 PM</span>
+              </li>
+            </ul>
+            <a href="https://maps.app.goo.gl/NB83KsPmr6NNLumJA" id="reception-maps-link" class="invitation__event-details" target="_blank" rel="noopener noreferrer">View details ›</a>
           </div>
         </div>
       </section>
+
+      </div>
 
       <div class="invitation__divider invitation__divider--ornate" aria-hidden="true">
         <img src="assets/landing-divider.png" alt="">
@@ -164,20 +223,26 @@
     document.getElementById('couple-names').textContent = getCoupleNames();
     document.getElementById('wedding-date').textContent = WEDDING_CONFIG.date;
     document.getElementById('ceremony-name').textContent = WEDDING_CONFIG.ceremony.name;
-    document.getElementById('ceremony-address').textContent = WEDDING_CONFIG.ceremony.address;
-    document.getElementById('ceremony-time').textContent = WEDDING_CONFIG.ceremony.time || WEDDING_CONFIG.time;
+    document.getElementById('ceremony-city').textContent =
+      WEDDING_CONFIG.ceremony.cityEn || WEDDING_CONFIG.ceremony.address;
+    document.getElementById('ceremony-time').textContent =
+      WEDDING_CONFIG.ceremony.time || WEDDING_CONFIG.time;
     const ceremonyMaps = document.getElementById('ceremony-maps-link');
     if (ceremonyMaps && WEDDING_CONFIG.ceremony.mapsUrl) {
       ceremonyMaps.href = WEDDING_CONFIG.ceremony.mapsUrl;
-      ceremonyMaps.textContent = WEDDING_CONFIG.ceremony.mapsLabelEn || 'Open in Google Maps';
+      ceremonyMaps.textContent =
+        (WEDDING_CONFIG.ceremony.detailsLabelEn || 'View details') + ' ›';
     }
     document.getElementById('reception-name').textContent = WEDDING_CONFIG.reception.name;
-    document.getElementById('reception-address').textContent = WEDDING_CONFIG.reception.address;
-    document.getElementById('reception-time').textContent = WEDDING_CONFIG.reception.time;
+    document.getElementById('reception-city').textContent =
+      WEDDING_CONFIG.reception.cityEn || WEDDING_CONFIG.reception.address;
+    document.getElementById('reception-time').textContent =
+      (WEDDING_CONFIG.reception.timePrefixEn || '') + WEDDING_CONFIG.reception.time;
     const receptionMaps = document.getElementById('reception-maps-link');
     if (receptionMaps && WEDDING_CONFIG.reception.mapsUrl) {
       receptionMaps.href = WEDDING_CONFIG.reception.mapsUrl;
-      receptionMaps.textContent = WEDDING_CONFIG.reception.mapsLabelEn || 'Open in Google Maps';
+      receptionMaps.textContent =
+        (WEDDING_CONFIG.reception.detailsLabelEn || 'View details') + ' ›';
     }
     document.title = `${getCoupleNames()} — Wedding Invitation`;
   </script>
