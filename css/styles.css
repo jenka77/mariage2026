@@ -2885,8 +2885,14 @@ html:has(body.landing-page-body) {
 }
 
 .invitation__invite .invitation__names + .invitation__invite-line {
-  margin-top: clamp(0.55rem, 2.8vw, 1.15rem);
+  margin-top: clamp(0.85rem, 4vw, 1.65rem);
   margin-bottom: 0;
+}
+
+.invitation__invite-suffix {
+  text-transform: none;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.92rem, 2.9vw, 1.12rem);
 }
 
 .invitation__subtitle {

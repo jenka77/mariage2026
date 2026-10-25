@@ -45,8 +45,8 @@ const WEDDING_CONFIG = {
   invitation: {
     familiesLineFr: 'Avec leurs familles',
     familiesLineEn: 'Together with their families',
-    inviteSuffixFr: 'vous invitent',
-    inviteSuffixEn: 'invite you',
+    inviteSuffixFr: 'vous invitent à leur mariage',
+    inviteSuffixEn: 'invite you to their wedding',
   },
 
   saveTheDate: {
