@@ -2866,6 +2866,19 @@ html:has(body.landing-page-body) {
   margin-bottom: clamp(0.75rem, 2.5vw, 1.25rem);
 }
 
+.invitation__invite {
+  margin-bottom: clamp(1rem, 3.5vw, 1.65rem);
+}
+
+.invitation__invite-line {
+  margin-bottom: clamp(0.45rem, 1.8vw, 0.65rem);
+  line-height: 1.55;
+}
+
+.invitation__invite-line:last-child {
+  margin-bottom: 0;
+}
+
 .invitation__subtitle {
   font-size: clamp(1.05rem, 3.4vw, 1.3rem);
   letter-spacing: 0.35em;

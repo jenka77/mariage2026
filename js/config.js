@@ -42,6 +42,13 @@ const WEDDING_CONFIG = {
   // false = image complète (placeholder actuel) | true = photo seule + cœur en overlay
   overlayDesign: false,
 
+  invitation: {
+    familiesLineFr: 'Avec leurs familles',
+    familiesLineEn: 'Together with their families',
+    inviteSuffixFr: 'vous invitent',
+    inviteSuffixEn: 'invite you',
+  },
+
   saveTheDate: {
     taglineEn: "We're Getting Married",
     taglineFr: 'Nous nous marions',
@@ -80,8 +87,8 @@ const WEDDING_CONFIG = {
   reception: {
     sectionTitleEn: 'Dinner / Evening',
     sectionTitleFr: 'Dîner / soirée',
-    name: 'Blessing Hall',
-    nameFr: 'Blessing Hall',
+    name: 'Blessings Hall',
+    nameFr: 'Blessings Hall',
     address: 'RFJJ+Q9V, Yaoundé, Cameroon',
     addressFr: 'RFJJ+Q9V, Yaoundé, Cameroun',
     cityEn: 'Yaoundé, Cameroon',
@@ -216,6 +223,14 @@ const WEDDING_CONFIG = {
 
 function getCoupleNames() {
   return `${WEDDING_CONFIG.bride} & ${WEDDING_CONFIG.groom}`;
+}
+
+function getCoupleNamesEt() {
+  return `${WEDDING_CONFIG.bride} et ${WEDDING_CONFIG.groom}`;
+}
+
+function getCoupleNamesAnd() {
+  return `${WEDDING_CONFIG.bride} and ${WEDDING_CONFIG.groom}`;
 }
 
 function getCoupleNamesUpper() {

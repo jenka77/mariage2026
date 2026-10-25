@@ -14,12 +14,9 @@
   <div class="invitation-content invitation-content--billet ticket-billet-paper" id="invitation">
     <main class="invitation">
       <header class="invitation__hero">
-        <p class="invitation__subtitle">Avec leurs familles</p>
-        <h1 class="invitation__names" id="couple-names">Camille & Henry</h1>
-        <p class="invitation__date" id="wedding-date">Dimanche 19 juillet 2027</p>
-
-        <div class="invitation__std-closing">
-          <p class="std-editorial__thanks invitation__std-thanks" id="std-thanks"></p>
+        <div class="invitation__invite">
+          <p class="invitation__subtitle invitation__invite-line" id="invite-families">Avec leurs familles</p>
+          <p class="invitation__subtitle invitation__invite-line" id="invite-couple">Dora et Yannick vous invitent</p>
         </div>
 
         <nav class="invitation__hero-actions std-editorial__actions std-editorial__actions--on-cream" aria-label="Actions">
@@ -119,7 +116,7 @@
             <div class="invitation__event-icon" aria-hidden="true">
               <svg viewBox="0 0 32 32" fill="none"><path d="M8 22h16M10 22V14l6-6 6 6v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10c1.5 0 2.5 1 2.5 2.5M20 10c-1.5 0-2.5 1-2.5 2.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
             </div>
-            <p class="invitation__event-venue location-name" id="reception-name">Blessing Hall</p>
+            <p class="invitation__event-venue location-name" id="reception-name">Blessings Hall</p>
             <ul class="invitation__event-meta">
               <li>
                 <span class="invitation__event-meta-icon" aria-hidden="true">
@@ -224,8 +221,11 @@
     document.getElementById('ceremony-photo').src = WEDDING_CONFIG.ceremonyPhoto;
     initPhotoLightbox('#ceremony-photo', 'fr');
     document.getElementById('reception-photo').src = WEDDING_CONFIG.receptionPhoto;
-    document.getElementById('couple-names').textContent = getCoupleNames();
-    document.getElementById('wedding-date').textContent = WEDDING_CONFIG.dateFr;
+    const inv = WEDDING_CONFIG.invitation || {};
+    document.getElementById('invite-families').textContent =
+      inv.familiesLineFr || 'Avec leurs familles';
+    document.getElementById('invite-couple').textContent =
+      `${getCoupleNamesEt()} ${inv.inviteSuffixFr || 'vous invitent'}`;
     document.getElementById('ceremony-name').textContent = WEDDING_CONFIG.ceremony.nameFr;
     document.getElementById('ceremony-city').textContent =
       WEDDING_CONFIG.ceremony.cityFr || WEDDING_CONFIG.ceremony.addressFr;
