@@ -13,7 +13,7 @@
 <body class="landing-page-body">
   <main class="landing">
     <div class="landing__bg" aria-hidden="true">
-      <img class="landing__bg-img" id="landing-bg-img" src="assets/image2.jpeg" alt="">
+      <img class="landing__bg-img" id="landing-bg-img" src="assets/couple-landing.jpeg" alt="">
       <div class="landing__bg-overlay"></div>
     </div>
 
@@ -51,13 +51,7 @@
 
       <div class="landing__envelope-wrap">
         <img class="landing__envelope-img" src="assets/landing-envelope.png" alt="">
-        <img
-          class="landing__envelope-monogram-img"
-          id="envelope-monogram-img"
-          src="assets/monogram-dy-seal.svg"
-          alt=""
-          aria-hidden="true"
-        >
+        <span class="landing__envelope-monogram" id="envelope-monogram" aria-hidden="true">DY</span>
       </div>
 
       <div class="landing__actions">
@@ -70,10 +64,8 @@
   <script src="js/config.js"></script>
   <script>
     document.getElementById('couple-names').textContent = getCoupleNames();
-    const monogramImg = document.getElementById('envelope-monogram-img');
-    if (monogramImg && WEDDING_CONFIG.envelopeMonogramImage) {
-      monogramImg.src = WEDDING_CONFIG.envelopeMonogramImage;
-    }
+    const letters = getEnvelopeMonogramLetters();
+    document.getElementById('envelope-monogram').textContent = letters.left + letters.right;
     document.getElementById('landing-bg-img').src = WEDDING_CONFIG.landingPhoto;
     const ringsImg = document.getElementById('landing-rings-img');
     if (ringsImg && WEDDING_CONFIG.landingRingsImage) {

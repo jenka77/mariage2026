@@ -5,7 +5,6 @@ const WEDDING_CONFIG = {
   monogram: 'DY',
   monogramLeft: 'D',
   monogramRight: 'Y',
-  envelopeMonogramImage: 'assets/monogram-dy-seal.svg',
 
   // Date du mariage (pour le décompte — format ISO)
   weddingDateISO: '2026-12-19T14:30:00',
@@ -21,17 +20,17 @@ const WEDDING_CONFIG = {
   venueFr: 'EEC Paroisse de Biyem-Assi, RFJJ+Q9V, Yaoundé, Cameroun',
 
   // Photo page enveloppe (première page — index.html)
-  landingPhoto: 'assets/image2.jpeg',
+  landingPhoto: 'assets/couple-landing.jpeg',
   landingRingsImage: 'assets/wedding-rings-sign.png',
 
   // Photo Save the Date (en.html / fr.html) — noir & blanc
-  couplePhoto: 'assets/image2.jpeg',
+  couplePhoto: 'assets/couple-landing.jpeg',
 
   ceremonyPhoto: 'assets/chapelle1.jpeg',
   receptionPhoto: 'assets/buffet.png',
 
   // Image sous les prénoms (fr.html / en.html) — remplacez par votre PNG/JPG si besoin
-  saveTheDateImage: 'assets/save-the-date-gemini.jpg',
+  saveTheDateImage: 'assets/couple-landing.jpeg',
   // true = fond papier crème (maquette billet), sans photo de couple
   saveTheDatePaperBackground: true,
   // Opacité du voile crème sur le fond (plus bas = image plus visible)
