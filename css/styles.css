@@ -2858,33 +2858,56 @@ html:has(body.landing-page-body) {
 .invitation__countdown-frame {
   position: relative;
   margin: clamp(0.75rem, 3vw, 1.5rem) auto clamp(0.5rem, 2vw, 1rem);
-  padding: clamp(1.5rem, 7vw, 3.25rem) 0;
+  padding:
+    clamp(1rem, 4vw, 1.75rem)
+    clamp(2.25rem, 12vw, 4.25rem)
+    clamp(2.75rem, 11vw, 4.5rem);
   overflow: visible;
+  max-width: min(100%, 560px);
+}
+
+.invitation__countdown-frame .std-decor__flowers {
+  z-index: 1;
+  pointer-events: none;
 }
 
 .invitation__countdown-frame .std-decor__flowers--bottom {
   top: auto;
-  bottom: 0;
-  z-index: 0;
+  bottom: clamp(0.15rem, 1.5vw, 0.65rem);
 }
 
 .invitation__countdown-frame .std-decor__flowers--left {
-  width: clamp(140px, 38vw, 320px);
-  transform: translate(-22%, 28%);
+  left: 0;
+  right: auto;
+  top: auto;
+  width: clamp(100px, 28vw, 220px);
+  transform: translate(-46%, 18%);
 }
 
 .invitation__countdown-frame .std-decor__flowers--right {
-  width: clamp(160px, 42vw, 360px);
-  transform: translate(20%, 22%);
+  left: auto;
+  right: 0;
+  top: auto;
+  width: clamp(100px, 28vw, 220px);
+  transform: translate(46%, 18%);
+}
+
+.invitation__countdown-frame .std-decor__flowers--left img {
+  object-position: right bottom;
+}
+
+.invitation__countdown-frame .std-decor__flowers--right img {
+  object-position: left bottom;
 }
 
 .invitation__countdown-frame .std-decor__flowers img {
-  max-height: min(42vh, 400px);
+  max-height: min(26vh, 230px);
 }
 
 .invitation__countdown-frame .deadline-countdown--ticket {
   position: relative;
   z-index: 2;
+  margin: 0;
 }
 
 .invitation__divider {

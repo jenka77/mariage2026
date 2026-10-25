@@ -15,7 +15,6 @@ function initDressCode(lang) {
   setText('dc-lead', dc.leadEn, dc.leadFr);
   setText('dc-text', dc.textEn, dc.textFr);
   setText('dc-avoid', dc.avoidEn, dc.avoidFr);
-  setText('dc-tip', dc.tipEn, dc.tipFr);
 
   const colorsEl = document.getElementById('dc-colors');
   const swatches = dc.colorSwatches?.length ? dc.colorSwatches : (dc.colors || []).map((hex) => ({ hex }));

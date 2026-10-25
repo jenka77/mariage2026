@@ -99,10 +99,6 @@ const WEDDING_CONFIG = {
       'Vous pouvez porter l\'une des teintes ci-dessous (couleurs autorisées pour les invités).',
     avoidEn: 'Please avoid white and off-white out of respect for the bride.',
     avoidFr: 'Merci d\'éviter le blanc et le blanc cassé par respect pour la mariée.',
-    tipEn:
-      'Ladies, please consider block heels or wedges for walking comfortably on the grass.',
-    tipFr:
-      'Mesdames, pensez aux talons larges ou compensés pour marcher confortablement sur l\'herbe.',
     colors: [
       '#7A3A12',
       '#5B161B',
