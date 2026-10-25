@@ -4180,12 +4180,6 @@ html[data-couple-font='burgues'] .invitation__names {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-body.body--invitation .help-widget__hint,
-body.rsvp-page-body .help-widget__hint,
-body.landing-page-body .help-widget__hint {
-  color: rgba(91, 22, 27, 0.78);
-}
-
 .help-widget__option {
   display: flex;
   align-items: center;
