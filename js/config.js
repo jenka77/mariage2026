@@ -60,6 +60,8 @@ const WEDDING_CONFIG = {
   },
 
   ceremony: {
+    sectionTitleEn: 'Religious Ceremony',
+    sectionTitleFr: 'Cérémonie religieuse',
     name: 'EEC Paroisse de Biyem-Assi',
     nameFr: 'EEC Paroisse de Biyem-Assi',
     address: 'RFJJ+Q9V, Yaoundé, Cameroon',
@@ -76,8 +78,10 @@ const WEDDING_CONFIG = {
   },
 
   reception: {
-    name: 'EEC Paroisse de Biyem-Assi',
-    nameFr: 'EEC Paroisse de Biyem-Assi',
+    sectionTitleEn: 'Dinner / Evening',
+    sectionTitleFr: 'Dîner / soirée',
+    name: 'Blessing Hall',
+    nameFr: 'Blessing Hall',
     address: 'RFJJ+Q9V, Yaoundé, Cameroon',
     addressFr: 'RFJJ+Q9V, Yaoundé, Cameroun',
     cityEn: 'Yaoundé, Cameroon',

@@ -3185,6 +3185,12 @@ html[data-couple-font='burgues'] .invitation__names {
   margin: 0;
 }
 
+.invitation__section--reception .invitation__event-title {
+  text-transform: none;
+  letter-spacing: 0.14em;
+  font-size: clamp(0.9rem, 2.95vw, 1.12rem);
+}
+
 .invitation__divider--event {
   display: flex;
   align-items: center;
