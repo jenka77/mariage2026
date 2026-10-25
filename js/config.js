@@ -213,6 +213,8 @@ const WEDDING_CONFIG = {
   adminPassword: 'mariage2026',
 
   // RSVP ouvert : les réponses sont enregistrées dans data/rsvps.json (plus de liste d'invités).
+  // Sync en ligne → GitHub (variables sur l'hébergeur, pas dans ce fichier) :
+  // GITHUB_SYNC=true, GITHUB_TOKEN=<token API>, GITHUB_REPO=jenka77/mariage2026, GITHUB_BRANCH=main
 
   contact: {
     phone: '+237640555409',

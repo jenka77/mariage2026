@@ -33,7 +33,9 @@
       <a class="export-btn" id="export-btn" href="#">Exporter les réponses (CSV)</a>
       <a class="export-btn export-btn--secondary" id="export-guests-btn" href="#">Exporter la liste des invités (CSV)</a>
       <a class="export-btn export-btn--secondary" id="export-guests-pdf-btn" href="#">Exporter la liste des invités (PDF)</a>
+      <button type="button" class="export-btn export-btn--secondary" id="sync-github-btn">Envoyer les réponses sur GitHub</button>
     </div>
+    <p class="admin-section__hint" id="sync-github-status" role="status"></p>
 
     <section class="admin-section">
       <h2 class="admin-section__title">Invités confirmés — détail par personne</h2>
@@ -250,6 +252,36 @@
       document.getElementById('export-guests-btn').href = `${apiBase}/api/export-guests?${passwordQuery}`;
       document.getElementById('export-guests-pdf-btn').href = `${apiBase}/api/export-guests-pdf?${passwordQuery}`;
     }
+
+    async function syncToGithub() {
+      const statusEl = document.getElementById('sync-github-status');
+      const btn = document.getElementById('sync-github-btn');
+      const base = getAdminApiBase();
+      if (!base || !currentPassword) return;
+
+      btn.disabled = true;
+      statusEl.textContent = 'Synchronisation vers GitHub…';
+
+      try {
+        const res = await fetch(`${base}/api/sync-github?password=${encodeURIComponent(currentPassword)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: currentPassword }),
+        });
+        const payload = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          statusEl.textContent = payload.message || payload.error || 'Échec de la synchronisation.';
+          return;
+        }
+        statusEl.textContent = `Réponses enregistrées sur GitHub (${payload.path || 'data/rsvps.json'}, branche ${payload.branch || 'main'}).`;
+      } catch {
+        statusEl.textContent = ADMIN_MESSAGES.serverUnavailable;
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    document.getElementById('sync-github-btn')?.addEventListener('click', syncToGithub);
   </script>
   <script src="js/config.js"></script>
   <script src="js/help.js"></script>

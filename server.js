@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const PDFDocument = require('pdfkit');
+const { githubSyncConfigured, syncRsvpFilePathToGitHub } = require('./lib/github-rsvp-sync');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -82,10 +83,18 @@ function readRsvps() {
   return [];
 }
 
+function scheduleGithubRsvpSync() {
+  if (!githubSyncConfigured()) return;
+  syncRsvpFilePathToGitHub(DATA_FILE).catch((err) => {
+    console.error('[github-sync] Failed to update data/rsvps.json:', err.message);
+  });
+}
+
 function writeRsvps(rsvps) {
   const dir = path.dirname(DATA_FILE);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(DATA_FILE, JSON.stringify(rsvps, null, 2));
+  scheduleGithubRsvpSync();
 }
 
 function readGuestListConfig() {
@@ -667,7 +676,37 @@ app.get('/api/export-guests-pdf', async (req, res) => {
   }
 });
 
+app.post('/api/sync-github', async (req, res) => {
+  if (!checkAdmin(req, res)) return;
+
+  if (!githubSyncConfigured()) {
+    return res.status(503).json({
+      error: 'GitHub sync not configured',
+      message:
+        'Sur le serveur en ligne, définissez GITHUB_SYNC=true et GITHUB_TOKEN (accès au dépôt).',
+    });
+  }
+
+  try {
+    const result = await syncRsvpFilePathToGitHub(DATA_FILE);
+    res.json({
+      success: true,
+      path: result.path,
+      branch: result.branch,
+    });
+  } catch (err) {
+    console.error('[github-sync] Manual sync failed:', err.message);
+    res.status(500).json({
+      error: 'GitHub sync failed',
+      message: err.message,
+    });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`\n  💒 Wedding invitation running at http://localhost:${PORT}\n`);
   console.log(`  Admin panel: http://localhost:${PORT}/admin.html\n`);
+  if (githubSyncConfigured()) {
+    console.log('  GitHub RSVP sync: enabled (data/rsvps.json → GitHub on each new response)\n');
+  }
 });
