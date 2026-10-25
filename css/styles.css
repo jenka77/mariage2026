@@ -2890,7 +2890,7 @@ html:has(body.landing-page-body) {
 }
 
 .invitation__invite-suffix {
-  text-transform: none;
+  text-transform: lowercase;
   letter-spacing: 0.12em;
   font-size: clamp(0.92rem, 2.9vw, 1.12rem);
 }
@@ -3194,14 +3194,11 @@ html[data-couple-font='burgues'] .invitation__names {
   color: var(--gold);
 }
 
-.invitation__event-headline-motif--rings svg {
-  width: clamp(42px, 12vw, 56px);
+.invitation__event-headline-motif--hearts-line img {
+  display: block;
+  width: clamp(44px, 13vw, 58px);
   height: auto;
-}
-
-.invitation__event-headline-motif--hearts svg {
-  width: clamp(36px, 10vw, 48px);
-  height: auto;
+  color: var(--gold);
 }
 
 .invitation__event-title {
