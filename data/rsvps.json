@@ -1,3 +1,48 @@
 [
-  
+  {
+    "id": 1793021450566,
+    "firstName": "Dora",
+    "lastName": "Nzedom",
+    "email": "",
+    "countryOfResidence": "DE",
+    "countryOfResidenceName": "Allemagne",
+    "phoneCountryCode": "+49",
+    "phoneNumber": "17648723050",
+    "fullPhone": "+4917648723050",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Yannick",
+        "lastName": "Nguemtchueng",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Dora",
+        "lastName": "Nzedom",
+        "fullName": "Dora Nzedom",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Yannick",
+        "lastName": "Nguemtchueng",
+        "fullName": "Yannick Nguemtchueng",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "",
+    "message": "",
+    "lang": "fr",
+    "submittedAt": "2026-10-26T13:30:50.342Z",
+    "invitedGuestId": null
+  }
 ]
