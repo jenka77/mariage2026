@@ -150,5 +150,51 @@
     "lang": "fr",
     "submittedAt": "2026-10-26T16:54:41.172Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793042054226,
+    "firstName": "Esther",
+    "lastName": "NGO BIKAI épse SATENANG",
+    "email": "satenangaudrey@gmail.com",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "+237696397794",
+    "fullPhone": "+237+237696397794",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "FRANK",
+        "lastName": "SATENANG",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Esther",
+        "lastName": "NGO BIKAI épse SATENANG",
+        "fullName": "Esther NGO BIKAI épse SATENANG",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "FRANK",
+        "lastName": "SATENANG",
+        "fullName": "FRANK SATENANG",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "",
+    "message": "Que la grâce de l'Eternel accompagne votre union et illumine votre vie pour toujours ! Soyez abondamment bénis ! Much ❤️",
+    "lang": "fr",
+    "submittedAt": "2026-10-26T19:14:13.420Z",
+    "invitedGuestId": null
   }
 ]
