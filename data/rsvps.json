@@ -74,5 +74,35 @@
     "lang": "fr",
     "submittedAt": "2026-10-26T14:09:05.496Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793027464381,
+    "firstName": "Lucien",
+    "lastName": "Nguemneng",
+    "email": "",
+    "countryOfResidence": "CA",
+    "countryOfResidenceName": "Canada",
+    "phoneCountryCode": "+1",
+    "phoneNumber": "5148120023",
+    "fullPhone": "+15148120023",
+    "attendance": "yes",
+    "guests": 1,
+    "confirmedCount": 1,
+    "additionalGuests": [],
+    "guestList": [
+      {
+        "firstName": "Lucien",
+        "lastName": "Nguemneng",
+        "fullName": "Lucien Nguemneng",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      }
+    ],
+    "dietary": "",
+    "message": "",
+    "lang": "fr",
+    "submittedAt": "2026-10-26T15:11:04.185Z",
+    "invitedGuestId": null
   }
 ]
