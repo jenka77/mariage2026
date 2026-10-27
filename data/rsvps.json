@@ -332,5 +332,35 @@
     "lang": "en",
     "submittedAt": "2026-10-27T09:29:18.195Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793135293494,
+    "firstName": "Armette Stephanie",
+    "lastName": "FIMBU",
+    "email": "fimstravel@gmail.com",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "674734465",
+    "fullPhone": "+237674734465",
+    "attendance": "yes",
+    "guests": 1,
+    "confirmedCount": 1,
+    "additionalGuests": [],
+    "guestList": [
+      {
+        "firstName": "Armette Stephanie",
+        "lastName": "FIMBU",
+        "fullName": "Armette Stephanie FIMBU",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      }
+    ],
+    "dietary": "Végétarien",
+    "message": "Félicitation au couple, que le Seigneur leur comble de sa grâce",
+    "lang": "fr",
+    "submittedAt": "2026-10-27T21:08:12.597Z",
+    "invitedGuestId": null
   }
 ]
