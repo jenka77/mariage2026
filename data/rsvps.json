@@ -302,5 +302,35 @@
     "lang": "fr",
     "submittedAt": "2026-10-26T20:47:32.811Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793093359891,
+    "firstName": "INGRID",
+    "lastName": "VINYLE",
+    "email": "ingridvinylefossi@gmail.com",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroon",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "695784155",
+    "fullPhone": "+237695784155",
+    "attendance": "yes",
+    "guests": 1,
+    "confirmedCount": 1,
+    "additionalGuests": [],
+    "guestList": [
+      {
+        "firstName": "INGRID",
+        "lastName": "VINYLE",
+        "fullName": "INGRID VINYLE",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      }
+    ],
+    "dietary": "RAS",
+    "message": "*❤️❤️À Yannick & Dora*❤️❤️\n\nAujourd'hui, deux cœurs ne font plus qu'un.\nDeux chemins ne font plus qu'une seule route.\nYannick, Dora, votre amour est la preuve que quand c'est vrai, ça résiste au temps, aux doutes et à la distance. Vous vous êtes choisis, et aujourd'hui vous vous dites OUI pour la vie.\nQue votre mariage soit aussi beau que votre rencontre, aussi fort que votre complicité, et aussi lumineux que vos sourires aujourd'hui.\nQue Dieu bénisse votre union, qu'Il mette beaucoup d'amour dans les jours difficiles, beaucoup de rires dans les jours heureux, et qu'Il vous garde toujours main dans la main.\n\nFélicitations aux plus beaux mariés !🎉🎉🎉🥳🥳❤️❤️❤️❤️\n\n*Avec tout mon cœur.*",
+    "lang": "en",
+    "submittedAt": "2026-10-27T09:29:18.195Z",
+    "invitedGuestId": null
   }
 ]
