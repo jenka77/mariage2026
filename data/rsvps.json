@@ -392,5 +392,35 @@
     "lang": "fr",
     "submittedAt": "2026-10-27T21:13:59.343Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793266800598,
+    "firstName": "Cédric",
+    "lastName": "Kemajou",
+    "email": "mostassociation6@gmail.com",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "657914826",
+    "fullPhone": "+237657914826",
+    "attendance": "yes",
+    "guests": 1,
+    "confirmedCount": 1,
+    "additionalGuests": [],
+    "guestList": [
+      {
+        "firstName": "Cédric",
+        "lastName": "Kemajou",
+        "fullName": "Cédric Kemajou",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      }
+    ],
+    "dietary": "",
+    "message": "Ma sœur que je seigneur te donne de faire un très bon mariage et qu il fait de toi une bonne femme pour ton marie\nMon cher beau aime ta femme et soit un bn mari",
+    "lang": "fr",
+    "submittedAt": "2026-10-29T09:39:58.007Z",
+    "invitedGuestId": null
   }
 ]
