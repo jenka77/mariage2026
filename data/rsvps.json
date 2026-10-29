@@ -422,5 +422,51 @@
     "lang": "fr",
     "submittedAt": "2026-10-29T09:39:58.007Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793272382382,
+    "firstName": "arnaud",
+    "lastName": "TCHUENCHIE",
+    "email": "arnaudebr@gmail.com",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroon",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "696007837",
+    "fullPhone": "+237696007837",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Arnaud",
+        "lastName": "TCHUENCHIE 2",
+        "relationship": "friend",
+        "relationshipOther": "",
+        "relationshipLabel": "Friend"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "arnaud",
+        "lastName": "TCHUENCHIE",
+        "fullName": "arnaud TCHUENCHIE",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Arnaud",
+        "lastName": "TCHUENCHIE 2",
+        "fullName": "Arnaud TCHUENCHIE 2",
+        "role": "companion",
+        "relationship": "friend",
+        "relationshipLabel": "Friend"
+      }
+    ],
+    "dietary": "RAS",
+    "message": "HAPPY MARIAGE",
+    "lang": "en",
+    "submittedAt": "2026-10-29T11:13:02.298Z",
+    "invitedGuestId": null
   }
 ]
