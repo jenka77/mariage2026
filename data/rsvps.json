@@ -528,5 +528,51 @@
     "lang": "en",
     "submittedAt": "2026-10-29T11:58:09.110Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793283106256,
+    "firstName": "Roméo",
+    "lastName": "Fohom",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "693767644",
+    "fullPhone": "+237693767644",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Irène",
+        "lastName": "Fohom",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Roméo",
+        "lastName": "Fohom",
+        "fullName": "Roméo Fohom",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Irène",
+        "lastName": "Fohom",
+        "fullName": "Irène Fohom",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "RAS",
+    "message": "",
+    "lang": "fr",
+    "submittedAt": "2026-10-29T14:11:46.196Z",
+    "invitedGuestId": null
   }
 ]
