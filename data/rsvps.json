@@ -880,5 +880,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-02T16:49:00.396Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793638231206,
+    "firstName": "Cécile",
+    "lastName": "AMANOUWEYE",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "674044533",
+    "fullPhone": "+237674044533",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Anne-Marie",
+        "lastName": "BEBENE",
+        "relationship": "friend",
+        "relationshipOther": "",
+        "relationshipLabel": "Ami(e)"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Cécile",
+        "lastName": "AMANOUWEYE",
+        "fullName": "Cécile AMANOUWEYE",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Anne-Marie",
+        "lastName": "BEBENE",
+        "fullName": "Anne-Marie BEBENE",
+        "role": "companion",
+        "relationship": "friend",
+        "relationshipLabel": "Ami(e)"
+      }
+    ],
+    "dietary": "Aucun",
+    "message": "Congratulations!!!",
+    "lang": "fr",
+    "submittedAt": "2026-11-02T16:50:30.982Z",
+    "invitedGuestId": null
   }
 ]
