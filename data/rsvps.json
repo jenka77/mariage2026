@@ -972,5 +972,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-02T16:52:17.567Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793646267416,
+    "firstName": "Charles P.",
+    "lastName": "Nanseu",
+    "email": "nanseu@yahoo.fr",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroon",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "670144284",
+    "fullPhone": "+237670144284",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Régine",
+        "lastName": "Nanseu",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Spouse / Partner"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Charles P.",
+        "lastName": "Nanseu",
+        "fullName": "Charles P. Nanseu",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Régine",
+        "lastName": "Nanseu",
+        "fullName": "Régine Nanseu",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Spouse / Partner"
+      }
+    ],
+    "dietary": "",
+    "message": "",
+    "lang": "en",
+    "submittedAt": "2026-11-02T19:04:26.207Z",
+    "invitedGuestId": null
   }
 ]
