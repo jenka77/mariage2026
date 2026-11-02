@@ -788,5 +788,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-02T09:48:26.070Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793613341546,
+    "firstName": "Arlette",
+    "lastName": "KAMDEM épse YARA",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "697555840",
+    "fullPhone": "+237697555840",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Serge Bertrand",
+        "lastName": "SEME OBAMA",
+        "relationship": "friend",
+        "relationshipOther": "",
+        "relationshipLabel": "Ami(e)"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Arlette",
+        "lastName": "KAMDEM épse YARA",
+        "fullName": "Arlette KAMDEM épse YARA",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Serge Bertrand",
+        "lastName": "SEME OBAMA",
+        "fullName": "Serge Bertrand SEME OBAMA",
+        "role": "companion",
+        "relationship": "friend",
+        "relationshipLabel": "Ami(e)"
+      }
+    ],
+    "dietary": "Aucun",
+    "message": "Soyez abondamment bénis en Jesus-Christ! Heureux mariage ❤️",
+    "lang": "fr",
+    "submittedAt": "2026-11-02T09:55:41.308Z",
+    "invitedGuestId": null
   }
 ]
