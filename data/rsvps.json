@@ -696,5 +696,51 @@
     "lang": "en",
     "submittedAt": "2026-10-31T23:54:44.063Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793609256531,
+    "firstName": "Ekah",
+    "lastName": "Lamy",
+    "email": "ekahlamy1234@gmail.com",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "695409536",
+    "fullPhone": "+237695409536",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Mireille",
+        "lastName": "Ekah",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Ekah",
+        "lastName": "Lamy",
+        "fullName": "Ekah Lamy",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Mireille",
+        "lastName": "Ekah",
+        "fullName": "Mireille Ekah",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "",
+    "message": "",
+    "lang": "fr",
+    "submittedAt": "2026-11-02T08:47:35.655Z",
+    "invitedGuestId": null
   }
 ]
