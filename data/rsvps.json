@@ -926,5 +926,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-02T16:50:30.982Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793638338301,
+    "firstName": "FRANKLIN",
+    "lastName": "YONGUI",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "674102102",
+    "fullPhone": "+237674102102",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Stéphanie",
+        "lastName": "YONGUI",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "FRANKLIN",
+        "lastName": "YONGUI",
+        "fullName": "FRANKLIN YONGUI",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Stéphanie",
+        "lastName": "YONGUI",
+        "fullName": "Stéphanie YONGUI",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "Aucun",
+    "message": "Félicitations!!!",
+    "lang": "fr",
+    "submittedAt": "2026-11-02T16:52:17.567Z",
+    "invitedGuestId": null
   }
 ]
