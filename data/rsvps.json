@@ -1094,5 +1094,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-02T21:55:00.485Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793656730728,
+    "firstName": "Esaïe",
+    "lastName": "DASSE",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "698478187",
+    "fullPhone": "+237698478187",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Léonie",
+        "lastName": "DASSE",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Esaïe",
+        "lastName": "DASSE",
+        "fullName": "Esaïe DASSE",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Léonie",
+        "lastName": "DASSE",
+        "fullName": "Léonie DASSE",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "",
+    "message": "",
+    "lang": "fr",
+    "submittedAt": "2026-11-02T21:58:50.623Z",
+    "invitedGuestId": null
   }
 ]
