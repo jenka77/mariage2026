@@ -834,5 +834,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-02T09:55:41.308Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793638140780,
+    "firstName": "Fabienne",
+    "lastName": "MBANGA",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "676429166",
+    "fullPhone": "+237676429166",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Jules",
+        "lastName": "MBANGA",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Fabienne",
+        "lastName": "MBANGA",
+        "fullName": "Fabienne MBANGA",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Jules",
+        "lastName": "MBANGA",
+        "fullName": "Jules MBANGA",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "Aucun",
+    "message": "Félicitations!!!",
+    "lang": "fr",
+    "submittedAt": "2026-11-02T16:49:00.396Z",
+    "invitedGuestId": null
   }
 ]
