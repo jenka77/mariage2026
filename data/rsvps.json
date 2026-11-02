@@ -742,5 +742,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-02T08:47:35.655Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793612906315,
+    "firstName": "Myriam",
+    "lastName": "POUGHELA",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "675942265",
+    "fullPhone": "+237675942265",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Armel",
+        "lastName": "POUGHELA",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Myriam",
+        "lastName": "POUGHELA",
+        "fullName": "Myriam POUGHELA",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Armel",
+        "lastName": "POUGHELA",
+        "fullName": "Armel POUGHELA",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "Aucun",
+    "message": "Tous nos voeux de bonheur. Soyez bénis❤️",
+    "lang": "fr",
+    "submittedAt": "2026-11-02T09:48:26.070Z",
+    "invitedGuestId": null
   }
 ]
