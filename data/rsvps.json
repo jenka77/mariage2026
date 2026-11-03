@@ -1170,5 +1170,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-03T06:35:44.577Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793720837946,
+    "firstName": "Christel Brice",
+    "lastName": "NGNAPAYO TALEU",
+    "email": "cleanbrice@gmail.com",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "694329350",
+    "fullPhone": "+237694329350",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Ermine Laure",
+        "lastName": "KAMMEGNE épse NGNAPAYO",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Christel Brice",
+        "lastName": "NGNAPAYO TALEU",
+        "fullName": "Christel Brice NGNAPAYO TALEU",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Ermine Laure",
+        "lastName": "KAMMEGNE épse NGNAPAYO",
+        "fullName": "Ermine Laure KAMMEGNE épse NGNAPAYO",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "Allergique au manioc et au poisson bouillie",
+    "message": "Toutes mes sincères félicitations à toi, cher frère, pour cette belle étape de ta vies!\nJe vous souhaite une vie conjugale remplie de bonheur, de prospérité, de paix et de beaux moments a partager. Que votre amour grandisse chaque jour et que vous trouviez toujours l'un auprès de l'autre la force de surmonter les épreuves.\nQue Dieu bénisse abondamment votre foyer.\nHeureux ménage a vous deux !",
+    "lang": "fr",
+    "submittedAt": "2026-11-03T15:47:14.300Z",
+    "invitedGuestId": null
   }
 ]
