@@ -1140,5 +1140,35 @@
     "lang": "fr",
     "submittedAt": "2026-11-02T21:58:50.623Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793687744653,
+    "firstName": "Boris",
+    "lastName": "Bogning Dongmo",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "694668742",
+    "fullPhone": "+237694668742",
+    "attendance": "yes",
+    "guests": 1,
+    "confirmedCount": 1,
+    "additionalGuests": [],
+    "guestList": [
+      {
+        "firstName": "Boris",
+        "lastName": "Bogning Dongmo",
+        "fullName": "Boris Bogning Dongmo",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      }
+    ],
+    "dietary": "",
+    "message": "Heureux ménage à vous 🙏",
+    "lang": "fr",
+    "submittedAt": "2026-11-03T06:35:44.577Z",
+    "invitedGuestId": null
   }
 ]
