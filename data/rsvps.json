@@ -1292,5 +1292,51 @@
     "lang": "en",
     "submittedAt": "2026-11-04T15:26:34.090Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1793826300820,
+    "firstName": "Carelle",
+    "lastName": "KOM",
+    "email": "carellevicky@yahoo.com",
+    "countryOfResidence": "BE",
+    "countryOfResidenceName": "Belgique",
+    "phoneCountryCode": "+32",
+    "phoneNumber": "466348616",
+    "fullPhone": "+32466348616",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Pierre-Richard",
+        "lastName": "GASPARD",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Carelle",
+        "lastName": "KOM",
+        "fullName": "Carelle KOM",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Pierre-Richard",
+        "lastName": "GASPARD",
+        "fullName": "Pierre-Richard GASPARD",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "",
+    "message": "Se serait un privilège pour nous, de prendre part à ce moment marquant de votre union. \nNous prions pour vous pendants ces moments de préparations, que le seigneur aille au devant de vous, et que vous puissiez savourer chaque moment de ces festivités.\n\nBisous Carelle et Pierre-Richard",
+    "lang": "fr",
+    "submittedAt": "2026-11-04T21:05:00.520Z",
+    "invitedGuestId": null
   }
 ]
