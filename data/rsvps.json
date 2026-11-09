@@ -1384,5 +1384,51 @@
     "lang": "en",
     "submittedAt": "2026-11-05T22:26:55.772Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1794240303487,
+    "firstName": "Boris",
+    "lastName": "Fouhoue",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "674704950",
+    "fullPhone": "+237674704950",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Gertrude",
+        "lastName": "Fouhoue",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Boris",
+        "lastName": "Fouhoue",
+        "fullName": "Boris Fouhoue",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Gertrude",
+        "lastName": "Fouhoue",
+        "fullName": "Gertrude Fouhoue",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Conjoint(e) / Partenaire"
+      }
+    ],
+    "dietary": "Aucun",
+    "message": "Tous nos voeux de bonheur!",
+    "lang": "fr",
+    "submittedAt": "2026-11-09T16:05:02.967Z",
+    "invitedGuestId": null
   }
 ]
