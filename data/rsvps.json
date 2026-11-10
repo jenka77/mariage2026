@@ -1460,5 +1460,35 @@
     "lang": "en",
     "submittedAt": "2026-11-10T12:20:25.648Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1794325489559,
+    "firstName": "Régine",
+    "lastName": "Ekosso",
+    "email": "njenempessaingridvictorine@gmail.com",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroun",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "697757263",
+    "fullPhone": "+237697757263",
+    "attendance": "yes",
+    "guests": 1,
+    "confirmedCount": 1,
+    "additionalGuests": [],
+    "guestList": [
+      {
+        "firstName": "Régine",
+        "lastName": "Ekosso",
+        "fullName": "Régine Ekosso",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      }
+    ],
+    "dietary": "",
+    "message": "Heureux ménage que le seigneur vous accompagne et vous accorde tout le bonheur du monde",
+    "lang": "fr",
+    "submittedAt": "2026-11-10T15:44:49.487Z",
+    "invitedGuestId": null
   }
 ]
