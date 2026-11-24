@@ -1566,5 +1566,51 @@
     "lang": "fr",
     "submittedAt": "2026-11-10T20:58:55.423Z",
     "invitedGuestId": null
+  },
+  {
+    "id": 1795522298875,
+    "firstName": "Christophe",
+    "lastName": "YOTCHOUEN",
+    "email": "",
+    "countryOfResidence": "CM",
+    "countryOfResidenceName": "Cameroon",
+    "phoneCountryCode": "+237",
+    "phoneNumber": "654743939",
+    "fullPhone": "+237654743939",
+    "attendance": "yes",
+    "guests": 2,
+    "confirmedCount": 2,
+    "additionalGuests": [
+      {
+        "firstName": "Liliane",
+        "lastName": "YOTCHOUEN",
+        "relationship": "spouse",
+        "relationshipOther": "",
+        "relationshipLabel": "Spouse / Partner"
+      }
+    ],
+    "guestList": [
+      {
+        "firstName": "Christophe",
+        "lastName": "YOTCHOUEN",
+        "fullName": "Christophe YOTCHOUEN",
+        "role": "main",
+        "relationship": "",
+        "relationshipLabel": ""
+      },
+      {
+        "firstName": "Liliane",
+        "lastName": "YOTCHOUEN",
+        "fullName": "Liliane YOTCHOUEN",
+        "role": "companion",
+        "relationship": "spouse",
+        "relationshipLabel": "Spouse / Partner"
+      }
+    ],
+    "dietary": "",
+    "message": "Heureux mariage sous la protection divine",
+    "lang": "en",
+    "submittedAt": "2026-11-24T12:11:38.688Z",
+    "invitedGuestId": null
   }
 ]
